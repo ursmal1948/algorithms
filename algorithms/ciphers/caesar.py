@@ -30,7 +30,7 @@ class CaesarCipher:
 
     def _decrypt_char(self, char: str) -> str:
         """
-        Decrypts  a single character using the Caesar cipher
+        Decrypts a single character using the Caesar cipher
         :param char: str, the character to be decrypted
         :return str: the decrypted character
         """
