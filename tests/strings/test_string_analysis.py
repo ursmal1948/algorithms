@@ -1,7 +1,15 @@
 import pytest
 import unittest
 from algorithms.strings.string_analysis import (
-    is_anagram, is_pangram, is_palindrome, is_potential_palindrome, contains_duplicates)
+    is_anagram,
+    is_pangram,
+    is_palindrome,
+    is_potential_palindrome,
+    count_substring_occurences,
+    is_substring,
+    is_subsequence,
+    contains_duplicates
+)
 
 
 class TestIsAnagram(unittest.TestCase):
@@ -40,6 +48,49 @@ class TestPalindromeFunctions:
     def test_potential_palindrome_but_not_actual_palindrome(self):
         assert not is_palindrome('batat')
         assert is_potential_palindrome('batat')
+
+
+class TestSubsequenceAndSubstring:
+    @pytest.fixture(params=[
+        (['hello', 'el'], True),
+        (['hello', 'ho'], True),
+        (['world', 'abc'], False),
+        (['abc', ''], True),
+        (['', 'abc'], False),
+        (['', ''], True)])
+    def text_potential_subsequence_and_result(self, request):
+        return request.param
+
+    def test_is_subsequence(self, text_potential_subsequence_and_result):
+        sequence_pair, result = text_potential_subsequence_and_result
+        assert is_subsequence(sequence_pair[0], sequence_pair[1]) == result
+
+    @pytest.fixture(params=[
+        (['garden', 'ard'], True),
+        (['garden', 'gdn'], False),
+        (['abc', 'abcdef'], False),
+        (['abc', ''], True),
+        (['', 'abc'], False),
+        (['', ''], True)
+    ])
+    def text_potential_substring_and_result(self, request):
+        return request.param
+
+    def test_is_substring(self, text_potential_substring_and_result):
+        sequence_pair, result = text_potential_substring_and_result
+        assert is_substring(sequence_pair[0], sequence_pair[1]) == result
+
+
+class TestCountSubstringOccurences:
+    @pytest.mark.parametrize('text, substring, count', [
+        ('abDababab', 'ab', 4),
+        ('ccc', 'c', 3),
+        ('garden garden', 'ard', 2),
+        ('world', 'o', 1),
+        ('hello', 'abc', 0)
+    ])
+    def test_substring_occurences(self, text, substring, count):
+        assert count_substring_occurences(text, substring) == count
 
 
 class TestContainsDuplicates:

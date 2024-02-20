@@ -13,6 +13,7 @@ def is_anagram(text1: str, text2: str) -> bool:
     Returns:
         bool: True if the strings are anagrams, False otherwise
     """
+
     if len(text1) != len(text2):
         return False
     return Counter(text1) == Counter(text2)
@@ -29,6 +30,7 @@ def is_pangram(text: str) -> bool:
     Returns:
         bool: True if the string is a pangram, False otherwise.
     """
+
     return len({c.lower() for c in text if c.isalpha()}) == 26
 
 
@@ -44,6 +46,7 @@ def is_palindrome(text: str) -> bool:
     Returns:
         bool: True if the text is a palindrome, False otherwise.
     """
+
     cleaned_text = ''.join(c.lower() for c in text if c.isalnum())
     start_index = 0
     end_index = len(cleaned_text) - 1
@@ -65,13 +68,97 @@ def is_potential_palindrome(text: str) -> bool:
     Returns:
         bool: True if the text can be rearranged to form a palindrome, False otherwise.
     """
+
     cleaned_text = ''.join(c.lower() for c in text if c.isalnum())
     chars_counter = Counter(cleaned_text)
     odd_count = sum(count % 2 for count in chars_counter.values())
     return odd_count <= 1
 
 
+def is_subsequence(text: str, subsequence: str) -> bool:
+    """
+    Checks if a given text contains the specified subsequence.
+
+    Parameters:
+        text (str): The text to be searched for the subsequence.
+        subsequence (str): The subsequence to check in the text.
+
+    Returns:
+        bool: True if the subsequence is present, False otherwise.
+    """
+
+    if not subsequence:
+        return True
+    if not text:
+        return False
+    sub_index = 0
+    for c in text:
+        if sub_index < len(subsequence) and c.lower() == subsequence[sub_index].lower():
+            sub_index += 1
+            if sub_index == len(subsequence):
+                return True
+    return False
+
+
+def is_substring(text: str, substring: str) -> bool:
+    """
+    Checks if a given text contains the specified substring.
+
+    Parameters:
+        text (str): The text to be searched for the substring.
+        substring (str): The substring to check in the text.
+
+    Returns:
+        bool: True if the substring is present, False otherwise.
+    """
+
+    if not text and not substring:
+        return True
+    if not substring:
+        return True
+
+    lowercase_text = [c.lower() for c in text]
+    lowercase_substring = [c.lower() for c in substring]
+    try:
+        start_text_index = lowercase_text.index(lowercase_substring[0])
+    except ValueError:
+        return False
+    substring_length = len(lowercase_substring)
+    return lowercase_substring == lowercase_text[start_text_index:start_text_index + substring_length]
+
+
+def count_substring_occurences(text: str, substring: str) -> int:
+    """
+    Counts the number of occurrences of a substring within a given text.
+
+    Parameters:
+        text (str): The text in which occurrences of the substring will be counted.
+        substring (str): The substring to be counted within the text.
+
+    Returns:
+        int: The number of occurrences of the substring in the text.
+    """
+
+    count = 0
+    lowercase_text = [c.lower() for c in text]
+    lowercase_substring = [c.lower() for c in substring]
+    for i in range(len(lowercase_text)):
+        if lowercase_text[i:i + len(lowercase_substring)] == lowercase_substring:
+            count += 1
+    return count
+
+
 def contains_duplicates(items: list[Any]) -> bool:
+    """
+    Checks if a list of items contains any duplicates.
+
+    Parameters:
+        items (list[Any]): List of items.
+
+    Returns:
+        bool: True if duplicates are found, False otherwise.
+    """
+
     unique_elements = set(item.lower() if isinstance(item, str) else item for item in items)
     if len(unique_elements) == len(items):
         return False
