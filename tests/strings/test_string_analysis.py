@@ -82,15 +82,15 @@ class TestSubsequenceAndSubstring:
 
 
 class TestCountSubstringOccurences:
-    @pytest.mark.parametrize('text, substring, count', [
+    @pytest.mark.parametrize('text, substring, expected_count', [
         ('abDababab', 'ab', 4),
         ('ccc', 'c', 3),
         ('garden garden', 'ard', 2),
         ('world', 'o', 1),
         ('hello', 'abc', 0)
     ])
-    def test_substring_occurences(self, text, substring, count):
-        assert count_substring_occurences(text, substring) == count
+    def test_substring_occurences(self, text, substring, expected_count):
+        assert count_substring_occurences(text, substring) == expected_count
 
 
 class TestContainsDuplicates:
