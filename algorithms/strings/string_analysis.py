@@ -89,8 +89,7 @@ def is_subsequence(text: str, subsequence: str) -> bool:
 
     if not subsequence:
         return True
-    if not text:
-        return False
+
     sub_index = 0
     for c in text:
         if sub_index < len(subsequence) and c.lower() == subsequence[sub_index].lower():
@@ -112,19 +111,18 @@ def is_substring(text: str, substring: str) -> bool:
         bool: True if the substring is present, False otherwise.
     """
 
-    if not text and not substring:
-        return True
-    if not substring:
-        return True
-
     lowercase_text = [c.lower() for c in text]
     lowercase_substring = [c.lower() for c in substring]
-    try:
-        start_text_index = lowercase_text.index(lowercase_substring[0])
-    except ValueError:
+
+    if lowercase_substring == lowercase_text:
+        return True
+    if len(lowercase_substring) > len(lowercase_text):
         return False
-    substring_length = len(lowercase_substring)
-    return lowercase_substring == lowercase_text[start_text_index:start_text_index + substring_length]
+
+    for i in range(len(text) - len(substring) + 1):
+        if lowercase_text[i:i + len(lowercase_substring)] == lowercase_substring:
+            return True
+    return False
 
 
 def count_substring_occurences(text: str, substring: str) -> int:

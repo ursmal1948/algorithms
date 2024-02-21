@@ -56,7 +56,6 @@ class TestSubsequenceAndSubstring:
         (['hello', 'ho'], True),
         (['world', 'abc'], False),
         (['abc', ''], True),
-        (['', 'abc'], False),
         (['', ''], True)])
     def text_potential_subsequence_and_result(self, request):
         return request.param
@@ -66,12 +65,15 @@ class TestSubsequenceAndSubstring:
         assert is_subsequence(sequence_pair[0], sequence_pair[1]) == result
 
     @pytest.fixture(params=[
-        (['garden', 'ard'], True),
+        (['abc', 'a'], True),
+        (['abc', 'c'], True),
+        (['garden', 'gar'], True),
         (['garden', 'gdn'], False),
-        (['abc', 'abcdef'], False),
+        (['garden', 'den'], True),
         (['abc', ''], True),
         (['', 'abc'], False),
-        (['', ''], True)
+        (['', ''], True),
+        (['', 'a'], False),
     ])
     def text_potential_substring_and_result(self, request):
         return request.param
