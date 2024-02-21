@@ -38,7 +38,8 @@ def is_palindrome(text: str) -> bool:
     """
     Checks if the given text is a palindrome.
 
-    A palindrome is a sequence of symbols that reads the same backwards as forwards.
+    A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and
+    removing all non-alphanumeric characters, it reads the same forward and backward.
 
     Args:
         text (str): The text to be checked for palindrome.
