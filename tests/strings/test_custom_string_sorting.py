@@ -1,5 +1,9 @@
 import pytest
-from algorithms.strings.custom_string_sorting import sort_items, compare_chars_sum, compare_vowels_count
+from algorithms.strings.custom_string_sorting import (
+    sort_items,
+    compare_chars_sum,
+    compare_vowels_count
+)
 
 
 class TestSortItems:
