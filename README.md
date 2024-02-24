@@ -1,38 +1,21 @@
-
-<style>
-    /* Style to add space between list items */
-    ul {
-        padding-left: 20px; /* Adjust the padding as needed */
-    }
-    li {
-        margin-bottom: 10px; /* Adjust the margin as needed */
-    }
-</style>
 <div style="text-align:center;">
-
-![Logo](logo.svg)
-<h1>
-<span style="color:lightyellow;">
-ALGORITHMS</span>
-</h1>
-<h2>
-All algorithms implemented in - <span style="color:lightskyblue;">PYTHON</span>
-</h2>
-
-</div>
-
-
-<div style="text-align:center;">
-
-![Coverage](coverage.svg)
-![Build Status](https://img.shields.io/badge/build-pending-yellow.svg)
-</div>
-
-<div style="text-align:center;">
-
-![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-lightgrey.svg)
-![Welcome](https://img.shields.io/badge/Welcome-We%20are%20Glad%20You're%20Here-pink)
-
+    <div>
+        <img src="logo.svg" alt="Logo">
+        <h1>
+            <span style="color:lightyellow;">ALGORITHMS</span>
+        </h1>
+        <h2>
+            All algorithms implemented in - <span style="color:lightskyblue;">PYTHON</span>
+        </h2>
+    </div>
+    <div>
+        <img src="coverage.svg" alt="coverage">
+        <img src="https://img.shields.io/badge/build-pending-yellow.svg" alt="pending">
+    </div>
+    <div>
+        <img src="https://img.shields.io/badge/license-All%20Rights%20Reserved-lightgrey.svg" alt="License">
+        <img src="https://img.shields.io/badge/Welcome-We%20are%20Glad%20You're%20Here-pink" alt="welcome">
+    </div>
 </div>
 
 <div>
