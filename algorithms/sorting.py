@@ -11,10 +11,17 @@ class Sorting(ABC):
     @abstractmethod
     def sort(self, data: list[Any]):
         """
-         Sorts a list of elements
-        :param data: list[Any] the list of elements to be sorted
-        :return list[Any]: the sorted list
+        Sorts a list of elements.
+
+        Parameters:
+            data : list[Any]
+                The list of elements to be sorted.
+
+        Returns:
+            list[Any]
+                The sorted list.
         """
+
         pass
 
 
@@ -26,15 +33,23 @@ class QuickSort(Sorting):
     def sort(self, data: list[Any]):
         """
         Sorts a list using the QuickSort algorithm.
-        :param data: list[Any] lhe list of elements to be sorted
-        :return list[Any]: the sorted list
+
+        Parameters:
+            data : list[Any]
+                The list of elements to be sorted.
+
+        Returns:
+            list[Any]
+                The sorted list.
         """
+
         if len(data) <= 1:
             return data
         pivot = data[len(data) // 2]
         less_than_pivot = [x for x in data if x < pivot]
         greater_than_pivot = [x for x in data if x > pivot]
-        return self.sort(less_than_pivot) + [pivot] + self.sort(greater_than_pivot)
+        equal_to_pivot = [x for x in data if x == pivot]
+        return self.sort(less_than_pivot) + equal_to_pivot + self.sort(greater_than_pivot)
 
 
 class BubbleSort(Sorting):
@@ -44,16 +59,23 @@ class BubbleSort(Sorting):
 
     def sort(self, data: list[Any]):
         """
-        Sorts a list using the BubbleSort algorithm
-        :param data: list[Any] the list of elements to be sorted
-        :return list[Any]: the sorted list
+        Sorts a list using the BubbleSort algorithm.
+
+        Parameters:
+            data : list[Any]
+                The list of elements to be sorted.
+
+        Returns:
+            list[Any]
+                The sorted list.
         """
 
-        for i in range(len(data)):
-            for j in range(0, len(data) - i - 1):
-                if data[j] > data[j + 1]:
-                    data[j], data[j + 1] = data[j + 1], data[j]
-        return data
+        sorted_data = data.copy()
+        for i in range(len(sorted_data)):
+            for j in range(0, len(sorted_data) - i - 1):
+                if sorted_data[j] > sorted_data[j + 1]:
+                    sorted_data[j], sorted_data[j + 1] = sorted_data[j + 1], sorted_data[j]
+        return sorted_data
 
 
 class MergeSort(Sorting):
@@ -61,39 +83,55 @@ class MergeSort(Sorting):
     A class implementing the MergeSort algorithm
     """
 
+    @staticmethod
+    def merge(left_half: list[int], right_half: list[int]) -> list[int]:
+        """
+        Merges two sorted lists into a single sorted list.
+
+        Parameters:
+            left_half : list[int]
+                The left half of the split list.
+            right_half : list[int]
+                The right half of the split list.
+
+        Returns:
+            list[int]
+                The merged and sorted list.
+        """
+
+        merged = []
+        i = j = 0
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                merged.append(left_half[i])
+                i += 1
+            else:
+                merged.append(right_half[j])
+                j += 1
+
+        merged.extend(left_half[i:])
+        merged.extend(right_half[j:])
+        return merged
+
     def sort(self, data: list[Any]):
         """
-        Sorts a list using the MergeSort algorithm
-        param data: list[Any] the list of elements to be sorted
-        :return list[Any]: the sorted list.
+        Sorts a list using the MergeSort algorithm.
 
+        Parameters:
+            data : list[Any]
+                The list of elements to be sorted.
+
+        Returns:
+            list[Any]
+                The sorted list.
         """
+
         if len(data) <= 1:
             return data
         mid = len(data) // 2
-        left_half = data[:mid]
-        right_half = data[mid:]
-        self.sort(left_half)
-        self.sort(right_half)
-        i = j = k = 0
-        while i < len(left_half) and j < len(right_half):
-            if left_half[i] < right_half[j]:
-                data[k] = left_half[i]
-                i += 1
-            else:
-                data[k] = right_half[j]
-                j += 1
-            k += 1
-
-        while i < len(left_half):
-            data[k] = left_half[i]
-            i += 1
-            k += 1
-        while j < len(right_half):
-            data[k] = right_half[j]
-            j += 1
-            k += 1
-        return data
+        left_half = self.sort(data[:mid])
+        right_half = self.sort(data[mid:])
+        return MergeSort.merge(left_half, right_half)
 
 
 class SelectionSort(Sorting):
@@ -103,17 +141,25 @@ class SelectionSort(Sorting):
 
     def sort(self, data: list[Any]):
         """
-        Sorts a list using the SelectionSort algorithm
-        :param data: list[Any] the list of elements to be sorted
-        :return list[Any]: the sorted list
+        Sorts a list using the SelectionSort algorithm.
+
+        Parameters:
+            data : list[Any]
+                The list of elements to be sorted.
+
+        Returns:
+            list[Any]
+                The sorted list.
         """
-        for i in range(len(data) - 1):
+
+        sorted_data = data.copy()
+        for i in range(len(sorted_data) - 1):
             min_index = i
-            for j in range(i + 1, len(data)):
-                if data[j] < data[min_index]:
+            for j in range(i + 1, len(sorted_data)):
+                if sorted_data[j] < sorted_data[min_index]:
                     min_index = j
-            data[i], data[min_index] = data[min_index], data[i]
-        return data
+            sorted_data[i], sorted_data[min_index] = sorted_data[min_index], sorted_data[i]
+        return sorted_data
 
 
 @dataclass
@@ -126,14 +172,25 @@ class SortingManager:
     def set_sorting_strategy(self, sorting_strategy: Sorting):
         """
         Sets the sorting strategy to be used.
-        :param sorting_strategy: the sorting strategy to be set
+
+        Parameters:
+            sorting_strategy : Sorting
+                The sorting strategy to be set.
         """
+
         self.sorting_strategy = sorting_strategy
 
     def perform_sorting(self, data: list[Any]) -> list[Any]:
         """
-        Performs sorting on a list using the current sorting strategy
-        :param data: list[Any] the list of elements to be sorted
-        :return list[Any]: the sorted list
+        Performs sorting on a list using the current sorting strategy.
+
+        Parameters:
+            data : list[Any]
+                The list of elements to be sorted.
+
+        Returns:
+            list[Any]
+                The sorted list.
         """
+
         return self.sorting_strategy.sort(data)
