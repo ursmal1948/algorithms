@@ -7,6 +7,8 @@ from algorithms.numbers.arithmetic_algorithms import (
     babylonian_sqrt
 )
 
+from ..conftest import ge_0_number_and_expected_factorial_result
+
 
 class TestBinarySearch:
     @pytest.mark.parametrize('numbers, looked_number, expected_result', [

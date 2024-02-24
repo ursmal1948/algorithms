@@ -10,6 +10,7 @@ from algorithms.strings.string_analysis import (
     is_subsequence,
     contains_duplicates
 )
+from ..conftest import palindrome_and_potential_palindrome
 
 
 class TestIsAnagram(unittest.TestCase):
