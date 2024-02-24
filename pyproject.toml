@@ -12,8 +12,16 @@ coverage = "^7.4.2"
 pytest-html = "^4.1.1"
 sphinx = "^7.2.6"
 sphinx-rtd-theme = "^2.0.0"
+setuptools = "^69.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+coverage-badge = "^1.1.0"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+coverage-badge = "coverage-badge -o coverage.svg"
