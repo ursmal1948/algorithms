@@ -2,9 +2,9 @@ import pytest
 
 from algorithms.numbers.geometric_algorithms import (
     Point,
-    calculate_distance_between_points,
+    distance_between_points,
     are_points_collinear,
-    is_valid_triangle,
+    is_triangle_valid,
     is_triangle_rectangular,
 )
 
@@ -17,7 +17,7 @@ class TestPointsGeometryTester:
         (Point(1.5, 2.5), Point(3.7, 4.9), 3.26)
     ])
     def test_calculate_distance_between_points(self, p1, p2, expected_distance):
-        distance = calculate_distance_between_points(p1, p2)
+        distance = distance_between_points(p1, p2)
         assert distance == expected_distance
 
     @pytest.mark.parametrize('p1, p2,p3, expected_collinearity', [
@@ -43,7 +43,7 @@ class TestTriangleProperties:
         (3.5, 4.5, 7.5, True),
     ])
     def test_is_triangle_valid(self, s1, s2, s3, expected_result):
-        validity = is_valid_triangle(s1, s2, s3)
+        validity = is_triangle_valid(s1, s2, s3)
         assert validity == expected_result
 
     @pytest.mark.parametrize('s1, s2, s3, expected_result', [

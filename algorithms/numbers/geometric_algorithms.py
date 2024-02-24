@@ -7,7 +7,7 @@ class Point:
     y: int | float = 0
 
 
-def calculate_distance_between_points(p1: Point, p2: Point) -> float:
+def distance_between_points(p1: Point, p2: Point) -> float:
     """
     Calculates the distance between two points in a 2-dimensional plane.
 
@@ -43,7 +43,7 @@ def are_points_collinear(point1: Point, point2: Point, point3: Point) -> bool:
     return slope_p1_p2 == slope_p1_p3
 
 
-def is_valid_triangle(a: int, b: int, c: int) -> bool:
+def is_triangle_valid(a: int, b: int, c: int) -> bool:
     """
     Checks if given side lengths can form a valid triangle.
 
