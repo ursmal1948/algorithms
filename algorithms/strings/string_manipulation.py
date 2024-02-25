@@ -59,3 +59,12 @@ def custom_join(words: list[str], separator: str = '') -> str:
         else:
             result += (words[i] + separator)
     return result
+
+
+# It will be in ciphers branch after rebasing main.
+def lower_string(text: str) -> str:
+    return ''.join([chr(ord(c) + 32) if c.isupper() else c for c in text])
+
+
+def upper_string(text: str) -> str:
+    return ''.join([chr(ord(c) - 32) if c.islower() else c for c in text])
