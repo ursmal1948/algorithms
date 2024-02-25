@@ -130,7 +130,3 @@ def _rand_number_until(
     return v
 
 
-# print(rand_number_until(10, 30, lambda x: x % 5 == 0))
-# print(rand_number_until(10, 30.0, lambda x: x > 5))
-print(rand_n_numbers(10, 10, 30))
-print(rand_n_numbers_until(10, 1, 10.0, lambda x: x > 4))
