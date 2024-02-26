@@ -17,8 +17,8 @@
 <div>
     <h2>Table of Contents</h2>
     <ul>
-        <li>About</li>
-        <li>Getting started</li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#getting_started">Getting started</a></li>
         <li>Algorithms</li>
         <ul>
         <li><a href="#numbers">Numbers</a></li>
@@ -30,7 +30,7 @@
 </div>
 
 <div>
-<h2>
+<h2 id="about">
 About
 </h2>
 <h3>
@@ -41,7 +41,7 @@ for encryption and decryption, as well algorithms for sorting data. It is wise t
 </div>
 
 <div>
-<h2>
+<h2 id="getting_started">
 Getting started
 </h2>
 </div>
