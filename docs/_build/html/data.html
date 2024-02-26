@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>data package &mdash; Algorithms Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tests package" href="tests.html" />
+    <link rel="prev" title="algorithms.strings package" href="algorithms.strings.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Algorithms Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">algorithms</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html">algorithms package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">data package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-data.randomm">data.randomm module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data.randomm.rand_chr"><code class="docutils literal notranslate"><span class="pre">rand_chr()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.randomm.rand_chr_until"><code class="docutils literal notranslate"><span class="pre">rand_chr_until()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.randomm.rand_n_numbers"><code class="docutils literal notranslate"><span class="pre">rand_n_numbers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.randomm.rand_n_numbers_until"><code class="docutils literal notranslate"><span class="pre">rand_n_numbers_until()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.randomm.rand_number"><code class="docutils literal notranslate"><span class="pre">rand_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.randomm.rand_number_until"><code class="docutils literal notranslate"><span class="pre">rand_number_until()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-data.user">data.user module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data.user.get_n_numbers"><code class="docutils literal notranslate"><span class="pre">get_n_numbers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.user.get_n_numbers_loop"><code class="docutils literal notranslate"><span class="pre">get_n_numbers_loop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.user.get_number"><code class="docutils literal notranslate"><span class="pre">get_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.user.get_number_loop"><code class="docutils literal notranslate"><span class="pre">get_number_loop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.user.get_number_matches_regex"><code class="docutils literal notranslate"><span class="pre">get_number_matches_regex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.user.get_number_matches_regex_loop"><code class="docutils literal notranslate"><span class="pre">get_number_matches_regex_loop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.user.get_str"><code class="docutils literal notranslate"><span class="pre">get_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-data.validation">data.validation module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data.validation.does_char_fall_within_range"><code class="docutils literal notranslate"><span class="pre">does_char_fall_within_range()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.validation.does_number_match_regex"><code class="docutils literal notranslate"><span class="pre">does_number_match_regex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.validation.does_string_match_regex"><code class="docutils literal notranslate"><span class="pre">does_string_match_regex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data.validation.is_credit_card_valid"><code class="docutils literal notranslate"><span class="pre">is_credit_card_valid()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Algorithms Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">algorithms</a></li>
+      <li class="breadcrumb-item active">data package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-package">
+<h1>data package<a class="headerlink" href="#data-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-data.randomm">
+<span id="data-randomm-module"></span><h2>data.randomm module<a class="headerlink" href="#module-data.randomm" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="data.randomm.rand_chr">
+<span class="sig-prename descclassname"><span class="pre">data.randomm.</span></span><span class="sig-name descname"><span class="pre">rand_chr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/data/randomm.html#rand_chr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.randomm.rand_chr" title="Link to this definition"></a></dt>
+<dd><p>Returns a char in the range [min_chr, max_chr]
+Parameters:</p>
+<blockquote>
+<div><p>min_c (str): The left end of the range
+max_c (str): The right end of the range</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>str: A char in the range [min_c, max_c]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.randomm.rand_chr_until">
+<span class="sig-prename descclassname"><span class="pre">data.randomm.</span></span><span class="sig-name descname"><span class="pre">rand_chr_until</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/data/randomm.html#rand_chr_until"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.randomm.rand_chr_until" title="Link to this definition"></a></dt>
+<dd><p>Returns a char in teh range [min_chr, max_chr] until it mets the condition
+Parameters:</p>
+<blockquote>
+<div><p>min_c (str): The left end of the range
+max_c (str): The right end of the range
+condition_fn (Callable[[str],bool]): The condition function</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>str: A char in the range [min_c, max_c] that satisfies the condition</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.randomm.rand_n_numbers">
+<span class="sig-prename descclassname"><span class="pre">data.randomm.</span></span><span class="sig-name descname"><span class="pre">rand_n_numbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/data/randomm.html#rand_n_numbers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.randomm.rand_n_numbers" title="Link to this definition"></a></dt>
+<dd><p>Returns list of int numbers or  float numbers in the range [min_n, max_n]
+Parameters:</p>
+<blockquote>
+<div><p>n (int): The number of itmes
+min_n (int|float): The left end of the range
+max_n (int|float): The right end of the range</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list[int]: A list containing int numbers or a float numbers in the range [min_n, max_n]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.randomm.rand_n_numbers_until">
+<span class="sig-prename descclassname"><span class="pre">data.randomm.</span></span><span class="sig-name descname"><span class="pre">rand_n_numbers_until</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/data/randomm.html#rand_n_numbers_until"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.randomm.rand_n_numbers_until" title="Link to this definition"></a></dt>
+<dd><p>Returns int numbers or float numbers in the range [min_n, max_n] untils it meets the condition
+Parameters:</p>
+<blockquote>
+<div><p>n (int): The number of items
+min_n (int|float): The left end of the range
+max_n (int|float): The right end of the range
+condition_fn (Callable[[int|float],bool]): The condition function</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list[int|float]: Int numbers or float numbers in the range [min_n, max_n] that satisfies the condition</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.randomm.rand_number">
+<span class="sig-prename descclassname"><span class="pre">data.randomm.</span></span><span class="sig-name descname"><span class="pre">rand_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/data/randomm.html#rand_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.randomm.rand_number" title="Link to this definition"></a></dt>
+<dd><p>Returns an int number or a float number in the range [min_n, max_n]
+Parameters:</p>
+<blockquote>
+<div><p>min_n (int|float): The left end of the range
+max_n (int|float): The right end of the range</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>int: An int number or a float number in the range [min_n, max_n]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.randomm.rand_number_until">
+<span class="sig-prename descclassname"><span class="pre">data.randomm.</span></span><span class="sig-name descname"><span class="pre">rand_number_until</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/data/randomm.html#rand_number_until"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.randomm.rand_number_until" title="Link to this definition"></a></dt>
+<dd><p>Returns an int number or a float number in the range [min_n, max_n] untils it meets the condition
+Parameters:</p>
+<blockquote>
+<div><p>min_n (int|float): The left end of the range
+max_n (int|float): The right end of the range
+condition_fn (Callable[[int|float],bool]): The condition function</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>int: An int number or a float number in the range [min_n, max_n] that satisfies the condition</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-data.user">
+<span id="data-user-module"></span><h2>data.user module<a class="headerlink" href="#module-data.user" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="data.user.get_n_numbers">
+<span class="sig-prename descclassname"><span class="pre">data.user.</span></span><span class="sig-name descname"><span class="pre">get_n_numbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/data/user.html#get_n_numbers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.user.get_n_numbers" title="Link to this definition"></a></dt>
+<dd><p>Return list of n int numbers or list of n float retrieved from the user
+:param n: the number of the items
+:param data_type: the tpye of number being retrieved
+:return: N int numbers or n float numbers retrieved from the user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.user.get_n_numbers_loop">
+<span class="sig-prename descclassname"><span class="pre">data.user.</span></span><span class="sig-name descname"><span class="pre">get_n_numbers_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/data/user.html#get_n_numbers_loop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.user.get_n_numbers_loop" title="Link to this definition"></a></dt>
+<dd><p>Return list of n numbers from the user as long as they are in a valid int or a float format
+:param n:   The number of items
+:param data_type: The type of number being retrieved
+:return:    N int numbers or n float numbers retrieved from the user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.user.get_number">
+<span class="sig-prename descclassname"><span class="pre">data.user.</span></span><span class="sig-name descname"><span class="pre">get_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/data/user.html#get_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.user.get_number" title="Link to this definition"></a></dt>
+<dd><p>Retrieves data from the user as long as it is  a valid int or float
+:param message:  A message to the user
+:param data_type: The type of number being retrieved
+:return: An int number or a float number retrieved from the user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.user.get_number_loop">
+<span class="sig-prename descclassname"><span class="pre">data.user.</span></span><span class="sig-name descname"><span class="pre">get_number_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/data/user.html#get_number_loop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.user.get_number_loop" title="Link to this definition"></a></dt>
+<dd><p>Returns an int number or float retrieved from the user
+:param message:  A message to the user
+:param data_type: The type of number being retrieved
+:return int|float: int or float retrieved from the user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.user.get_number_matches_regex">
+<span class="sig-prename descclassname"><span class="pre">data.user.</span></span><span class="sig-name descname"><span class="pre">get_number_matches_regex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/data/user.html#get_number_matches_regex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.user.get_number_matches_regex" title="Link to this definition"></a></dt>
+<dd><p>Returns an int number or a float retrieved from the user whose matches the given pattern
+:param message: A message to the user
+:param data_type: The type of number being retrieved
+:param regex: The pattern for the number being retrievec
+:return: an int or the float retrieved from the user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.user.get_number_matches_regex_loop">
+<span class="sig-prename descclassname"><span class="pre">data.user.</span></span><span class="sig-name descname"><span class="pre">get_number_matches_regex_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/data/user.html#get_number_matches_regex_loop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.user.get_number_matches_regex_loop" title="Link to this definition"></a></dt>
+<dd><p>Retrievs data from the user as long as it is in valid interger or floating point format accorgind
+to the provided pattern
+:param message: A message to the user
+:param data_type: The type of number being retrieved
+:param regex: The pattern for the number being retrievec
+:return: an int or the float retrieved from the user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.user.get_str">
+<span class="sig-prename descclassname"><span class="pre">data.user.</span></span><span class="sig-name descname"><span class="pre">get_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/data/user.html#get_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.user.get_str" title="Link to this definition"></a></dt>
+<dd><p>Returns a string retrieved from the user
+:param message:  A message to the user
+:return: A string retrieved from the user</p>
+</dd></dl>
+
+</section>
+<section id="module-data.validation">
+<span id="data-validation-module"></span><h2>data.validation module<a class="headerlink" href="#module-data.validation" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="data.validation.does_char_fall_within_range">
+<span class="sig-prename descclassname"><span class="pre">data.validation.</span></span><span class="sig-name descname"><span class="pre">does_char_fall_within_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">char</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_char</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_char</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/data/validation.html#does_char_fall_within_range"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.validation.does_char_fall_within_range" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.validation.does_number_match_regex">
+<span class="sig-prename descclassname"><span class="pre">data.validation.</span></span><span class="sig-name descname"><span class="pre">does_number_match_regex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/data/validation.html#does_number_match_regex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.validation.does_number_match_regex" title="Link to this definition"></a></dt>
+<dd><p>Checks if n matches a specified regular expression pattern based on its data type.</p>
+<dl>
+<dt>Parameters:</dt><dd><p>n (int | float): The number to be checked.
+data_type (Type[int | float]): The type of the number (int or float).
+regex (str, optional): Regular expression pattern to match against.</p>
+<blockquote>
+<div><p>If not provided, a default pattern based on the data type will be used.</p>
+</div></blockquote>
+</dd>
+<dt>Returns:</dt><dd><p>int | float: True if number matches the specified regular expression pattern, otherwise False.</p>
+</dd>
+<dt>Raises:</dt><dd><p>TypeError: If data_type is not int or float.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.validation.does_string_match_regex">
+<span class="sig-prename descclassname"><span class="pre">data.validation.</span></span><span class="sig-name descname"><span class="pre">does_string_match_regex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'^[A-Z][a-z]+$'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/data/validation.html#does_string_match_regex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.validation.does_string_match_regex" title="Link to this definition"></a></dt>
+<dd><p>Checks if a string matches a specified regular expression pattern.</p>
+<dl>
+<dt>Parameters:</dt><dd><p>text (str): The string to be checked.
+pattern (str, optional): Regular expression pattern to match against.</p>
+<blockquote>
+<div><p>The default pattern checks if the string follows a specific naming convention where
+the first letter is capitalized and the rest are lowercase.</p>
+</div></blockquote>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the string matches the specified regular expression pattern, otherwise False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data.validation.is_credit_card_valid">
+<span class="sig-prename descclassname"><span class="pre">data.validation.</span></span><span class="sig-name descname"><span class="pre">is_credit_card_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">card_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/data/validation.html#is_credit_card_valid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data.validation.is_credit_card_valid" title="Link to this definition"></a></dt>
+<dd><p>Check if a credit card number is valid according to the Luhn algorithm.</p>
+<p>Args:
+- card_number (str): The credit card number to be validated.</p>
+<p>Returns:
+- bool: True if the credit card number is valid, False otherwise.</p>
+</dd></dl>
+
+</section>
+<section id="module-data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-data" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="algorithms.strings.html" class="btn btn-neutral float-left" title="algorithms.strings package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tests.html" class="btn btn-neutral float-right" title="tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
