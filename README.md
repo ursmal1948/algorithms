@@ -1,3 +1,6 @@
+<div>
+    [DOCUMENTATION](https://ursmal1948.github.io/algorithms/)
+</div>
 <div align="center">
     <img src="logo.svg" alt="Logo">
     <h1 style="color:lightyellow;">ALGORITHMS</h1>
