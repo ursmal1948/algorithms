@@ -1,8 +1,8 @@
 [DOCUMENTATION](https://ursmal1948.github.io/algorithms/)
 <div align="center">
     <img src="logo.svg" alt="Logo">
-    <h1 style="color:lightyellow;">ALGORITHMS</h1>
-    <h2 style="color:lightskyblue;">All algorithms implemented in - PYTHON</h2>
+    <h1 style="color:lightyellow;">⭐️ ALGORITHMS ⭐️</h1>
+    <h2 style="color:lightskyblue;">All algorithms implemented in PYTHON</h2>
 </div>
 
 <div align="center">
@@ -19,7 +19,7 @@
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#getting_started">Getting started</a></li>
-        <li>Algorithms</li>
+        <li><a href="#algorithms">Algorithms</a></li>
         <ul>
         <li><a href="#numbers">Numbers</a></li>
         <li><a href="#strings">Strings</a></li>
@@ -35,7 +35,7 @@ About
 </h2>
 <h3>
 This repository contains a collection of algorithms written in Python. You can find algorithms for handlind numbers, including ciphers 
-for encryption and decryption, as well algorithms for sorting data. It is wise to learn and implement them in your projects 
+for encryption and decryption, as well for sorting data. It is wise to learn and implement them in your projects 
 💯
 </h3>
 </div>
@@ -47,7 +47,7 @@ Getting started
 </div>
 
 <div>
-<h2>
+<h2 id="algorithms">
 Algorithms
 </h2>
     <h2 id="numbers">Numbers</h2>
