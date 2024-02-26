@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>algorithms.numbers package &mdash; algorithms 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="algorithms.strings package" href="algorithms.strings.html" />
+    <link rel="prev" title="algorithms.ciphers package" href="algorithms.ciphers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            algorithms
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">algorithms</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="algorithms.html">algorithms package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="algorithms.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="algorithms.ciphers.html">algorithms.ciphers package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">algorithms.numbers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="algorithms.strings.html">algorithms.strings package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#module-algorithms.sorting">algorithms.sorting module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#module-algorithms">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">algorithms</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">algorithms</a></li>
+          <li class="breadcrumb-item"><a href="algorithms.html">algorithms package</a></li>
+      <li class="breadcrumb-item active">algorithms.numbers package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/algorithms.numbers.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="algorithms-numbers-package">
+<h1>algorithms.numbers package<a class="headerlink" href="#algorithms-numbers-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-algorithms.numbers.arithmetic_algorithms">
+<span id="algorithms-numbers-arithmetic-algorithms-module"></span><h2>algorithms.numbers.arithmetic_algorithms module<a class="headerlink" href="#module-algorithms.numbers.arithmetic_algorithms" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.arithmetic_algorithms.babylonian_sqrt">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.arithmetic_algorithms.</span></span><span class="sig-name descname"><span class="pre">babylonian_sqrt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accuracy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/arithmetic_algorithms.html#babylonian_sqrt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.arithmetic_algorithms.babylonian_sqrt" title="Link to this definition"></a></dt>
+<dd><p>Calculates the square root of a number using the Babylonian method.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The number for which the square root is to be calculated.
+accuracy (float): The level of precision for the approximation. Defaults to 0.001.</p>
+</dd>
+<dt>Returns:</dt><dd><p>float: The approximate square root of the number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.arithmetic_algorithms.binary_exponentiation">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.arithmetic_algorithms.</span></span><span class="sig-name descname"><span class="pre">binary_exponentiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/algorithms/numbers/arithmetic_algorithms.html#binary_exponentiation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.arithmetic_algorithms.binary_exponentiation" title="Link to this definition"></a></dt>
+<dd><p>Computes the result of raising a given number to the power using binary exponentiation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>number (int): The base number.
+power (int): The exponent to which the base number is raised.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The result of raising number to the power.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.arithmetic_algorithms.binary_search">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.arithmetic_algorithms.</span></span><span class="sig-name descname"><span class="pre">binary_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">looked_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/arithmetic_algorithms.html#binary_search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.arithmetic_algorithms.binary_search" title="Link to this definition"></a></dt>
+<dd><p>Performs binary search to find the index of the looked number in the sorted list of numbers</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>numbers (list[int]): A sorted list of integers.
+looked_number (int): The integer to be found in the list.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>int | bool: If the looked_number is found in the list, returns the index of the number.</dt><dd><p>If the looked_number is not found in the list, returns False.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.arithmetic_algorithms.iterative_factorial">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.arithmetic_algorithms.</span></span><span class="sig-name descname"><span class="pre">iterative_factorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/arithmetic_algorithms.html#iterative_factorial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.arithmetic_algorithms.iterative_factorial" title="Link to this definition"></a></dt>
+<dd><p>Calculates the factorial of a non-negative integer using an iterative approach.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The non-negative integer for which to calculate the factorial.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The factorial of the integer.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If n is a negative number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.arithmetic_algorithms.recursive_factorial">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.arithmetic_algorithms.</span></span><span class="sig-name descname"><span class="pre">recursive_factorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/arithmetic_algorithms.html#recursive_factorial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.arithmetic_algorithms.recursive_factorial" title="Link to this definition"></a></dt>
+<dd><p>Calculates the factorial of a non-negative integer using a recursive approach.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The non-negative integer for which to calculate the factorial.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The factorial of the integer.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If n is a negative number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algorithms.numbers.digits">
+<span id="algorithms-numbers-digits-module"></span><h2>algorithms.numbers.digits module<a class="headerlink" href="#module-algorithms.numbers.digits" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.digits.get_digit">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.digits.</span></span><span class="sig-name descname"><span class="pre">get_digit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/digits.html#get_digit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.digits.get_digit" title="Link to this definition"></a></dt>
+<dd><p>Gets the digit at a specified position in a given integer.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The integer from which to extract the digit.
+position (int): The position of the digit to retrieve.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The digit at the specified position.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If position is a negative number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.digits.move_zeroes">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.digits.</span></span><span class="sig-name descname"><span class="pre">move_zeroes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/algorithms/numbers/digits.html#move_zeroes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.digits.move_zeroes" title="Link to this definition"></a></dt>
+<dd><p>Moves all zeros to the end, maintaining the order of other elements.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>nums (list[int]): List of integers.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list[int]: The input list with zeroes at the end.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.digits.sum_digits">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.digits.</span></span><span class="sig-name descname"><span class="pre">sum_digits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/digits.html#sum_digits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.digits.sum_digits" title="Link to this definition"></a></dt>
+<dd><p>Calculates the sum of all digits of a number.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The integer for which sum of digits is to be calculated.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The sum of all digits of the number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algorithms.numbers.divisors">
+<span id="algorithms-numbers-divisors-module"></span><h2>algorithms.numbers.divisors module<a class="headerlink" href="#module-algorithms.numbers.divisors" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.divisors.count_comomon_divisors">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.divisors.</span></span><span class="sig-name descname"><span class="pre">count_comomon_divisors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/divisors.html#count_comomon_divisors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.divisors.count_comomon_divisors" title="Link to this definition"></a></dt>
+<dd><p>Calculates the number of common divisors for the given integers.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>a (int): The first integer.
+b (int): The second integer.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int | float: The common number of divisors for the integers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.divisors.count_divisors">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.divisors.</span></span><span class="sig-name descname"><span class="pre">count_divisors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/divisors.html#count_divisors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.divisors.count_divisors" title="Link to this definition"></a></dt>
+<dd><p>Counts the number of divisors for a given integer.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The integer for which to count divisors.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int | float: The number of divisors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.divisors.sum_divisors">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.divisors.</span></span><span class="sig-name descname"><span class="pre">sum_divisors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_included</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/divisors.html#sum_divisors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.divisors.sum_divisors" title="Link to this definition"></a></dt>
+<dd><p>Calculates and returns the sum of divisors for the given integer.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): Number for which the sum of divisors is determined.
+n_included (bool): Indicates whether the number n will be taken into account when summing the divisors.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int | float: The sum of divisors for the integer, or infinity if the integer is 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algorithms.numbers.function_algorithms">
+<span id="algorithms-numbers-function-algorithms-module"></span><h2>algorithms.numbers.function_algorithms module<a class="headerlink" href="#module-algorithms.numbers.function_algorithms" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.function_algorithms.bisection_root_finder">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.function_algorithms.</span></span><span class="sig-name descname"><span class="pre">bisection_root_finder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/function_algorithms.html#bisection_root_finder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.function_algorithms.bisection_root_finder" title="Link to this definition"></a></dt>
+<dd><p>Finds a root of the given function within the interval [a,b] using the bisection method
+:param func: Callable[[int|float],int|float] the function for which root is to be found
+:param a: int|float the left endpoint of the interval
+:param b: int|float the right endpoint of the interval
+:param tolerance: float the acceptable level of error in the root approximation. Default is to 1e-6
+# akceptowalny poziom bledu lub precyzji w wyniku obliczen
+:param max_iterations: int the maximum number of iterations. Default is 100.
+:return flaot: an approximation of the root within the specified tolerance
+:raises ValueErrpr: if the function has the same sign at both endpoints (func(a) * func(b) &gt;0)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.function_algorithms.horner_evaluation">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.function_algorithms.</span></span><span class="sig-name descname"><span class="pre">horner_evaluation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coefficients</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/function_algorithms.html#horner_evaluation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.function_algorithms.horner_evaluation" title="Link to this definition"></a></dt>
+<dd><p>Evaluates a polynomial represented at the specifiec value of x.
+Used often to check whether x is the root of the equation or to calculate the
+value of polynomial at x
+:param coefficients: list[int] list of coefficients representing the polynomial
+:param x: value at which the polynomial is to be evaluated
+:return int: result of the polynomial evaluation at the given value</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.function_algorithms.quadratic_roots_finder">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.function_algorithms.</span></span><span class="sig-name descname"><span class="pre">quadratic_roots_finder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/algorithms/numbers/function_algorithms.html#quadratic_roots_finder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.function_algorithms.quadratic_roots_finder" title="Link to this definition"></a></dt>
+<dd><p>Calculates the roots of a quadratic equation ax*2 + bx + c = 0
+:param a: int|float coefficient of x^2
+:param b: int|float coefficient of x
+:param c: int|float constant term, function value when x = 0
+:return tuple[int|float|commplex, int|float|complex]: a tuple containing the roots of the quadratic equation.
+The roots can be integers, floats or complex numbers.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.function_algorithms.rectangle_integration">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.function_algorithms.</span></span><span class="sig-name descname"><span class="pre">rectangle_integration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/function_algorithms.html#rectangle_integration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.function_algorithms.rectangle_integration" title="Link to this definition"></a></dt>
+<dd><p>Approximate the definite integral of a function using the rectangle rule. In other words evaluates the area under
+the curve by dividing the total area into smaller rectangles
+:param func: Callanle[[float],float] function to integrate
+:param a: float the lower limit of integration
+:param b: float the upper limit of integration
+:param n: int the number of rectangles used to divide the area under the curve
+:return float: the estimated value of the definite integral</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.function_algorithms.trapezoidal_integration">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.function_algorithms.</span></span><span class="sig-name descname"><span class="pre">trapezoidal_integration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/function_algorithms.html#trapezoidal_integration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.function_algorithms.trapezoidal_integration" title="Link to this definition"></a></dt>
+<dd><p>Approximate the definite integral of a function using the trapezoidal rule
+Evaluates area under the curve by dividing the total area into smaller trapezoids
+:param func: Callable[[float],float] function to be integrate
+:param a: float the lower limit of integration
+:param b: float the upper limit of integration
+:param n: the number of trapezoids used to divide the area under the curve
+:return float: the estimated value of the definite integral</p>
+</dd></dl>
+
+</section>
+<section id="module-algorithms.numbers.geometric_algorithms">
+<span id="algorithms-numbers-geometric-algorithms-module"></span><h2>algorithms.numbers.geometric_algorithms module<a class="headerlink" href="#module-algorithms.numbers.geometric_algorithms" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="algorithms.numbers.geometric_algorithms.Point">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">algorithms.numbers.geometric_algorithms.</span></span><span class="sig-name descname"><span class="pre">Point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/algorithms/numbers/geometric_algorithms.html#Point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.geometric_algorithms.Point" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="algorithms.numbers.geometric_algorithms.Point.x">
+<span class="sig-name descname"><span class="pre">x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#algorithms.numbers.geometric_algorithms.Point.x" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="algorithms.numbers.geometric_algorithms.Point.y">
+<span class="sig-name descname"><span class="pre">y</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#algorithms.numbers.geometric_algorithms.Point.y" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.geometric_algorithms.are_points_collinear">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.geometric_algorithms.</span></span><span class="sig-name descname"><span class="pre">are_points_collinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#algorithms.numbers.geometric_algorithms.Point" title="algorithms.numbers.geometric_algorithms.Point"><span class="pre">Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#algorithms.numbers.geometric_algorithms.Point" title="algorithms.numbers.geometric_algorithms.Point"><span class="pre">Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#algorithms.numbers.geometric_algorithms.Point" title="algorithms.numbers.geometric_algorithms.Point"><span class="pre">Point</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/geometric_algorithms.html#are_points_collinear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.geometric_algorithms.are_points_collinear" title="Link to this definition"></a></dt>
+<dd><p>Checks if three points are collinear.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>point1 (Point): The first point.
+point2 (Point): The second point.
+point3 (Point): The third point.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the points are collinear, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.geometric_algorithms.distance_between_points">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.geometric_algorithms.</span></span><span class="sig-name descname"><span class="pre">distance_between_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#algorithms.numbers.geometric_algorithms.Point" title="algorithms.numbers.geometric_algorithms.Point"><span class="pre">Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#algorithms.numbers.geometric_algorithms.Point" title="algorithms.numbers.geometric_algorithms.Point"><span class="pre">Point</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/geometric_algorithms.html#distance_between_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.geometric_algorithms.distance_between_points" title="Link to this definition"></a></dt>
+<dd><p>Calculates the distance between two points in a 2-dimensional plane.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>p1 (Point): The first point.
+p2 (Point): The second point.</p>
+</dd>
+<dt>Returns:</dt><dd><p>float: The distance between the two points.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.geometric_algorithms.is_triangle_rectangular">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.geometric_algorithms.</span></span><span class="sig-name descname"><span class="pre">is_triangle_rectangular</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/geometric_algorithms.html#is_triangle_rectangular"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.geometric_algorithms.is_triangle_rectangular" title="Link to this definition"></a></dt>
+<dd><p>Checks if a triangle with given side lengths is a right-angled triangle.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>s1 (int): Length of side 1.
+s2 (int): Length of side 2.
+s3 (int): Length of side 3.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the triangle is a right-angled triangle, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.geometric_algorithms.is_triangle_valid">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.geometric_algorithms.</span></span><span class="sig-name descname"><span class="pre">is_triangle_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/geometric_algorithms.html#is_triangle_valid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.geometric_algorithms.is_triangle_valid" title="Link to this definition"></a></dt>
+<dd><p>Checks if given side lengths can form a valid triangle.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>a (int): Length of side a.
+b (int): Length of side b.
+c (int): Length of side c.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the side lengths form a valid triangle, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algorithms.numbers.num_base_conversion">
+<span id="algorithms-numbers-num-base-conversion-module"></span><h2>algorithms.numbers.num_base_conversion module<a class="headerlink" href="#module-algorithms.numbers.num_base_conversion" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.num_base_conversion.any_to_decimal">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">any_to_decimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/num_base_conversion.html#any_to_decimal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.num_base_conversion.any_to_decimal" title="Link to this definition"></a></dt>
+<dd><p>Converts a number in the specified base to its decimal representation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>num_str (str): The number in the specified base.
+base (int): The base of the input number. Must be 2 or 8.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The decimal representation of the input number.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If the specified base is not 2 or 8.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.num_base_conversion.binary_to_hexadecimal">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">binary_to_hexadecimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binary_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/num_base_conversion.html#binary_to_hexadecimal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.num_base_conversion.binary_to_hexadecimal" title="Link to this definition"></a></dt>
+<dd><p>Converts a binary number to its hexadecimal representation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>binary_num (str): The binary number to convert.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The hexadecimal representation of the input binary number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.num_base_conversion.binary_to_octal">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">binary_to_octal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/num_base_conversion.html#binary_to_octal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.num_base_conversion.binary_to_octal" title="Link to this definition"></a></dt>
+<dd><p>Converts a binary number to its octal representation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>binary (str): The binary number to convert.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The octal representation of the input binary number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.num_base_conversion.decimal_to_any">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">decimal_to_any</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/num_base_conversion.html#decimal_to_any"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.num_base_conversion.decimal_to_any" title="Link to this definition"></a></dt>
+<dd><p>Converts a decimal number to its representation in the specified base.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The decimal number to convert.
+base (int): The base to convert the number to. Must be 2 or 8.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The number’s representation in the specified base.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If the specified base is not 2 or 8.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.num_base_conversion.decimal_to_hexadecimal">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">decimal_to_hexadecimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/num_base_conversion.html#decimal_to_hexadecimal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.num_base_conversion.decimal_to_hexadecimal" title="Link to this definition"></a></dt>
+<dd><p>Converts a decimal number to its hexadecimal representation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The decimal number to convert.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The hexadecimal representation of the input decimal number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.num_base_conversion.hexadecimal_to_binary">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">hexadecimal_to_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hex_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/num_base_conversion.html#hexadecimal_to_binary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.num_base_conversion.hexadecimal_to_binary" title="Link to this definition"></a></dt>
+<dd><p>Converts a hexadecimal number to its binary representation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>hex_num (str): The hexadecimal number to convert.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The binary representation of the input hexadecimal number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.num_base_conversion.hexadecimal_to_decimal">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">hexadecimal_to_decimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/num_base_conversion.html#hexadecimal_to_decimal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.num_base_conversion.hexadecimal_to_decimal" title="Link to this definition"></a></dt>
+<dd><p>Converts a hexadecimal number to its decimal representation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>num_str (str): The hexadecimal number to convert.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The decimal representation of the input hexadecimal number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.num_base_conversion.hexadecimal_to_octal">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">hexadecimal_to_octal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hexadecimal_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/num_base_conversion.html#hexadecimal_to_octal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.num_base_conversion.hexadecimal_to_octal" title="Link to this definition"></a></dt>
+<dd><p>Converts a hexadecimal number to its octal representation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>hexadecimal_str (str): The hexadecimal number to convert.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The octal representation of the input hexadecimal number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.num_base_conversion.octal_to_binary">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">octal_to_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">octal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/num_base_conversion.html#octal_to_binary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.num_base_conversion.octal_to_binary" title="Link to this definition"></a></dt>
+<dd><p>Converts an octal number to its binary representation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>octal (int): The octal number to convert.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The binary representation of the input octal number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.num_base_conversion.octal_to_hexadecimal">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">octal_to_hexadecimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">octal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/num_base_conversion.html#octal_to_hexadecimal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.num_base_conversion.octal_to_hexadecimal" title="Link to this definition"></a></dt>
+<dd><p>Converts an octal number to its hexadecimal representation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>octal (int): The octal number to convert.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The hexadecimal representation of the input octal number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algorithms.numbers.primes">
+<span id="algorithms-numbers-primes-module"></span><h2>algorithms.numbers.primes module<a class="headerlink" href="#module-algorithms.numbers.primes" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="algorithms.numbers.primes.ErastothenesSieve">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">algorithms.numbers.primes.</span></span><span class="sig-name descname"><span class="pre">ErastothenesSieve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/algorithms/numbers/primes.html#ErastothenesSieve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.primes.ErastothenesSieve" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for checking prime numbers using Erastothenes sieve and another method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="algorithms.numbers.primes.ErastothenesSieve.is_prime">
+<span class="sig-name descname"><span class="pre">is_prime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/primes.html#ErastothenesSieve.is_prime"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.primes.ErastothenesSieve.is_prime" title="Link to this definition"></a></dt>
+<dd><p>Checks if a given number is prime using the sieve
+:param n: the number to check
+:return bool: True if the number is prime, False otherwise
+:raises ValueError: if n is out of the range of the sieve</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.primes.get_prime_factors">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.primes.</span></span><span class="sig-name descname"><span class="pre">get_prime_factors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/algorithms/numbers/primes.html#get_prime_factors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.primes.get_prime_factors" title="Link to this definition"></a></dt>
+<dd><p>Determines the prime factors of a given number
+:param n: int the number for which prime factors will be determined. Must be an integer greater than 1.
+:return: A list containing the prime factors of the number n. Each factory may appear in the list more than once,
+depending on its multiplicity in the prime factorization of n.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.primes.is_perfect_number">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.primes.</span></span><span class="sig-name descname"><span class="pre">is_perfect_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/primes.html#is_perfect_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.primes.is_perfect_number" title="Link to this definition"></a></dt>
+<dd><p>Checks if the number is a perfect number.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): Number to check.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if n is a perfect number, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algorithms.numbers.primes.is_prime_basic">
+<span class="sig-prename descclassname"><span class="pre">algorithms.numbers.primes.</span></span><span class="sig-name descname"><span class="pre">is_prime_basic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algorithms/numbers/primes.html#is_prime_basic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algorithms.numbers.primes.is_prime_basic" title="Link to this definition"></a></dt>
+<dd><p>Checking if the number is prime
+:param n: int the integer to be checked for a prime number
+:return bool: True if the number is, otherwise False</p>
+</dd></dl>
+
+</section>
+<section id="module-algorithms.numbers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-algorithms.numbers" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="algorithms.ciphers.html" class="btn btn-neutral float-left" title="algorithms.ciphers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="algorithms.strings.html" class="btn btn-neutral float-right" title="algorithms.strings package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
