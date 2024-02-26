@@ -1,14 +1,3 @@
-<style>
-    li {
-        margin-bottom: 10px;
-        font-size: 17px;
-    }
-    /*  ul {*/
-    /*    margin-bottom: 10px;*/
-    /*    font-weight: lighter;*/
-    /*}*/
-</style>
-
 <div align="center">
     <img src="logo.svg" alt="Logo">
     <h1 style="color:lightyellow;">ALGORITHMS</h1>
