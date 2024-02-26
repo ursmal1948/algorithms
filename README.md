@@ -1,6 +1,4 @@
-<div>
-    [DOCUMENTATION](https://ursmal1948.github.io/algorithms/)
-</div>
+[DOCUMENTATION](https://ursmal1948.github.io/algorithms/)
 <div align="center">
     <img src="logo.svg" alt="Logo">
     <h1 style="color:lightyellow;">ALGORITHMS</h1>
@@ -19,6 +17,8 @@
 <div>
     <h2>Table of Contents</h2>
     <ul>
+        <li>About</li>
+        <li>Getting started</li>
         <li>Algorithms</li>
         <ul>
         <li><a href="#numbers">Numbers</a></li>
@@ -26,13 +26,30 @@
         <li><a href="#ciphers">Ciphers</a></li>
         <li><a href="#sorting">Sorting</a></li>
         </ul>
-        <li>Getting started</li>
     </ul>
 </div>
 
-
+<div>
+<h2>
+About
+</h2>
+<h3>
+This repository contains a collection of algorithms written in Python. You can find algorithms for handlind numbers, including ciphers 
+for encryption and decryption, as well algorithms for sorting data. It is wise to learn and implement them in your projects 
+💯
+</h3>
+</div>
 
 <div>
+<h2>
+Getting started
+</h2>
+</div>
+
+<div>
+<h2>
+Algorithms
+</h2>
     <h2 id="numbers">Numbers</h2>
     <h3>
     Digits module
