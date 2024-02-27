@@ -22,6 +22,7 @@
         <li><a href="#algorithms">Algorithms</a></li>
         <ul>
         <li><a href="#numbers">Numbers</a></li>
+        <li><a href="#math">Math</a></li>
         <li><a href="#strings">Strings</a></li>
         <li><a href="#ciphers">Ciphers</a></li>
         <li><a href="#sorting">Sorting</a></li>
@@ -57,8 +58,7 @@ pip install algorithms
 </div>
 
 <div>
-<h2 id="ALGORITHMS">
-
+<h2 id="algorithms">
 <h2 style="text-align:center;">OVERVIEW OF ALGORITHMS</h2>
 
 <font size="+1">
@@ -79,36 +79,6 @@ pip install algorithms
 </li>
 </ul>
     </h3>
-    <h3>
-    Arithmetic algorithms
-<ul style="margin-bottom: 10px; font-weight: lighter;">
-        <li>binary_search</li>
-        <li>babylonian_sqrt</li>    
-        <li>binary_exponentiation</li> 
-        <li>iterative_factorial</li> 
-        <li>recursive_factorial</li>
-</ul>
-    </h3>
- <h3>
-    Geometric algorithms
-<ul style="margin-bottom: 10px; font-weight: lighter;">
-        <li>distane_between_points</li>
-        <li>babylonian_sqrt</li>    
-        <li>are_points_collinear</li>   
-        <li>is_triangle_valid</li>   
-        <li>is_triangle_rectangular</li>
-</ul>
-    </h3>
- <h3>
-    Function algorithms
-<ul style="margin-bottom: 10px; font-weight: lighter;">
-        <li>bisection_root_finder</li>
-        <li>quadratic_roots_finder</li>    
-        <li>horner_evaluation</li>  
-        <li>trapezoidal_integration</li>  
-        <li>rectangular_integration</li>  
-</ul>
-    </h3>
  <h3>
     Number base conversion
 <ul style="margin-bottom: 10px; font-weight: lighter;">
@@ -123,7 +93,7 @@ pip install algorithms
  <h3>
     Primes
 <ul style="margin-bottom: 10px; font-weight: lighter;">
-        <li>Eratothenes Sieve</li>   
+        <li>Eratosthenes Sieve</li>   
         <li>is_prime_basic</li>   
         <li>get_prime_factors</li>   
         <li>is_perfect_number</li>   
@@ -138,6 +108,37 @@ pip install algorithms
         <li>sum_divisors</li>
 </ul>
     </h3>
+<h2 id="math">Math</h2>
+<h3>
+    Arithmetic algorithms
+<ul style="margin-bottom: 10px; font-weight: lighter;">
+        <li>binary_search</li>
+        <li>babylonian_sqrt</li>    
+        <li>binary_exponentiation</li> 
+        <li>iterative_factorial</li> 
+        <li>recursive_factorial</li>
+</ul>
+    </h3>
+<h3>
+    Function algorithms
+<ul style="margin-bottom: 10px; font-weight: lighter;">
+        <li>bisection_root_finder</li>
+        <li>quadratic_roots_finder</li>    
+        <li>horner_evaluation</li>  
+        <li>trapezoidal_integration</li>  
+        <li>rectangular_integration</li> 
+</ul>
+    </h3>
+<h3>
+    Geometric algorithms
+<ul style="margin-bottom: 10px; font-weight: lighter;">
+        <li>distane_between_points</li>
+        <li>are_points_collinear</li>   
+        <li>is_triangle_valid</li>   
+        <li>is_triangle_rectangular</li>
+</ul>
+    </h3>
+
 <h2 id="strings">Strings</h2>
 <h3>
     String analysis
@@ -148,9 +149,8 @@ pip install algorithms
         <li>is_subsequence</li>
         <li>count_substring_occurences</li>
         <li>contains_duplicates</li>
-        
 </ul>
-    </h3>
+      </h3>
 <h3>
     String manipulation
 <ul style="margin-bottom: 10px; font-weight: lighter;">
