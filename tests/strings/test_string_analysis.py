@@ -101,7 +101,7 @@ class TestContainsDuplicates:
     def unique_elements(self, request):
         return request.param
 
-    @pytest.fixture(params=[[5, 6, 6, 7, 8], ['b', 'c', 'd', 'd']])
+    @pytest.fixture(params=[[5, 6, 6, 7, 8], ['b', 'c', 'd', 'D']])
     def duplicate_elements(self, request):
         return request.param
 
