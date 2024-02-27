@@ -59,8 +59,7 @@ pip install algorithms
 
 <div>
 <h2 id="algorithms">
-<h2 style="text-align:center;">OVERVIEW OF ALGORITHMS</h2>
-
+<h2 align="center">OVERVIEW OF ALGORITHMS</h2>
 <font size="+1">
 </font>
 </h2>
@@ -70,7 +69,7 @@ pip install algorithms
     <h2 id="numbers">Numbers</h2>
     <h3>
     Digits module
-<ul style="margin-bottom: 10px; font-weight: 300;">
+<ul font-weight: 300>
         <li>
         get_digits
         </li>
