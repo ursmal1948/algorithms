@@ -70,7 +70,7 @@ pip install algorithms
     <h2 id="numbers">Numbers</h2>
     <h3>
     Digits module
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>
         get_digits
         </li>
@@ -81,7 +81,7 @@ pip install algorithms
     </h3>
  <h3>
     Number base conversion
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>decimal_to_any & any_to_decimal</li>
         <li>decimal_to_hexadecimal & hexadecimal_to_decimal</li>
         <li>binary_to_hexadecimal & hexadecimal_to_binary</li>    
@@ -92,7 +92,7 @@ pip install algorithms
     </h3>
  <h3>
     Primes
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>Eratosthenes Sieve</li>   
         <li>is_prime_basic</li>   
         <li>get_prime_factors</li>   
@@ -102,7 +102,7 @@ pip install algorithms
     </h3>
  <h3>
     Divisors
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
          <li>count_divisors</li>
         <li>count_common_divisors</li>
         <li>sum_divisors</li>
@@ -111,7 +111,7 @@ pip install algorithms
 <h2 id="math">Math</h2>
 <h3>
     Arithmetic algorithms
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>binary_search</li>
         <li>babylonian_sqrt</li>    
         <li>binary_exponentiation</li> 
@@ -121,7 +121,7 @@ pip install algorithms
     </h3>
 <h3>
     Function algorithms
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>bisection_root_finder</li>
         <li>quadratic_roots_finder</li>    
         <li>horner_evaluation</li>  
@@ -131,7 +131,7 @@ pip install algorithms
     </h3>
 <h3>
     Geometric algorithms
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>distane_between_points</li>
         <li>are_points_collinear</li>   
         <li>is_triangle_valid</li>   
@@ -142,7 +142,7 @@ pip install algorithms
 <h2 id="strings">Strings</h2>
 <h3>
     String analysis
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>is_anagram</li>
         <li>is_pangram</li>
         <li>is_palindrome</li>
@@ -153,7 +153,7 @@ pip install algorithms
       </h3>
 <h3>
     String manipulation
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>reverse_string</li>
         <li>string_compression</li>
         <li>custom_join</li>
@@ -163,7 +163,7 @@ pip install algorithms
     </h3>
 <h3>
     Custom string sorting
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>sort_items</li>
         <li>compare_vowels_count</li>
         <li>compare_chars_sum</li>
@@ -171,7 +171,7 @@ pip install algorithms
     </h3>
 <h2 id="ciphers">Ciphers</h2>
 <h3>
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>caesar_cipher</li>
         <li>vigenere_cipher</li>
         <li>morse_code</li>
@@ -180,7 +180,7 @@ pip install algorithms
 <h2 id="sorting">Sorting</h2>
 <h3>
 
-<ul style="margin-bottom: 10px; font-weight: lighter;">
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>quick_sort</li>
         <li>bubble_sort</li>
         <li>merge_sort</li>
