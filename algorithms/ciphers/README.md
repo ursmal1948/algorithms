@@ -43,13 +43,13 @@ vigenere_square = VigenereCipher("CAT")
 ```
 
 ```
-# Encrypting a message
+# Encrypting a text
 plaintext = "HOME"
-encrypted_text = vigenere_square.encrypt(plaintext)<br>
+encrypted_text = vigenere_square.encrypt(plaintext)
 print(f'Encrypted: {encrypted_text}')
 ```
 ```
-# Decrypting a message
+# Decrypting a text
 decrypted_text = vigenere_square.decrypt(encrypted_text)
 print(f'Decrypted: {decrypted_text}')
 ```  
@@ -59,7 +59,7 @@ print(f'Decrypted: {decrypted_text}')
 <font size="+1">
 The Caesar cipher is one of the simplest and most widely 
 known encryption techniques. It shifts the letters of the alphabet by a certain 
-number of places.<br>
+number of places down or up the alphabet.<br>
 Here's how you can use it:
 
 ```
@@ -72,14 +72,37 @@ shift = 2
 caesar_cipher = CaesarCipher(shift)
 ```
 ```
-# Encrypting a message
+# Encrypting a text
 plaintext = 'ABCD'
 encrypted_text = caesar_cipher.encrypt(plaintext)
 print(f'Encrypted: {encrypted_text}')
 ```
 ```
-# Decrypting a message
+# Decrypting a text
 decrypted_text = caesar_cipher.decrypt(encrypted_text)
+print(f'Decrypted: {decrypted_text}')
+```
+</font>
+
+## Morse Code
+<font size="+1">
+
+Morse code is a method used in telecommunication to encode text characters 
+as sequences of two different signal durations, called dots and dashes.<br>
+Here is how you can use it:<br>
+```
+Creating an instance of Morse code
+morse_code = MorseCode()
+```
+```
+# Encrypting a text
+plaintext = 'HOUSE'
+encrypted_text = morse_code.encrypt(plaintext)
+print(f'Encrypted: {encrypted_text}')
+```
+```
+# Decrypting a text
+decrypted_text = morse_code.decrypt(encrypted_text)
 print(f'Decrypted: {decrypted_text}')
 ```
 </font>

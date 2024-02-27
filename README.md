@@ -18,7 +18,7 @@
     <h2>Table of Contents</h2>
     <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#getting_started">Getting started</a></li>
+        <li><a href="#installation">Installation</a></li>
         <li><a href="#algorithms">Algorithms</a></li>
         <ul>
         <li><a href="#numbers">Numbers</a></li>
@@ -31,25 +31,42 @@
 
 <div>
 <h2 id="about">
-About
-</h2>
-<h3>
-This repository contains a collection of algorithms written in Python. You can find algorithms for handlind numbers, including ciphers 
+
+## About
+<font size="+1">
+This repository contains a collection of algorithms written in Python. You can find algorithms for handling numbers, including ciphers 
 for encryption and decryption, as well for sorting data. It is wise to learn and implement them in your projects 
-💯
-</h3>
-</div>
-
-<div>
-<h2 id="getting_started">
-Getting started
+💯<br>
+</font>
 </h2>
 </div>
 
 <div>
-<h2 id="algorithms">
-Algorithms
+<h2 id="installation">
+
+## Installation
+<font size="+1">
+To install this library and access algorithms, you can use pip:<br>
+<br>
+  
+```
+pip install algorithms
+```
+</font>
 </h2>
+</div>
+
+<div>
+<h2 id="ALGORITHMS">
+
+<h2 style="text-align:center;">OVERVIEW OF ALGORITHMS</h2>
+
+<font size="+1">
+</font>
+</h2>
+</div>
+
+<div>
     <h2 id="numbers">Numbers</h2>
     <h3>
     Digits module
