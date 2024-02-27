@@ -9,7 +9,8 @@ Vigenère cipher, Caesar cipher, and Morse code.
 ## Installation
 <font size="+1">
 To install the "algorithms" library and access the this package, you can use pip:<br>
-
+<br>
+  
 ```
 pip install algorithms
 ```
@@ -28,7 +29,8 @@ is usually referred to as the Vigenère Square.The first row of this table has t
 English letters. Starting with the second row, each row has the letters 
 shifted to the left one position in a cyclic way. For example, when B is shifted to 
 the first position on the second row, the letter A moves to the end.<br>
-
+<br>
+  
 ```
 from algorithms.ciphers import vigenere
 ```
@@ -41,7 +43,7 @@ vigenere_square = VigenereSquare("CAT")
 
 ```
 # Encrypting a message
-plaintext = "HELLO"
+plaintext = "HOME"
 encrypted_text = vigenere_square.encrypt(plaintext)<br>
 print(f'Encrypted: {encrypted_text}')
 ```
