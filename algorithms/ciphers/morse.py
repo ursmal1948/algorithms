@@ -3,7 +3,7 @@ from typing import ClassVar
 
 
 @dataclass
-class MorseCipher:
+class MorseCode:
     """
     A class for Morse Code encryption and decryption
     Class Attribute
@@ -23,7 +23,7 @@ class MorseCipher:
                                             '7': '--...', '8': '---..', '9': '----.',
                                             '0': '-----', ',': '--..--', '.': '.-.-.-',
                                             '?': '..--..', '/': '-..-.', '-': '-....-',
-                                            '(': '-.--.', ')': '-.--.-', ' ': '|'
+                                            '(': '-.--.', ')': '-.--.-',
                                             }
 
     def encrypt(self, text: str) -> str:
@@ -45,10 +45,10 @@ class MorseCipher:
         :return str: the decrypted original text
         :raises ValueError: if a character in the text is not present in the reversed Morse code dictionary
         """
+
         encoded_chars = encrypted_text.split("|")
         reversed_morse_code = {value: key for key, value in self.morse_code.items()}
         chars = []
         for c in encoded_chars:
-            chars.append(reversed_morse_code[c.upper() if c.isalpha() else c])
-
+            chars.append(reversed_morse_code[c if c.isalpha() else c])
         return ''.join(chars)
