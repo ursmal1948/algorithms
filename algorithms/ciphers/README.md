@@ -29,6 +29,7 @@ is usually referred to as the Vigenère Square.The first row of this table has t
 English letters. Starting with the second row, each row has the letters 
 shifted to the left one position in a cyclic way. For example, when B is shifted to 
 the first position on the second row, the letter A moves to the end.<br>
+Here's how you can use it:
 <br>
   
 ```
@@ -36,7 +37,7 @@ from algorithms.ciphers import vigenere
 ```
 
 ```
-# Creating instance of vigenere square
+# Creating an instance of vigenere square
 key = "CAT" <br>
 vigenere_square = VigenereSquare("CAT")
 ```
@@ -50,6 +51,35 @@ print(f'Encrypted: {encrypted_text}')
 ```
 # Decrypting a message
 decrypted_text = vigenere_cipher.decrypt(encrypted_text)
+print(f'Decrypted: {decrypted_text}')
+```
+</font>
+
+## Caesar Cipher
+<font size="+1">
+The Caesar cipher is one of the simplest and most widely 
+known encryption techniques. It shifts the letters of the alphabet by a certain 
+number of places.<br>
+Here's how you can use it:
+
+```
+from algorithms.ciphers import caesar
+```
+
+```
+# Creating an instance of caesar cipher
+shift = 2
+caesar_cipher = CaesarCipher(shift)
+```
+```
+# Encrypting a message
+plaintext = 'ABCD'
+encrypted_text = caesar_cipher.encrypt(plaintext)
+print(f'Encrypted: {encrypted_text}')
+```
+```
+# Decrypting a message
+decrypted_text = caesar_cipher.decrypt(encrypted_text)
 print(f'Decrypted: {decrypted_text}')
 ```
 </font>
