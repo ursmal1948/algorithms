@@ -1,14 +1,14 @@
-# CIPHERS PACKAGE
+# 🔐 CIPHERS PACKAGE 🔐
 ## Overview
 <font size="+1">
-Weslcome to the "ciphers" package of the "algorithms" library. This package
-provides implementationsof various classical ciphers, including 
+Welcome to the "ciphers" package of the "algorithms" library. This package
+provides implementations of various classical ciphers, including 
 Vigenère cipher, Caesar cipher, and Morse code.
 </font>
 
 ## Installation
 <font size="+1">
-To install the "algorithms" library and access the this package, you can use pip:<br>
+To install the "algorithms" library and access this package, you can use pip:<br>
 <br>
   
 ```
@@ -19,12 +19,12 @@ pip install algorithms
 
 ## Usage
 <font size="+1">
-Once installed, you can import ciphers package and utilize its functionalities in Python projects 
+Once installed, you can import the ciphers package and utilize its functionalities in Python projects 
 </font>
 
 ## Vigenère Cipher
 <font size="+1">
-The Vigenère cipher uses a 26×26 table with A to Z as the row heading and column heading This table
+The Vigenère cipher uses a 26×26 table with A to Z as the row heading and column heading. This table
 is usually referred to as the Vigenère Square.The first row of this table has the 26
 English letters. Starting with the second row, each row has the letters 
 shifted to the left one position in a cyclic way. For example, when B is shifted to 
@@ -37,9 +37,9 @@ from algorithms.ciphers import vigenere
 ```
 
 ```
-# Creating an instance of vigenere square
+# Creating an instance of Vigenère square
 key = "CAT" <br>
-vigenere_square = VigenereSquare("CAT")
+vigenere_square = VigenereCipher("CAT")
 ```
 
 ```
@@ -50,12 +50,12 @@ print(f'Encrypted: {encrypted_text}')
 ```
 ```
 # Decrypting a message
-decrypted_text = vigenere_cipher.decrypt(encrypted_text)
+decrypted_text = vigenere_square.decrypt(encrypted_text)
 print(f'Decrypted: {decrypted_text}')
-```
+```  
 </font>
 
-## Caesar Cipher
+## Caesar Cipher 
 <font size="+1">
 The Caesar cipher is one of the simplest and most widely 
 known encryption techniques. It shifts the letters of the alphabet by a certain 
@@ -67,7 +67,7 @@ from algorithms.ciphers import caesar
 ```
 
 ```
-# Creating an instance of caesar cipher
+# Creating an instance of Caesar cipher
 shift = 2
 caesar_cipher = CaesarCipher(shift)
 ```
