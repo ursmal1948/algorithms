@@ -1,5 +1,5 @@
 import pytest
-from algorithms.numbers.arithmetic_algorithms import (
+from algorithms.math.arithmetic_algorithms import (
     iterative_factorial,
     recursive_factorial,
     binary_search,
@@ -7,7 +7,7 @@ from algorithms.numbers.arithmetic_algorithms import (
     babylonian_sqrt
 )
 
-from ..conftest import ge_0_number_and_expected_factorial_result
+from tests.conftest import ge_0_number_and_expected_factorial_result
 
 
 class TestBinarySearch:

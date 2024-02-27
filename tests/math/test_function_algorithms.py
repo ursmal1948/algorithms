@@ -1,6 +1,6 @@
 import unittest
 import pytest
-from algorithms.numbers.function_algorithms import (
+from algorithms.math.function_algorithms import (
     bisection_root_finder,
     quadratic_roots_finder,
     horner_evaluation,
