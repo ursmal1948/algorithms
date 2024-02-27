@@ -19,14 +19,14 @@ class TestCaesarWithDefaultShift(unittest.TestCase):
         for case in TestCaesarWithDefaultShift.test_cases:
             with self.subTest(case=case):
                 text, expected_encrypted_text = case
-                encrypted_text = self.caesar_cipher.encrypt_text(text)
+                encrypted_text = self.caesar_cipher.encrypt(text)
                 self.assertEqual(encrypted_text, expected_encrypted_text)
 
     def test_decrypt(self):
         for case in TestCaesarWithDefaultShift.test_cases:
             with self.subTest(case=case):
                 expected_decrypted_text, encrypted_text = case
-                decrypted_text = self.caesar_cipher.decrypt_text(encrypted_text)
+                decrypted_text = self.caesar_cipher.decrypt(encrypted_text)
                 self.assertEqual(decrypted_text, expected_decrypted_text)
 
 
@@ -45,12 +45,12 @@ class TestCaesarWithCustomShift(unittest.TestCase):
         for case in TestCaesarWithCustomShift.test_cases:
             with self.subTest(case=case):
                 text, expected_encrypted_text, shift = case
-                encrypted_text = CaesarCipher(shift).encrypt_text(text)
+                encrypted_text = CaesarCipher(shift).encrypt(text)
                 assert encrypted_text == expected_encrypted_text
 
     def test_decrypt(self):
         for case in self.test_cases:
             with self.subTest(case=case):
                 expected_decrypted_text, encrypted_text, shift = case
-                decrypted_text = CaesarCipher(shift).decrypt_text(encrypted_text)
+                decrypted_text = CaesarCipher(shift).decrypt(encrypted_text)
                 assert decrypted_text == expected_decrypted_text

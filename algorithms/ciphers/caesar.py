@@ -38,7 +38,7 @@ class CaesarCipher:
             return self.sequence[(self.sequence.index(char) - self.shift) % 26]
         return char
 
-    def encrypt_text(self, text: str) -> str:
+    def encrypt(self, text: str) -> str:
         """
         Encrypts a given text using the Caesar cipher
         :param text: str, the text to be encrypted
@@ -46,7 +46,7 @@ class CaesarCipher:
         """
         return ''.join([self._encrypt_char(c) for c in text])
 
-    def decrypt_text(self, encrypted_text: str) -> str:
+    def decrypt(self, encrypted_text: str) -> str:
         """
          Decrypts a given encrypted text using the Caesar cipher
         :param encrypted_text: str, the encrypted text to be decrypted
