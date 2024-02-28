@@ -48,10 +48,24 @@ for encryption and decryption, as well for sorting data. It is wise to learn and
     <h2 id="documentation">Documentation</h2>
     <font size="+1">
         Comprehensive documentation available at this link:<br>
-        <a href="https://ursmal1948.github.io/algorithms/" target="_blank">SPHINX DOCUMENTATION</a>
+        <a href="https://ursmal1948.github.io/algorithms/" target="_blank">SPHINX DOCUMENTATION</a><br>
     </font>
 </div>
+<div>
+<h2 id="about">
 
+<font size="+1"> 
+📄 Feel free to explore detailed README documentation for each package below 📃
+
+
+[NUMBERS](algorithms/numbers/README.md) <br>
+[MATH](algorithms/math/README.md)<br>
+[STRINGS](algorithms/strings/README.md)<br>
+[CIPHERS](algorithms/ciphers/README.md)<br>
+[SORTING](algorithms/sorting/README.md)
+</font>
+</h2>
+</div>
 <div>
 <h2 id="installation">
 
