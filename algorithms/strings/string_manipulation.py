@@ -1,7 +1,7 @@
 from collections import Counter, OrderedDict
 
 
-def reverse_string(text: str) -> str:
+def reverse(text: str) -> str:
     """
     Reverses a given string.
 
@@ -19,7 +19,7 @@ def reverse_string(text: str) -> str:
     return ''.join(backwards)
 
 
-def string_compression(text: str) -> str:
+def compress(text: str) -> str:
     """
     Compresses a given string by representing the count of occurrences for each character.
 
@@ -61,10 +61,29 @@ def custom_join(words: list[str], separator: str = '') -> str:
     return result
 
 
-# It will be in ciphers branch after rebasing main.
-def lower_string(text: str) -> str:
+def lower(text: str) -> str:
+    """
+    Converts all uppercase letters in the string to lowercase.
+
+    Parameters:
+        text (str): The string to be converted to lowercase.
+
+    Returns:
+        str: The string with all uppercase letters converted to lowercase.
+    """
+
     return ''.join([chr(ord(c) + 32) if c.isupper() else c for c in text])
 
 
-def upper_string(text: str) -> str:
+def upper(text: str) -> str:
+    """
+    Converts all lowercase letters in the string to uppercase.
+
+    Parameters:
+        text (str): The string to be converted to uppercase.
+
+    Returns:
+        str: The string with all lowercase letters converted to uppercase.
+    """
+
     return ''.join([chr(ord(c) - 32) if c.islower() else c for c in text])

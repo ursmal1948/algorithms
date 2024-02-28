@@ -2,8 +2,8 @@ import unittest
 
 import pytest
 from algorithms.strings.string_manipulation import (
-    reverse_string,
-    string_compression,
+    reverse,
+    compress,
     custom_join
 )
 
@@ -14,7 +14,7 @@ class TestReverse(unittest.TestCase):
     def test_reverse_string(self):
         for word in TestReverse.words_for_reversal:
             with self.subTest(word=word):
-                self.assertEqual(reverse_string(word), word[::-1])
+                self.assertEqual(reverse(word), word[::-1])
 
 
 class TestCompression:
@@ -25,7 +25,7 @@ class TestCompression:
 
     ])
     def test_string_compression(self, text, expected_compressed_text):
-        assert string_compression(text) == expected_compressed_text
+        assert compress(text) == expected_compressed_text
 
 
 class TestCustomJoin:
