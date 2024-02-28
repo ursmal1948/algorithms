@@ -18,6 +18,7 @@
     <h2>Table of Contents</h2>
     <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#documentation">Documentation</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#algorithms">Algorithms</a></li>
         <ul>
@@ -40,6 +41,15 @@ for encryption and decryption, as well for sorting data. It is wise to learn and
 💯<br>
 </font>
 </h2>
+</div>
+
+
+<div>
+    <h2 id="documentation">Documentation</h2>
+    <font size="+1">
+        Comprehensive documentation available at this link:<br>
+        <a href="https://ursmal1948.github.io/algorithms/" target="_blank">SPHINX DOCUMENTATION</a>
+    </font>
 </div>
 
 <div>
@@ -68,8 +78,8 @@ pip install algorithms
 <div>
     <h2 id="numbers">Numbers</h2>
     <h3>
-    Digits module
-<ul font-weight: 300>
+    Digits 
+<ul style="margin-bottom: 10px; font-weight: 300;">
         <li>
         get_digits
         </li>
@@ -79,14 +89,11 @@ pip install algorithms
 </ul>
     </h3>
  <h3>
-    Number base conversion
+    Divisors
 <ul style="margin-bottom: 10px; font-weight: 300;">
-        <li>decimal_to_any & any_to_decimal</li>
-        <li>decimal_to_hexadecimal & hexadecimal_to_decimal</li>
-        <li>binary_to_hexadecimal & hexadecimal_to_binary</li>    
-        <li>binary_to_octal & octal_to_binary</li>    
-        <li>octal_to_hexadecimal & hexadecimal_to_octal</li>    
-
+         <li>count_divisors</li>
+        <li>count_common_divisors</li>
+        <li>sum_divisors</li>
 </ul>
     </h3>
  <h3>
@@ -100,11 +107,14 @@ pip install algorithms
 </ul>
     </h3>
  <h3>
-    Divisors
+    Number base conversion
 <ul style="margin-bottom: 10px; font-weight: 300;">
-         <li>count_divisors</li>
-        <li>count_common_divisors</li>
-        <li>sum_divisors</li>
+        <li>decimal_to_any & any_to_decimal</li>
+        <li>decimal_to_hexadecimal & hexadecimal_to_decimal</li>
+        <li>binary_to_hexadecimal & hexadecimal_to_binary</li>    
+        <li>binary_to_octal & octal_to_binary</li>    
+        <li>octal_to_hexadecimal & hexadecimal_to_octal</li>    
+
 </ul>
     </h3>
 <h2 id="math">Math</h2>
