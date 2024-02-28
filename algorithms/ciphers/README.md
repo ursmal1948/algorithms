@@ -19,7 +19,7 @@ pip install algorithms
 
 ## Usage
 <font size="+1">
-Once installed, you can import the ciphers package and utilize its functionalities in Python projects 
+Once installed, you can import the ciphers package and utilize its functionalities in Python. 
 </font>
 
 ## Vigenère Cipher

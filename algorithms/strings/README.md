@@ -141,7 +141,7 @@ text = string_manipulation.custom_join(items,separator)
 print(f'Joined chars: {text}') # A-B-C-D-E
 ```  
 
-#### Lower & Upper
+#### Lowercase & Upperrcase
 
 ```
 text = "MiXed CASED STRING2!"

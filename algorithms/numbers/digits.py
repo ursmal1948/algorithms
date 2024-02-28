@@ -61,4 +61,3 @@ def move_zeroes(nums: list[int]) -> list[int]:
         nums[index] = 0
         index += 1
     return nums
-
