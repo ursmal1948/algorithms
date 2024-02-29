@@ -115,7 +115,7 @@ class TestOctalHexadecimalConversion:
         (1, '1'),
         (33, '1B'),
         (520, '150'),
-        (12, '0A'),
+        (12, 'A'),
         (1277, '2BF'),
     ])
     def conversion_octal_hex_parameters(self, request):
@@ -130,3 +130,6 @@ class TestOctalHexadecimalConversion:
         expected_octal_representation, hex_representation = conversion_octal_hex_parameters
         octal_representation = hexadecimal_to_octal(hex_representation)
         assert octal_representation == expected_octal_representation
+
+
+data = ["Z", "A", "B", "D"]

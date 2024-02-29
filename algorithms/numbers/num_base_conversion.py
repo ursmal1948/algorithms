@@ -82,7 +82,11 @@ def binary_to_hexadecimal(binary_num: str) -> str:
         14: 'E',
         15: 'F'
     }
-    return ''.join([decimal_to_hex[d] if d >= 10 else str(d) for d in digits])
+
+    hexadecimal = [decimal_to_hex[d] if d >= 10 else str(d) for d in digits]
+    while hexadecimal[0] == "0":
+        hexadecimal.pop(0)
+    return ''.join(hexadecimal)
 
 
 def hexadecimal_to_binary(hex_num: str) -> str:
@@ -170,7 +174,10 @@ def binary_to_octal(binary: str) -> int:
                 sum_ += 2 ** pow_
             pow_ -= 1
         digits.append(sum_)
-    return int(''.join(str(d) for d in digits))
+
+    while digits[0] == 0:
+        digits.pop(0)
+    return int(''.join([str(d) for d in digits]))
 
 
 def octal_to_binary(octal: int) -> str:

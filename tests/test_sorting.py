@@ -1,5 +1,7 @@
 import pytest
-from algorithms.sorting import QuickSort, BubbleSort, MergeSort, SelectionSort, SortingManager
+from algorithms.sorting import (
+    QuickSort, BubbleSort, MergeSort, SelectionSort, SortingManager
+)
 
 
 class TestSortingAlgorithms:

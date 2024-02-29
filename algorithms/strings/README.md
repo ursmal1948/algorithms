@@ -1,9 +1,9 @@
-# 📝 STRINGS PACKAGE 📝
+# 📝 STRINGS ALGORITHMS 📝
 
 ## Overview
 
 <font size="+1">
-This package provides a collection of functions for working with strings. Algorithms for string analysis,
+Package "strings" provides a collection of functions for working with strings. Algorithms for string analysis,
 string manipulation and string sorting are implemented.
 
 
@@ -24,7 +24,7 @@ pip install algorithms
 ## Usage
 
 <font size="+1">
-Once installed, you can import the ciphers package and utilize its functionalities in Python projects.
+Once installed, you can import the strings package and utilize its functionalities in Python projects.
 </font>
 
 ## Strings Analysis

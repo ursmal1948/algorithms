@@ -1,4 +1,4 @@
-# 🔢 NUMBERS PACKAGE 🔢
+# 🔢 NUMBERS ALGORITHMS 🔢
 
 ## Overview
 
@@ -23,7 +23,7 @@ pip install algorithms
 ## Usage
 
 <font size="+1">
-Once installed, you can import the ciphers package and utilize its functionalities in Python. 
+Once installed, you can import the numbers package and utilize its functionalities in Python. 
 </font>
 
 ## Digits 🧮

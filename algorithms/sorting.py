@@ -69,7 +69,6 @@ class BubbleSort(Sorting):
             list[Any]
                 The sorted list.
         """
-
         sorted_data = data.copy()
         for i in range(len(sorted_data)):
             for j in range(0, len(sorted_data) - i - 1):
@@ -167,7 +166,7 @@ class SortingManager:
     """
     A class that manages the sorting strategy and performs sorting using the specified strategy.
     """
-    sorting_strategy: Sorting
+    sorting_strategy: Sorting = QuickSort()
 
     def set_sorting_strategy(self, sorting_strategy: Sorting):
         """

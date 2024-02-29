@@ -1,4 +1,4 @@
-# 🔐 CIPHERS PACKAGE 🔐
+# 🔐 CIPHERS ALGORITHMS 🔐
 ## Overview
 <font size="+1">
 Welcome to the "ciphers" package of the "algorithms" library. This package
