@@ -70,6 +70,7 @@ Comprehensive documentation available at this link: <br>
 
 <font size="+1">
 
+### Ciphers
 ```
 from algorithms.ciphers import vigenere
 ```
@@ -94,6 +95,8 @@ print(f'Decrypted: {decrypted_text}')                       # HOME
 ```  
 <br>
 
+### Strings
+
 ```
 from algorithms.strings import string_manipulation
 ```
@@ -103,6 +106,8 @@ compressed_string = string_manipulation.compress("ABCABa")
 print(f'Compression: {compressed_string}') # A2B2C1a1
 ```
 <br>
+
+### Numbers
 
 ```
 from algorithms.numbers.num_base_conversion import any_to_decimal, decimal_to_any
