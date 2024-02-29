@@ -75,6 +75,7 @@ def get_prime_factors(n: int) -> list[int]:
     :return: A list containing the prime factors of the number n. Each factory may appear in the list more than once,
     depending on its multiplicity in the prime factorization of n.
     """
+
     if n < 2:
         raise ValueError('The number must be greater than 1')
 
@@ -100,4 +101,5 @@ def is_perfect_number(n: int) -> bool:
     Returns:
         bool: True if n is a perfect number, False otherwise.
     """
+
     return sum_divisors(n, False) == n

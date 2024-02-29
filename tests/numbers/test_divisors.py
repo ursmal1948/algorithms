@@ -1,6 +1,6 @@
 import unittest
 import pytest
-from algorithms.numbers.divisors import count_divisors, count_comomon_divisors, sum_divisors
+from algorithms.numbers.divisors import count_divisors, count_common_divisors, sum_divisors
 
 
 class TestCountDivisors:
@@ -27,7 +27,7 @@ class TestCountCommonDivisors:
         (10, 10, 4)
     ])
     def test_count_common_divisors(self, number1, number2, expected_common_divisors_count):
-        common_divisors_count = count_comomon_divisors(number1, number2)
+        common_divisors_count = count_common_divisors(number1, number2)
         assert common_divisors_count == expected_common_divisors_count
 
 

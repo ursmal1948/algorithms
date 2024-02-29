@@ -11,6 +11,7 @@ def count_divisors(n: int) -> int | float:
     Returns:
         int | float: The number of divisors.
     """
+
     if n == 0:
         return float('inf')
     nn = abs(n) if n < 0 else n
@@ -29,7 +30,7 @@ def count_divisors(n: int) -> int | float:
     return counter
 
 
-def count_comomon_divisors(a: int, b: int) -> int | float:
+def count_common_divisors(a: int, b: int) -> int | float:
     """
     Calculates the number of common divisors for the given integers.
 
@@ -40,6 +41,7 @@ def count_comomon_divisors(a: int, b: int) -> int | float:
     Returns:
         int | float: The common number of divisors for the integers.
     """
+
     if a == 0 and b == 0:
         return float('inf')
 
@@ -77,3 +79,4 @@ def sum_divisors(n: int, n_included: bool = True) -> int | float:
     if i * i == nn:
         divisors_sum += i
     return divisors_sum
+
