@@ -291,7 +291,6 @@ hex_number = "A12"
 octal_number = hexadecimal_to_octal(hex_number)
 
 print(f'Octal representation of {hex_number}: {octal_number}')          # 5022
-
 ```
 </font>
 

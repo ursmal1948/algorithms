@@ -38,7 +38,7 @@ from algorithms.ciphers import vigenere
 
 ```
 # Creating an instance of Vigenère square
-key = "CAT" <br>
+key = "CAT" 
 vigenere_square = VigenereCipher("CAT")
 ```
 
@@ -52,7 +52,8 @@ print(f'Encrypted: {encrypted_text}')
 # Decrypting a text
 decrypted_text = vigenere_square.decrypt(encrypted_text)
 print(f'Decrypted: {decrypted_text}')
-```  
+```
+
 </font>
 
 ## Caesar Cipher 

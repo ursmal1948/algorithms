@@ -41,8 +41,7 @@ This repository contains a collection of algorithms written in Python. You can f
 for encryption and decryption, as well for sorting data. It is wise to learn and implement them in your projects 
 💯<br>
 </font>
-</h2>
-</div>
+</h2></div>
 
 
 <div>
@@ -64,6 +63,70 @@ Comprehensive documentation available at this link: <br>
 </font>
 </h2>
 </div>
+<div>
+<h2 id="installation">
+
+## Example usage of algorithms
+
+<font size="+1">
+
+```
+from algorithms.ciphers import vigenere
+```
+
+
+```
+# Creating an instance of Vigenère square
+key = "CAT" 
+vigenere_square = VigenereCipher("CAT")
+```
+
+```
+# Encrypting a text
+plaintext = "HOME"
+encrypted_text = vigenere_square.encrypt(plaintext) 
+print(f'Encrypted: {encrypted_text}')                       # JOFG
+```
+```
+# Decrypting a text
+decrypted_text = vigenere_square.decrypt(encrypted_text)
+print(f'Decrypted: {decrypted_text}')                       # HOME
+```  
+<br>
+
+```
+from algorithms.strings import string_manipulation
+```
+ 
+```
+compressed_string = string_manipulation.compress("ABCABa")
+print(f'Compression: {compressed_string}') # A2B2C1a1
+```
+<br>
+
+```
+from algorithms.numbers.num_base_conversion import any_to_decimal, decimal_to_any
+```
+#### Decimal to binary conversion
+```
+decimal_number = 10
+binary_number = decimal_to_any(decimal_number, 2)
+
+print(f'Binary representation of {decimal_number}: {binary_number}')    # "1010"
+```
+#### Octal to decimal conversion
+```
+octal_number = '144'
+decimal_number = any_to_decimal(octal_number, 8)
+
+print(f'Decimal representation of {octal_number}: {decimal_number}')     # 100
+```
+
+
+</font>
+</h2>
+</div>
+
 
 <div>
 <h2 id="installation">
