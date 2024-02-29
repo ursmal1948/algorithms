@@ -4,7 +4,9 @@ import pytest
 from algorithms.strings.string_manipulation import (
     reverse,
     compress,
-    custom_join
+    custom_join,
+    lower,
+    upper
 )
 
 
@@ -48,3 +50,24 @@ class TestCustomJoin:
     def test_with_valid_data(self, words_and_separator_fixture):
         words, sep = words_and_separator_fixture
         assert custom_join(words, sep) == f'{sep}'.join(words)
+
+
+class TestLowerAndUpper:
+    @pytest.mark.parametrize('text, expected_lowercased_text', [
+        ('ABCdef123', 'abcdef123'),
+        ('A', 'a'),
+        ('Hello#world', 'hello#world'),
+    ])
+    def test_lower(self, text, expected_lowercased_text):
+        lowercased_text = lower(text)
+        assert lowercased_text == expected_lowercased_text
+
+    @pytest.mark.parametrize('text, expected_uppercased_text', [
+        ('abcDEF8!', 'ABCDEF8!'),
+        ('c', 'C'),
+        ('north-face', 'NORTH-FACE')
+    ])
+    def test_upper(self, text, expected_uppercased_text):
+        uppercased_text = upper(text)
+
+        assert uppercased_text == expected_uppercased_text
