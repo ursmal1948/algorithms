@@ -115,7 +115,7 @@ class TestOctalHexadecimalConversion:
         (1, '1'),
         (33, '1B'),
         (520, '150'),
-        (12, 'A'),
+        (12, '0A'),
         (1277, '2BF'),
     ])
     def conversion_octal_hex_parameters(self, request):

@@ -229,7 +229,7 @@ print(f'Decimal representation of {binary_number}: {decimal_number}')  # 15
 ```
 decimal_number = 10
 octal_number = decimal_to_any(decimal_number, 8)
-print(f'Octal representation of {decimal_number}: {octal_number}')      # 12
+print(f'Octal representation of {decimal_number}: {octal_number}')      # "12"
 
 octal_number = '144'
 decimal_number = any_to_decimal(octal_number, 8)
@@ -243,7 +243,7 @@ print(f'Decimal representation of {octal_number}: {decimal_number}')    # 100
 decimal_number = 43
 hex_number = decimal_to_hexadecimal(decimal_number)
 
-print(f'Hexadecimal representation of {decimal_number}: {hex_number}')      # 2B
+print(f'Hexadecimal representation of {decimal_number}: {hex_number}')      # "2B"
 
 hex_number = "1AB"
 decimal_number = hexadecimal_to_decimal(hex_number)
@@ -254,8 +254,44 @@ print(f'Decimal representation of {hex_number}: {decimal_number}')          # 42
 #### Binary & hexadecimal conversion
 
 ```
-pass
+binary_number = "11011"
+hex_number = binary_to_hexadecimal(binary_number)   
+
+print(f'Hexadecimal representation of {binary_number}: {hex_number}')       # "1B"
+
+hex_number = "A2"
+binary_number = hexadecimal_to_binary(hex_number)
+
+print(f'Binary representation of {hex_number}: {binary_number}')            # "10100010"
 ```
 
+#### Binary & octal conversion
+
+```
+binary_number = "10110"
+octal_number = binary_to_octal(binary_number)
+
+print(f'Octal representation of {binary_number}: {octal_number}')        # 26
+
+octal_number = 127
+binary_number = octal_to_binary(octal_number)
+
+print(f'Binary representation of {octal_number}: {binary_number}')       # "001010111"
+```
+
+#### Octal & hexadecimal conversion
+
+```
+octal_number = 50
+hex_number =  octal_to_hexadecimal(octal_number)
+
+print(f'Hexadecimal representation of {octal_number}: {hex_number}')    # "28"
+
+hex_number = "A12"
+octal_number = hexadecimal_to_octal(hex_number)
+
+print(f'Octal representation of {hex_number}: {octal_number}')          # 5022
+
+```
 </font>
 

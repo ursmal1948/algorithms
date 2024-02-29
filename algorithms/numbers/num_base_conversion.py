@@ -82,10 +82,7 @@ def binary_to_hexadecimal(binary_num: str) -> str:
         14: 'E',
         15: 'F'
     }
-    hexadecimal = ''.join([decimal_to_hex[d] if d >= 10 else str(d) for d in digits])
-    if len(hexadecimal) == 1:
-        return hexadecimal
-    return hexadecimal if hexadecimal[0] != '0' else hexadecimal[1:]
+    return ''.join([decimal_to_hex[d] if d >= 10 else str(d) for d in digits])
 
 
 def hexadecimal_to_binary(hex_num: str) -> str:
