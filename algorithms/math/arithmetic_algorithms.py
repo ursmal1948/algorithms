@@ -9,8 +9,8 @@ def binary_search(numbers: list[int], looked_number: int) -> int | bool:
     Returns:
         int | bool: If the looked_number is found in the list, returns the index of the number.
                     If the looked_number is not found in the list, returns False.
-
     """
+
     if not numbers:
         return False
     first_index = 0
@@ -37,6 +37,7 @@ def babylonian_sqrt(n: int, accuracy: float = 0.001) -> float:
     Returns:
         float: The approximate square root of the number.
     """
+
     r = n
     while abs(n - r * r) > accuracy:
         r = (r + n / r) / 2
@@ -77,6 +78,7 @@ def iterative_factorial(n: int) -> int:
     Raises:
         ValueError: If n is a negative number.
     """
+
     if n < 0:
         raise ValueError('The number must be a non-negative integer')
     if n == 0 or n == 1:
@@ -102,6 +104,7 @@ def recursive_factorial(n: int) -> int:
     Raises:
         ValueError: If n is a negative number.
     """
+
     if n < 0:
         raise ValueError('The number must be a non-negative integer')
     if n == 0 or n == 1:

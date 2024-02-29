@@ -55,3 +55,5 @@ class TestTriangleProperties:
     def test_is_triangle_rectangular(self, s1, s2, s3, expected_result):
         is_rectangular = is_triangle_rectangular(s1, s2, s3)
         assert is_rectangular == expected_result
+
+

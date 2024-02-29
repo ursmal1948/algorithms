@@ -1,4 +1,4 @@
-# 📝 SORTING ALGORITHMS 📝
+# 🔤 SORTING ALGORITHMS 🔤
 
 ## Overview
 
@@ -22,17 +22,10 @@ pip install algorithms
 ## Usage
 
 <font size="+1">
-Once installed, you can import the ciphers package and utilize its functionalities in Python projects.
+Once installed, you can import the sorting module and utilize its functionalities in Python projects.
 </font>
 
-## Sorting Manager
-
 <font size="+1">
-This package contains a set of versatile functions for string analysis. These functions serve as 
-useful tools for various text analysis tasks such as checking for anagrams or palindromes or detecting
-duplicate elements in a list. <br>
-Here's how you can use it:
-<br>
 
 ```
 from algorithms.sorting import (
@@ -42,11 +35,13 @@ from algorithms.sorting import (
     SelectionSort,
     SortingManager
 )
-
 ```
+
+#### Sorting Manager
 
 ```
 # Creating an instance of sorting manager, default is QuickSort
+
 sorting_manager = SortingManager()
 ```
 
@@ -92,7 +87,7 @@ print(f'Sorted data: {sorted_data}')    # ['anaconda', 'cat', 'dog', 'lion', 'ti
 ```
 # Changing sorting strategy
 
-selection_sort = MergeSort()
+selection_sort = SelectionSort()
 sorting_manager.set_sorting_strategy(selection_sort)
 
 data = [-10, -100, 30, 50, 100, 200, 5, 0]
@@ -100,3 +95,6 @@ sorted_data = sorting_manager.perform_sorting(data)
 
 print(f'Sorted data: {sorted_data}')    # [-100, -10, 0, 5, 30, 50, 100, 200]
 ```
+
+</font>
+

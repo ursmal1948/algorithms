@@ -1,4 +1,3 @@
-[DOCUMENTATION](https://ursmal1948.github.io/algorithms/)
 <div align="center">
     <img src="logo.svg" alt="Logo">
     <h1 style="color:lightyellow;">⭐️ ALGORITHMS ⭐️</h1>
@@ -18,8 +17,9 @@
     <h2>Table of Contents</h2>
     <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#documentation">Documentation</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#documentation">Documentation</a></li>
+        <li><a href="#usage">Example usage</a></li>
         <li><a href="#algorithms">Algorithms</a></li>
         <ul>
         <li><a href="#numbers">Numbers</a></li>
@@ -41,7 +41,25 @@ This repository contains a collection of algorithms written in Python. You can f
 for encryption and decryption, as well for sorting data. It is wise to learn and implement them in your projects 
 💯<br>
 </font>
-</h2></div>
+</h2>
+</div>
+
+<div>
+<h2 id="installation">
+
+## Installation
+
+<font size="+1">
+To install this library and access algorithms, you can use pip:<br>
+<br>
+
+```
+pip install algorithms
+```
+
+</font>
+</h2>
+</div>
 
 
 <div>
@@ -64,17 +82,17 @@ Comprehensive documentation available at this link: <br>
 </h2>
 </div>
 <div>
-<h2 id="installation">
+<h2 id="usage">
 
 ## Example usage of algorithms
 
 <font size="+1">
 
 ### Ciphers
+
 ```
 from algorithms.ciphers import vigenere
 ```
-
 
 ```
 # Creating an instance of Vigenère square
@@ -88,11 +106,13 @@ plaintext = "HOME"
 encrypted_text = vigenere_square.encrypt(plaintext) 
 print(f'Encrypted: {encrypted_text}')                       # JOFG
 ```
+
 ```
 # Decrypting a text
 decrypted_text = vigenere_square.decrypt(encrypted_text)
 print(f'Decrypted: {decrypted_text}')                       # HOME
 ```  
+
 <br>
 
 ### Strings
@@ -100,11 +120,12 @@ print(f'Decrypted: {decrypted_text}')                       # HOME
 ```
 from algorithms.strings import string_manipulation
 ```
- 
+
 ```
 compressed_string = string_manipulation.compress("ABCABa")
 print(f'Compression: {compressed_string}') # A2B2C1a1
 ```
+
 <br>
 
 ### Numbers
@@ -112,38 +133,23 @@ print(f'Compression: {compressed_string}') # A2B2C1a1
 ```
 from algorithms.numbers.num_base_conversion import any_to_decimal, decimal_to_any
 ```
+
 #### Decimal to binary conversion
+
 ```
 decimal_number = 10
 binary_number = decimal_to_any(decimal_number, 2)
 
 print(f'Binary representation of {decimal_number}: {binary_number}')    # "1010"
 ```
+
 #### Octal to decimal conversion
+
 ```
 octal_number = '144'
 decimal_number = any_to_decimal(octal_number, 8)
 
 print(f'Decimal representation of {octal_number}: {decimal_number}')     # 100
-```
-
-
-</font>
-</h2>
-</div>
-
-
-<div>
-<h2 id="installation">
-
-## Installation
-
-<font size="+1">
-To install this library and access algorithms, you can use pip:<br>
-<br>
-
-```
-pip install algorithms
 ```
 
 </font>
@@ -242,7 +248,7 @@ String analysis
         <li>count_substring_occurences</li>
         <li>contains_duplicates</li>
 </ul>
-      </h3>
+    </h3>
 <h3>
     String manipulation
 <ul style="margin-bottom: 10px; font-weight: 300;">
