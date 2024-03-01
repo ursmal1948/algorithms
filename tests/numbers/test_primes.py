@@ -4,7 +4,8 @@ import pytest
 from algorithms.numbers.primes import (
     ErastothenesSieve,
     is_prime_basic,
-    get_prime_factors
+    get_prime_factors,
+    is_perfect_number
 )
 
 
@@ -69,3 +70,13 @@ class TestPrimeFunctions:
         with pytest.raises(ValueError) as e:
             get_prime_factors(1)
         assert 'The number must be greater than 1' == str(e.value)
+
+    @pytest.mark.parametrize('number, expected_result', [
+        (1, False),
+        (6, True),
+        (5, False),
+        (25, False)
+    ])
+    def test_is_perfect_number(self, number, expected_result):
+        is_perfect = is_perfect_number(number)
+        assert is_perfect == expected_result

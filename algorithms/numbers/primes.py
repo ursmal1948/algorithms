@@ -127,5 +127,7 @@ def is_perfect_number(n: int) -> bool:
     Returns:
         bool: True if n is a perfect number, False otherwise.
     """
+    if n in [1, 2, 3]:
+        return False
 
     return sum_divisors(n, False) == n

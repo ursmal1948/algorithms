@@ -79,4 +79,3 @@ def sum_divisors(n: int, n_included: bool = True) -> int | float:
     if i * i == nn:
         divisors_sum += i
     return divisors_sum
-

@@ -60,6 +60,11 @@ class TestSumDivisors(unittest.TestCase):
             with self.subTest(number=number):
                 self.assertEqual(sum_divisors(number, False), expected_divisors_sum - number)
 
+    def test_with_special_cases(self):
+        for number, expected_divisors_sum in self.special_cases:
+            with self.subTest(number=number):
+                self.assertEqual(sum_divisors(number), expected_divisors_sum)
+
     def tearDown(self):
         self.positive_numbers_data = None
         self.negative_numbers_data = None
