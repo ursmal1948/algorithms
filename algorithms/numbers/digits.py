@@ -12,6 +12,7 @@ def get_digit(n: int, position: int) -> int:
     Raises:
         ValueError: If position is a negative number.
     """
+
     if position < 0:
         raise ValueError('Position must be a non-negative number')
     nn = abs(n) if n < 0 else n
