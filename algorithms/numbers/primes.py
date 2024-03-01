@@ -8,21 +8,32 @@ class ErastothenesSieve:
 
     def __init__(self, n: int):
         """
-        Initialize the sieve of Erasthotenes with a given limit
-        :param n: the upper limit for the sieve
-        :raises ValueError: if n is less than 2
+        Initialize the sieve of Eratosthenes with a given limit.
+
+        Parameters:
+            n (int): The upper limit for the sieve.
+
+        Raises:
+            ValueError: If n is less than 2.
         """
+
         self._sieve = self._create_sieve(n)
 
     @staticmethod
     def _create_sieve(n: int) -> list[bool]:
+        """
+         Create the sieve of Eratosthenes up to a given limit.
 
-        """
-        Create the sieve of Eratosthenes up to a given limit
-        :param n: the upper limit for the sieve
-        :return list[bool]: the sieve as a boolean list where True indicates a prime number
-        :raises ValueError: if n i less than 2
-        """
+         Parameters:
+             n (int): The upper limit for the sieve.
+
+         Returns:
+             list[bool]: The sieve as a boolean list where True indicates a prime number.
+
+         Raises:
+             ValueError: If n is less than 2.
+         """
+
         if n < 2:
             raise ValueError('Eratosthenes sieve must have indexes grater than 1')
         sieve = [False, False] + [True] * (n - 1)
@@ -37,11 +48,18 @@ class ErastothenesSieve:
 
     def is_prime(self, n: int) -> bool:
         """
-        Checks if a given number is prime using the sieve
-        :param n: the number to check
-        :return bool: True if the number is prime, False otherwise
-        :raises ValueError: if n is out of the range of the sieve
+        Checks if a given number is prime using the sieve.
+
+        Parameters:
+            n (int): The number to check.
+
+        Returns:
+            bool: True if the number is prime, False otherwise.
+
+        Raises:
+            ValueError: If n is out of the range of the sieve.
         """
+
         if not 0 <= n <= len(self._sieve):
             raise ValueError(f'Number {n} is out of the range')
         return self._sieve[n]
@@ -49,9 +67,13 @@ class ErastothenesSieve:
 
 def is_prime_basic(n: int) -> bool:
     """
-    Checking if the number is prime
-    :param n: int the integer to be checked for a prime number
-    :return bool: True if the number is, otherwise False
+    Checking if the number is prime.
+
+    Parameters:
+        n (int): The integer to be checked for a prime number.
+
+    Returns:
+        bool: True if the number is prime, otherwise False.
     """
 
     if n <= 1:
@@ -70,10 +92,14 @@ def is_prime_basic(n: int) -> bool:
 
 def get_prime_factors(n: int) -> list[int]:
     """
-    Determines the prime factors of a given number
-    :param n: int the number for which prime factors will be determined. Must be an integer greater than 1.
-    :return: A list containing the prime factors of the number n. Each factory may appear in the list more than once,
-    depending on its multiplicity in the prime factorization of n.
+    Determines the prime factors of a given number.
+
+    Parameters:
+        n (int): The number for which prime factors will be determined. Must be an integer greater than 1.
+
+    Returns:
+        list[int]: A list containing the prime factors of the number n. Each factory may appear in the list
+                   more than once, depending on its multiplicity in the prime factorization of n.
     """
 
     if n < 2:

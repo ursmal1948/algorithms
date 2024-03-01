@@ -7,7 +7,7 @@ def is_anagram(text1: str, text2: str) -> bool:
     Checks if two strings are anagrams of each other.
     An anagram is a word of phrase formed by rearranging the letters of a different word or phrase
 
-    Args:
+    Parameters:
         text1 (str): The first string to check
         text2 (str): The second string to check
     Returns:
@@ -24,7 +24,7 @@ def is_pangram(text: str) -> bool:
     Checks if a string is a pangram.
     A pangram is a sentence or phrase that contains every letter of the alphabet at least once.
 
-    Args:
+    Parameters:
         text (str): The string to check.
 
     Returns:
@@ -41,7 +41,7 @@ def is_palindrome(text: str) -> bool:
     A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and
     removing all non-alphanumeric characters, it reads the same forward and backward.
 
-    Args:
+    Parameters:
         text (str): The text to be checked for palindrome.
 
     Returns:
@@ -63,7 +63,7 @@ def is_potential_palindrome(text: str) -> bool:
     """
     Checks if the given string can be rearranged to form a palindrome.
 
-    Args:
+    Parameters:
         text (str): The text to be checked for potential palindrome.
 
     Returns:

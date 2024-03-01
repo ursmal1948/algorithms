@@ -69,6 +69,7 @@ class BubbleSort(Sorting):
             list[Any]
                 The sorted list.
         """
+
         sorted_data = data.copy()
         for i in range(len(sorted_data)):
             for j in range(0, len(sorted_data) - i - 1):

@@ -5,9 +5,10 @@ from typing import ClassVar
 @dataclass
 class MorseCode:
     """
-    A class for Morse Code encryption and decryption
-    Class Attribute
-    morse_code ClassVar[dict[str,str]]: Morse code dictionary
+    A class for Morse Code encryption and decryption.
+
+    Attributes:
+        morse_code (ClassVar[dict[str,str]]): Morse code dictionary.
     """
     morse_code: ClassVar[dict[str, str]] = {'A': '.-', 'B': '-...',
                                             'C': '-.-.', 'D': '-..', 'E': '.',
@@ -29,10 +30,17 @@ class MorseCode:
     def encrypt(self, text: str) -> str:
         """
         Encrypts the given text using Morse code.
-        :param text: str the text to be encrypted
-        :return str: the encrypted text represented in Morse code
-        :raises ValueError: if a character in the input is not in Morse code dictionary
+
+        Parameters:
+            text (str): The text to be encrypted.
+
+        Returns:
+            str: The encrypted text represented in Morse code.
+
+        Raises:
+            ValueError: If a character in the input is not in Morse code dictionary.
         """
+
         chars = []
         for c in text:
             chars.append(self.morse_code[c.upper() if c.isalpha() else c])
@@ -40,10 +48,16 @@ class MorseCode:
 
     def decrypt(self, encrypted_text: str) -> str:
         """
-        Decrypts the given Morse code to obtain the original text
-        :param encrypted_text: str the encrypted text in Morse code
-        :return str: the decrypted original text
-        :raises ValueError: if a character in the text is not present in the reversed Morse code dictionary
+        Decrypts the given Morse code to obtain the original text.
+
+        Parameters:
+            encrypted_text (str): The encrypted text in Morse code.
+
+        Returns:
+            str: The decrypted original text.
+
+        Raises:
+            ValueError: If a character in the text is not present in the reversed Morse code dictionary.
         """
 
         encoded_chars = encrypted_text.split("|")
