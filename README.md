@@ -220,8 +220,8 @@ print(f'Decimal representation of {octal_number}: {decimal_number}')     # 100
 <h3>
     Function algorithms
 <ul style="margin-bottom: 10px; font-weight: 300;">
-        <li>bisection_root_finder</li>
-        <li>quadratic_roots_finder</li>    
+        <li>bisection_root</li>
+        <li>quadratic_roots</li>    
         <li>horner_evaluation</li>  
         <li>trapezoidal_integration</li>  
         <li>rectangular_integration</li> 

@@ -96,29 +96,82 @@ print(f'Factorial of number {number} is equal: {factorial}')                    
 ## Function algorithms 🧮
 
 <font size="+1">
-Arithmetic algorithms module provides essential tools for numerical computations.
-It includes functions for binary search, Babylonian sqare root calculation,
-binary exponentiation, and both iterative and recursive factorial calculations.
+Function algorithms module provides essential tools for numerical computations involving functions.
+It includes functions for root finding, polynomial evaluation, and numerical integration
+using various methods.
 <br>
 
 ```
 from algorithms.math.function_algorithms import (
-    bisection_root_finder,
-    quadratic_roots_finder,
+    bisection_root,
+    quadratic_roots,
     horner_evaluation,
     trapezoidal_integration,
-    rectangle_integration
+    rectangular_integration
 )
 ```
 
-#### Binary search
+#### Bisection root finder
 
 ```
-numbers = [10, 20, 30, 40, 50]
-looked_number = 30
-result = binary_search(numbers, looked_number) 
+left_endpoint = 2
+right_endpoint = 8
+root = bisection_root(lambda x: x * x - 4 * x, left_endpoint, right_endpoint)
 
-print(f'Index of number {looked_number} in numbers: {result}')   # 2 
+print(f'Root of function x: x * x - 4 * x within interval [{left_endpoint}, {right_endpoint}] equals: {root}')  # 4.0
+```
+
+#### Quadratic roots finder
+
+```
+# Quadratic function: a*x**2 + b*x + c
+# Quadratic function: x * x + 6 * x + 5
+# Coefficients
+a = 1
+b = 6
+c = 5
+roots = quadratic_roots(a, b , c)
+
+print(f'Roots of quadratic function with coefficients a: {a}, b: {b}, c: {c} are: {roots}') # (-5, -1)
+```
+
+#### Horner evaluation
+
+```
+# Checking if x is the root of the function
+# if value of horner evaluation equals 0, then the x is root of the function, otherwise no
+
+# ROOT OF THE FUNCTION AT X 
+coefficients = [1,6,9] # quadratic function: {x ** 2 +6 * x +9}
+x = -3
+result = horner_evaluation(coefficients, x)
+
+print(f'Function with coefficients: {coefficients} at x = {x} equals {result} ')        # 0
+
+# NOT A ROOT OF A FUNCTION AT X, just a value of function at x. 
+coefficients_2 =[1, -6, 11, -6] # third degree function:  x ** 3 - 6 * x * x + 11 * x - 6
+x_2 = 4
+result_2 = horner_evaluation(coefficients_2, x_2)
+
+print(f'Function with coefficients: {coefficients_2} at x = {x_2} equals {result_2}')   # 6
+```
+
+#### Trapezoidal integration
+
+```
+# Quadratic function: x * x + 3 * x + 4
+integration_result = trapezoidal_integration(lambda x: x * x + 3 * x + 4, -2, 1, 200)
+
+print(f'Integration result is equal: {round(integration_result, 2)}')       # 10.5
+```
+
+#### Rectangular integration
+
+```
+# Polynomial function: x ** 3 + x * x - 3 * x + 4
+integration_result = rectangular_integration(lambda x:  x ** 3 + x * x - 3 * x + 4, -2, 2, 50)
+
+print(f'Integration result is equal: {round(integration_result, 2)}')       # 21.33
 ```
 
 </font>
@@ -140,7 +193,6 @@ from algorithms.math.geometric_algorithms import (
     is_triangle_valid,
     is_triangle_rectangular,
 )
-
 ```
 
 #### Distance between points
@@ -200,7 +252,6 @@ result_2 = is_triangle_rectangular(d_side, e_side, f_side)
 
 print(f'Triangle with sides {a_side}, {b_side} and {c_side} is rectangular: {result}')      # True
 print(f'Triangle with sides {d_side}, {e_side} and {f_side} is rectangular: {result_2}')    # False
-
 ```
 
 </font>
