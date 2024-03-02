@@ -1,5 +1,10 @@
 import pytest
-from algorithms.numbers.digits import get_digit, sum_digits, move_zeroes
+from algorithms.numbers.digits import (
+    get_digit,
+    sum_digits,
+    move_zeroes,
+    validate_luhn
+)
 
 
 class TestGetDigit:
@@ -41,3 +46,16 @@ class TestMoveZeroes:
     def test_move_zeroes(self, numbers_and_expected_result_after_moving_zeroes):
         numbers_list, expected_numbers_with_zeroes_moved_to_the_end = numbers_and_expected_result_after_moving_zeroes
         assert move_zeroes(numbers_list) == expected_numbers_with_zeroes_moved_to_the_end
+
+
+class TestValidateLuhn:
+    @pytest.mark.parametrize('credit_card_number, expected_result', [
+        ['1234567890123456', False],
+        ['4245110203731942', True],
+        ['79927398713', True],
+        ['79927398714', False],
+
+    ])
+    def test(self, credit_card_number, expected_result):
+        validation_result = validate_luhn(credit_card_number)
+        assert validation_result == expected_result

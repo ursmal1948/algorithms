@@ -62,3 +62,27 @@ def move_zeroes(nums: list[int]) -> list[int]:
         nums[index] = 0
         index += 1
     return nums
+
+
+def validate_luhn(number_str: str) -> bool:
+    """
+    Checks if a given number is valid according to the Luhn algorithm.
+
+    Parameters:
+    - number_str (str): The number to be validated.
+
+    Returns:
+    - bool: True if the number is valid, False otherwise.
+    """
+    reversed_number_str = number_str[::-1]
+
+    sum_ = 0
+    for i in range(len(reversed_number_str)):
+        digit = int(reversed_number_str[i])
+        if i % 2 == 1:
+            digit *= 2
+            if digit > 9:
+                digit -= 9
+        sum_ += digit
+
+    return sum_ % 10 == 0
