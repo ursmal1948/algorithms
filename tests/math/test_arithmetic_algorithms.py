@@ -1,5 +1,5 @@
 import pytest
-from algorithms.math.arithmetic_algorithms import (
+from algorithm_implementations.math.arithmetic_algorithms import (
     iterative_factorial,
     recursive_factorial,
     binary_search,

@@ -1,5 +1,5 @@
 import pytest
-from algorithms.ciphers.morse import MorseCode
+from algorithm_implementations.ciphers.morse import MorseCode
 
 
 class TestMorse:

@@ -1,5 +1,5 @@
 import pytest
-from algorithms.numbers.num_base_conversion import (
+from algorithm_implementations.numbers.num_base_conversion import (
     decimal_to_any,
     any_to_decimal,
     decimal_to_hexadecimal,
@@ -130,6 +130,3 @@ class TestOctalHexadecimalConversion:
         expected_octal_representation, hex_representation = conversion_octal_hex_parameters
         octal_representation = hexadecimal_to_octal(hex_representation)
         assert octal_representation == expected_octal_representation
-
-
-data = ["Z", "A", "B", "D"]

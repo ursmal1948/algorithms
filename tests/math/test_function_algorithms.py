@@ -1,7 +1,7 @@
 import logging
 import unittest
 import pytest
-from algorithms.math.function_algorithms import (
+from algorithm_implementations.math.function_algorithms import (
     bisection_root,
     quadratic_roots,
     horner_evaluation,

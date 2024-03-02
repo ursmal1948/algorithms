@@ -1,5 +1,5 @@
 import unittest
-from algorithms.ciphers.caesar import CaesarCipher
+from algorithm_implementations.ciphers.caesar import CaesarCipher
 
 
 class TestCaesarWithDefaultShift(unittest.TestCase):
@@ -38,6 +38,7 @@ class TestCaesarWithCustomShift(unittest.TestCase):
         ('123!', '123!', 10),
         ('G4HI', 'L4MN', 5)
     ]
+
     # def setUp(self): # PARAMETRYZACJA
     #     self.caesar_cipher = CaesarCipher(3)
 
