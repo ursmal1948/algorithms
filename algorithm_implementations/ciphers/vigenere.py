@@ -95,12 +95,10 @@ class VigenereCipher:
         cleaned_text = [c for c in encrypted_text if c.isalpha()]
         vigenere_square = self.vigenere_generator.generate_vigenere_square()
         chars = []
-
         for i in range(len(cleaned_text)):
             current_key_char = self.key[i % len(self.key)]
             row = ord(current_key_char) - ord('A')
             column = vigenere_square[row].index(cleaned_text[i])
             decrypted_char = vigenere_square[0][column]
             chars.append(decrypted_char)
-
         return ''.join(chars)

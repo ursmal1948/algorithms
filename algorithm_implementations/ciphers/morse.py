@@ -10,6 +10,7 @@ class MorseCode:
     Attributes:
         morse_code (ClassVar[dict[str,str]]): Morse code dictionary.
     """
+
     morse_code: ClassVar[dict[str, str]] = {'A': '.-', 'B': '-...',
                                             'C': '-.-.', 'D': '-..', 'E': '.',
                                             'F': '..-.', 'G': '--.', 'H': '....',

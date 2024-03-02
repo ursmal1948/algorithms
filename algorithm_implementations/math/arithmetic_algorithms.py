@@ -7,8 +7,8 @@ def binary_search(numbers: list[int], looked_number: int) -> int | bool:
         looked_number (int): The integer to be found in the list.
 
     Returns:
-        int | bool: If the looked_number is found in the list, returns the index of the number.
-                    If the looked_number is not found in the list, returns False.
+        int | bool: If the looked_number is found in the list, returns the index of the number,
+        otherwise False.
     """
 
     if not numbers:

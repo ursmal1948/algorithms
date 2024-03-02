@@ -1,4 +1,4 @@
-from algorithms.numbers.divisors import sum_divisors
+from algorithm_implementations.numbers.divisors import sum_divisors
 
 
 class ErastothenesSieve:
@@ -40,7 +40,7 @@ class ErastothenesSieve:
         p = 2
         while p * p <= n:
             if sieve[p]:
-                for i in range(p * p, n + 1, p):  # wielokrotnosci p wszystkie zerujemy
+                for i in range(p * p, n + 1, p):
                     if sieve[i]:
                         sieve[i] = False
             p += 1

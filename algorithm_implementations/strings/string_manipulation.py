@@ -72,7 +72,7 @@ def lower(text: str) -> str:
         str: The string with all uppercase letters converted to lowercase.
     """
 
-    return ''.join([chr(ord(c) + 32) if c.isupper() else c for c in text])
+    return ''.join([chr(ord(c) + 32) if c.isupper() and c.isalpha() else c for c in text])
 
 
 def upper(text: str) -> str:
@@ -86,4 +86,4 @@ def upper(text: str) -> str:
         str: The string with all lowercase letters converted to uppercase.
     """
 
-    return ''.join([chr(ord(c) - 32) if c.islower() else c for c in text])
+    return ''.join([chr(ord(c) - 32) if c.islower() and c.isalpha() else c for c in text])

@@ -44,12 +44,11 @@ def count_common_divisors(a: int, b: int) -> int | float:
 
     if a == 0 and b == 0:
         return float('inf')
-
     if a == 0 and b != 0:
         return count_divisors(b)
     if a != 0 and b == 0:
         return count_divisors(a)
-    return count_divisors(math.gcd(a, b))  # Najwiekszy wspolny dzielnik dwoch liczb  i obliczamy jego dzielniki
+    return count_divisors(math.gcd(a, b))
 
 
 def sum_divisors(n: int, n_included: bool = True) -> int | float:
