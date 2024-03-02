@@ -90,7 +90,7 @@ print(f'Sorted data: {sorted_data}')    # ['anaconda', 'cat', 'dog', 'lion', 'ti
 selection_sort = SelectionSort()
 sorting_manager.set_sorting_strategy(selection_sort)
 
-data = [-10, -100, 30, 50, 100, 200, 5, 0]
+data = [-10, -100, 30, 50, 200, 100, 5, 0]
 sorted_data = sorting_manager.perform_sorting(data)
 
 print(f'Sorted data: {sorted_data}')    # [-100, -10, 0, 5, 30, 50, 100, 200]
