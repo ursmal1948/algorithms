@@ -142,11 +142,11 @@ print(f'Roots of quadratic function with coefficients a: {a}, b: {b}, c: {c} are
 # if value of horner evaluation equals 0, then the x is root of the function, otherwise no
 
 # ROOT OF THE FUNCTION AT X 
-coefficients = [1,6,9] # quadratic function: {x ** 2 +6 * x +9}
+coefficients = [1,6,9] # quadratic function: {x ** 2 + 6 * x + 9}
 x = -3
 result = horner_evaluation(coefficients, x)
 
-print(f'Function with coefficients: {coefficients} at x = {x} equals {result} ')        # 0
+print(f'Function with coefficients: {coefficients} at x = {x} equals {result}')        # 0
 
 # NOT A ROOT OF A FUNCTION AT X, just a value of function at x. 
 coefficients_2 =[1, -6, 11, -6] # third degree function:  x ** 3 - 6 * x * x + 11 * x - 6

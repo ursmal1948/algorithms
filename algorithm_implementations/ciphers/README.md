@@ -3,7 +3,7 @@
 <font size="+1">
 Welcome to the "ciphers" package of the "algorithms" library. This package
 provides implementations of various classical ciphers, including 
-Vigenère cipher, Caesar cipher, and Morse code.
+Vigenère cipher, Caesar cipher and Morse code.
 </font>
 
 ## Installation
@@ -39,19 +39,19 @@ from algorithms.ciphers import vigenere
 ```
 # Creating an instance of Vigenère square
 key = "CAT" 
-vigenere_square = VigenereCipher("CAT")
+vigenere_square = VigenereCipher(key)
 ```
 
 ```
 # Encrypting a text
 plaintext = "HOME"
 encrypted_text = vigenere_square.encrypt(plaintext)
-print(f'Encrypted: {encrypted_text}')
+print(f'Encrypted: {encrypted_text}')              #JOFG
 ```
 ```
 # Decrypting a text
 decrypted_text = vigenere_square.decrypt(encrypted_text)
-print(f'Decrypted: {decrypted_text}')
+print(f'Decrypted: {decrypted_text}')             # HOME
 ```
 
 </font>
@@ -76,12 +76,12 @@ caesar_cipher = CaesarCipher(shift)
 # Encrypting a text
 plaintext = 'ABCD'
 encrypted_text = caesar_cipher.encrypt(plaintext)
-print(f'Encrypted: {encrypted_text}')
+print(f'Encrypted: {encrypted_text}')           # CDEF
 ```
 ```
 # Decrypting a text
 decrypted_text = caesar_cipher.decrypt(encrypted_text)
-print(f'Decrypted: {decrypted_text}')
+print(f'Decrypted: {decrypted_text}')           # ABCD
 ```
 </font>
 
@@ -99,11 +99,11 @@ morse_code = MorseCode()
 # Encrypting a text
 plaintext = 'HOUSE'
 encrypted_text = morse_code.encrypt(plaintext)
-print(f'Encrypted: {encrypted_text}')
+print(f'Encrypted: {encrypted_text}')           #  ....|---|..-|...|.
 ```
 ```
 # Decrypting a text
 decrypted_text = morse_code.decrypt(encrypted_text)
-print(f'Decrypted: {decrypted_text}')
+print(f'Decrypted: {decrypted_text}')           # HOUSE
 ```
 </font>

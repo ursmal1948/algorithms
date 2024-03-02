@@ -37,8 +37,9 @@
 ## About
 
 <font size="+1">
-This repository contains a collection of algorithms written in Python. You can find algorithms for handling numbers, including ciphers 
-for encryption and decryption, as well for sorting data. It is wise to learn and implement them in your projects 
+This repository contains a collection of algorithms written in Python. You can find algorithms for handling numbers, 
+including ciphers, strings and for sorting data. 
+It is wise to learn and implement them in your projects 
 💯<br>
 </font>
 </h2>
@@ -252,11 +253,11 @@ String analysis
 <h3>
     String manipulation
 <ul style="margin-bottom: 10px; font-weight: 300;">
-        <li>reverse_string</li>
-        <li>string_compression</li>
+        <li>reverse</li>
+        <li>compress</li>
         <li>custom_join</li>
-        <li>lower_string</li>
-        <li>upper_string</li>
+        <li>lower</li>
+        <li>upper</li>
 </ul>
     </h3>
 <h3>

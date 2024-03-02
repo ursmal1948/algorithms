@@ -179,6 +179,7 @@ print(f'sorted_items_by_vowels_count: {sorted_items_by_vowels_count}') # ["CCC",
 sorted_items_by_chars_sum = sort_items(words, lambda text1, text2: compare_chars_sum(text1, text2))
 print(f'sorted_items_by_chars_sum: {sorted_items_by_chars_sum}') # ['DAD', 'CCC', 'COUSIN', 'BROTHER']
 ```
+
 </font>
 
 

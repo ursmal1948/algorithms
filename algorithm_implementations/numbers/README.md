@@ -183,8 +183,6 @@ print(f'Perfect number {number}: {perfect_number}')  # True
 
 </font>
 
-#### #HEER
-
 ## Number base conversion 🧮
 
 <font size="+1">
@@ -216,7 +214,7 @@ from algorithms.numbers.num_base_conversion import (
 decimal_number = 10
 binary_number = decimal_to_any(decimal_number, 2)
 
-print(f'Binary representation of {decimal_number}: {binary_number}')  # "1010"
+print(f'Binary representation of {decimal_number}: {binary_number}')  # 1010
 
 binary_number = "1111" 
 decimal_number = any_to_decimal(binary_number, 2)
@@ -229,9 +227,9 @@ print(f'Decimal representation of {binary_number}: {decimal_number}')  # 15
 ```
 decimal_number = 10
 octal_number = decimal_to_any(decimal_number, 8)
-print(f'Octal representation of {decimal_number}: {octal_number}')      # "12"
+print(f'Octal representation of {decimal_number}: {octal_number}')      # 12
 
-octal_number = '144'
+octal_number = "144"
 decimal_number = any_to_decimal(octal_number, 8)
 
 print(f'Decimal representation of {octal_number}: {decimal_number}')    # 100
@@ -257,12 +255,12 @@ print(f'Decimal representation of {hex_number}: {decimal_number}')          # 42
 binary_number = "11011"
 hex_number = binary_to_hexadecimal(binary_number)   
 
-print(f'Hexadecimal representation of {binary_number}: {hex_number}')       # "1B"
+print(f'Hexadecimal representation of {binary_number}: {hex_number}')       # 1B
 
 hex_number = "A2"
 binary_number = hexadecimal_to_binary(hex_number)
 
-print(f'Binary representation of {hex_number}: {binary_number}')            # "10100010"
+print(f'Binary representation of {hex_number}: {binary_number}')            # 10100010
 ```
 
 #### Binary & octal conversion
@@ -276,7 +274,7 @@ print(f'Octal representation of {binary_number}: {octal_number}')        # 26
 octal_number = 127
 binary_number = octal_to_binary(octal_number)
 
-print(f'Binary representation of {octal_number}: {binary_number}')       # "001010111"
+print(f'Binary representation of {octal_number}: {binary_number}')       # 001010111
 ```
 
 #### Octal & hexadecimal conversion
@@ -285,12 +283,13 @@ print(f'Binary representation of {octal_number}: {binary_number}')       # "0010
 octal_number = 50
 hex_number =  octal_to_hexadecimal(octal_number)
 
-print(f'Hexadecimal representation of {octal_number}: {hex_number}')    # "28"
+print(f'Hexadecimal representation of {octal_number}: {hex_number}')    # 28
 
 hex_number = "A12"
 octal_number = hexadecimal_to_octal(hex_number)
 
 print(f'Octal representation of {hex_number}: {octal_number}')          # 5022
 ```
+
 </font>
 
