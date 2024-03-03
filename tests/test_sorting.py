@@ -1,5 +1,5 @@
 import pytest
-from algohub.sorting import (
+from algohub.algorithms.sorting import (
     QuickSort,
     BubbleSort,
     MergeSort,

@@ -1,5 +1,5 @@
 import pytest
-from algohub.numbers.num_base_conversion import (
+from algohub.algorithms.numbers.num_base_conversion import (
     decimal_to_any,
     any_to_decimal,
     decimal_to_hexadecimal,

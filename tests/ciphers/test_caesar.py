@@ -1,5 +1,5 @@
 import unittest
-from algorithm_implementations.ciphers.caesar import CaesarCipher
+from algohub.algorithms.ciphers.caesar import CaesarCipher
 
 
 class TestCaesarWithDefaultShift(unittest.TestCase):

@@ -1,6 +1,6 @@
 <div align="center">
     <img src="logo.svg" alt="Logo">
-    <h1 style="color:lightyellow;">⭐️ ALGORITHMS ⭐️</h1>
+    <h1 style="color:lightyellow;">⭐️ ALGOHUB - HUB OF ALGORITHMS ⭐️</h1>
     <h2 style="color:lightskyblue;">All algorithms implemented in PYTHON</h2>
 </div>
 

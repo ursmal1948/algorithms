@@ -1,5 +1,5 @@
 import pytest
-from algohub.numbers.digits import (
+from algohub.algorithms.numbers.digits import (
     get_digit,
     sum_digits,
     move_zeroes,

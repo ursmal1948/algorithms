@@ -1,6 +1,6 @@
 import unittest
 import pytest
-from algohub.numbers.divisors import count_divisors, count_common_divisors, sum_divisors
+from algohub.algorithms.numbers.divisors import count_divisors, count_common_divisors, sum_divisors
 
 
 class TestCountDivisors:
