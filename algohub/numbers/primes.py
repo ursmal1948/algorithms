@@ -1,4 +1,4 @@
-from algorithm_implementations.numbers.divisors import sum_divisors
+from algohub.numbers.divisors import sum_divisors
 
 
 class ErastothenesSieve:
