@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "algorithms_hub"
+name = "algohub"
 version = "0.1.0"
 description = ""
 authors = ["Ula <ula.malin35@gmail.com>"]
