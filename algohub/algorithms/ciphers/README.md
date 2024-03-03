@@ -12,7 +12,7 @@ To install the "algorithms" library and access this package, you can use pip:<br
 <br>
   
 ```
-pip install algorithms
+pip install algohub
 ```
 
 </font>
@@ -33,7 +33,7 @@ Here's how you can use it:
 <br>
   
 ```
-from algorithms.ciphers import vigenere
+from algohub.algorithms.ciphers import vigenere
 ```
 
 ```
@@ -64,7 +64,7 @@ number of places down or up the alphabet.<br>
 Here's how you can use it:
 
 ```
-from algorithms.ciphers import caesar
+from algohub.algorithms.ciphers import caesar
 ```
 
 ```
@@ -91,6 +91,10 @@ print(f'Decrypted: {decrypted_text}')           # ABCD
 Morse code is a method used in telecommunication to encode text characters 
 as sequences of two different signal durations, called dots and dashes.<br>
 Here is how you can use it:<br>
+
+```
+from algohub.algorithms.ciphers import morse
+```
 ```
 Creating an instance of Morse code
 morse_code = MorseCode()

@@ -14,7 +14,7 @@ To install the "algorithms" library and access this package, you can use pip:<br
 <br>
 
 ```
-pip install algorithms
+pip install algohub
 ```
 
 </font>
@@ -28,7 +28,7 @@ Once installed, you can import the sorting module and utilize its functionalitie
 <font size="+1">
 
 ```
-from algorithms.sorting import (
+from algohub.algorithms.sorting import (
     QuickSort,
     BubbleSort,
     MergeSort,

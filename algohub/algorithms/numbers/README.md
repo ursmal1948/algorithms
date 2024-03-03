@@ -15,7 +15,7 @@ To install the "algorithms" library and access this package, you can use pip:<br
 <br>
 
 ```
-pip install algorithms
+pip install algohub
 ```
 
 </font>
@@ -36,7 +36,7 @@ Here is how you can use it:
 <br>
 
 ```
-from algorithms.numbers import digits
+from algohub.algorithms.numbers import digits
 ```
 
 #### Digit at specified position
@@ -88,7 +88,7 @@ divisors between two numbers, and summing divisors of a given number.<br>
 Here's how you can use it:<br>
 
 ```
-from algorithms.numbers import divisors
+from algohub.algorithms.numbers import divisors
 ```
 
 #### Count divisors
@@ -132,8 +132,12 @@ Here's how you can use it:
 <br>
 
 ```
-from algorithms.numbers.primes import ErastothenesSieve, is_prime_basic
-get_prime_factors, is_perfect_number
+from algohub.algorithms.numbers.primes import (
+    ErastothenesSieve,
+    is_prime_basic,
+    get_prime_factors,
+    is_perfect_number
+)
 ```
 
 #### Erastothenes sieve
@@ -194,7 +198,7 @@ Here's how you can use it:
 <br>
 
 ```
-from algorithms.numbers.num_base_conversion import (
+from algohub.algorithms.numbers.num_base_conversion import (
     decimal_to_any,
     any_to_decimal,
     decimal_to_hexadecimal,

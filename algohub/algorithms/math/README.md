@@ -15,7 +15,7 @@ To install the "algorithms" library and access this package, you can use pip:<br
 <br>
 
 ```
-pip install algorithms
+pip install algohub
 ```
 
 </font>
@@ -35,7 +35,7 @@ binary exponentiation, and both iterative and recursive factorial calculations.
 <br>
 
 ```
-from algorithms.math.arithmetic_algorithms import (
+from algohub.algorithms.math.arithmetic_algorithms import (
     binary_search,
     babylonian_sqrt
     binary_exponentiation,
@@ -186,7 +186,7 @@ a triangle with given side lengths is a rectangular triangle.
 <br>
 
 ```
-from algorithms.math.geometric_algorithms import (
+from algohub.algorithms.math.geometric_algorithms import (
     Point,
     distance_between_points,
     are_points_collinear,

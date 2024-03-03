@@ -16,7 +16,7 @@ To install the "algorithms" library and access this package, you can use pip:<br
 <br>
 
 ```
-pip install algorithms
+pip install algohub
 ```
 
 </font>
@@ -37,7 +37,7 @@ Here's how you can use it:
 <br>
 
 ```
-from algorithms.strings import string_analysis
+from algohub.algorithms.strings import string_analysis
 ```
 
 #### Checking for anagram
@@ -114,7 +114,7 @@ Here's how you can use it:
 <br>
 
 ```
-from algorithms.strings import string_manipulation
+from algohub.algorithms.strings import string_manipulation
 ```
 
 #### Reversing a string
@@ -164,8 +164,11 @@ Here's how you can use it:
 <br>
 
 ```
-from algorithms.strings.custom_string_sorting import sort_items, compare_vowels_count,
-compare_chars_sum
+from algohub.algorithms.strings.custom_string_sorting import (
+    sort_items,
+    compare_chars_sum,
+    compare_vowels_count
+)
 ```
 
 #### Sort items with compare_vowels_count and compare_chars_sum functions

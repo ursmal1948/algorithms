@@ -55,7 +55,7 @@ To install this library and access algorithms, you can use pip:<br>
 <br>
 
 ```
-pip install algorithms
+pip install algohub
 ```
 
 </font>
@@ -92,7 +92,7 @@ Comprehensive documentation available at this link: <br>
 ### Ciphers
 
 ```
-from algorithms.ciphers import vigenere
+from algohub.algorithms.ciphers import vigenere
 ```
 
 ```
@@ -119,7 +119,7 @@ print(f'Decrypted: {decrypted_text}')                       # HOME
 ### Strings
 
 ```
-from algorithms.strings import string_manipulation
+from algohub.algorithms.strings import string_manipulation
 ```
 
 ```
@@ -132,7 +132,7 @@ print(f'Compression: {compressed_string}') # A2B2C1a1
 ### Numbers
 
 ```
-from algorithms.numbers.num_base_conversion import any_to_decimal, decimal_to_any
+from algohub.algorithms.numbers.num_base_conversion import any_to_decimal, decimal_to_any
 ```
 
 #### Decimal to binary conversion
