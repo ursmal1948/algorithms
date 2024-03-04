@@ -2,7 +2,6 @@
 This module provides various functions for data validation.
 """
 
-
 import re
 from collections import Counter
 from typing import Callable

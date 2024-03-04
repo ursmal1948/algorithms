@@ -20,6 +20,7 @@
         <li><a href="#installation">Installation</a></li>
         <li><a href="#documentation">Documentation</a></li>
         <li><a href="#quality">Code quality</a></li>
+        <li><a href="#data">Data</a></li>
         <li><a href="#usage">Example usage</a></li>
         <li><a href="#algorithms">Algorithms</a></li>
         <ul>
@@ -95,6 +96,8 @@ Pylint Rating <br>
 </h3>
 <h4>
 Measures quality of code and its adherence to coding standards and best practices.
+<br>
+My score:
 </h4>
 <br>
 
@@ -108,11 +111,45 @@ Mypy<br>
 <h4>
 Analyzes code to verify that the actual usage of variables, function arguments
 and return values matches the type specified in the annotations (type hints).
-Overall the code demonstrated high compatibility with type annotations.
+Overall the code demonstrates high compatibility with type annotations.
 </h4>
 </font>
 </h2>
 </div>
+
+<div>
+<h2 id="data">
+
+## Data
+
+<font size="+1">
+Except for algorithms in package there is also a data package. It consists of many
+useful functions for retrieving the data from user, random number generation and
+data validation. Feel free to explore it!
+<br>
+<br>
+Example usage
+
+```
+from algohub.algorithms.data.validation import does_string_match_regex
+```
+
+```
+pattern = r'^[A-Z]{3};[a-z]+;\d$'
+text = "ULA;developer;2"
+text_2 = "KLAUDIA;developer;3"
+
+result = does_string_match_regex(text, pattern)
+result_2 = does_string_match_regex(text_2, pattern)
+
+print(f'Text {text} matches regex: {result}')       # True
+print(f'Text {text_2} matches regex: {result_2}')   # False
+```
+
+</font>
+</h2>
+</div>
+
 
 <div>
 <h2 id="usage">
