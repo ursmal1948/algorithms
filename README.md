@@ -72,7 +72,7 @@ pip install algohub
 
 <font size="+1"> 
 Comprehensive documentation available at this link: <br>
-<a href=" https://ursmal1948.github.io/algorithms_hub/" target="_blank">SPHINX DOCUMENTATION</a><br>
+<a href="https://ursmal1948.github.io/algorithms_hub/" target="_blank">SPHINX DOCUMENTATION</a><br>
 <br>
 
 ## ‼️ 📄 Feel free to explore detailed README documentation for each package below 📃 ‼️
