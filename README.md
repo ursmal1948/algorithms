@@ -77,11 +77,11 @@ Comprehensive documentation available at this link: <br>
 
 ## ‼️ 📄 Feel free to explore detailed README documentation for each package below 📃 ‼️
 
-[NUMBERS](algorithms/numbers/README.md) <br>
-[MATH](algorithms/math/README.md)<br>
-[STRINGS](algorithms/strings/README.md)<br>
-[CIPHERS](algorithms/ciphers/README.md)<br>
-[SORTING](algorithms/sorting/README.md)
+[NUMBERS](algohub/algorithms/numbers/README.md) <br>
+[MATH](algohub/algorithms/math/README.md)<br>
+[STRINGS](algohub/algorithms/strings/README.md)<br>
+[CIPHERS](algohub/algorithms/ciphers/README.md)<br>
+[SORTING](algohub/algorithms/sorting_README.md)
 </font>
 </h2>
 </div>
