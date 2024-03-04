@@ -1,3 +1,7 @@
+"""
+This module provides various functions for retrieving string / strings from user.
+"""
+
 import re
 
 

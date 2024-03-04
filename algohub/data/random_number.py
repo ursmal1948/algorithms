@@ -1,3 +1,7 @@
+"""
+This module provides various functions for retrieving random number / numbers.
+"""
+
 import random
 from typing import Callable
 
