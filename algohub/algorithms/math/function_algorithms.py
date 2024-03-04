@@ -73,13 +73,13 @@ def quadratic_roots(a: int | float, b: int | float, c: int | float) -> \
         root_1 = (-b - math.sqrt(discriminant)) / (2 * a)
         root_2 = (-b + math.sqrt(discriminant)) / (2 * a)
         return root_1, root_2
-    elif discriminant == 0:
+    if discriminant == 0:
         root = -b / (2 * a)
         return root, root
-    else:
-        real_part = -b / (2 * a)
-        imaginary_part = math.sqrt(abs(discriminant)) / (2 * a)
-        return real_part + imaginary_part * 1j, real_part - imaginary_part * 1j
+
+    real_part = -b / (2 * a)
+    imaginary_part = math.sqrt(abs(discriminant)) / (2 * a)
+    return real_part + imaginary_part * 1j, real_part - imaginary_part * 1j
 
 
 def horner_evaluation(coefficients: list[int | float], x: int | float) -> int:
