@@ -1,3 +1,7 @@
+"""
+This module provides functions for working primes.
+"""
+
 from algohub.algorithms.numbers.divisors import sum_divisors
 
 
@@ -95,11 +99,13 @@ def get_prime_factors(n: int) -> list[int]:
     Determines the prime factors of a given number.
 
     Parameters:
-        n (int): The number for which prime factors will be determined. Must be an integer greater than 1.
+        n (int): The number for which prime factors will be determined.
+         Must be an integer greater than 1.
 
     Returns:
-        list[int]: A list containing the prime factors of the number n. Each factory may appear in the list
-                   more than once, depending on its multiplicity in the prime factorization of n.
+        list[int]: A list containing the prime factors of the number n.
+         Each factory may appear in the list more than once, depending
+         on its multiplicity in the prime factorization of n.
     """
 
     if n < 2:

@@ -1,3 +1,7 @@
+"""
+This module provides functions for encoding and decoding text using the Caesar cipher.
+"""
+
 from dataclasses import dataclass
 from typing import ClassVar
 from string import ascii_uppercase
@@ -6,12 +10,14 @@ from string import ascii_uppercase
 @dataclass
 class CaesarCipher:
     """
-    A class for implementing the Caesar cipher, a simple substitution cipher where each letter in the plaintext
-    is shifted a certain number of places down or up the alphabet.
+    A class for implementing the Caesar cipher, a simple substitution cipher
+    where each letter in the plaintext is shifted a certain number of places
+    down or up the alphabet.
 
     Attributes:
         sequence:str
-         A sequence of characters representing the alphabet. Default is the ASCII uppercase characters.
+         A sequence of characters representing the alphabet. Default is the
+         ASCII uppercase characters.
         shift: int
          The number of positions each letter is shifted. Default is 3.
     """

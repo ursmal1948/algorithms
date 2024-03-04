@@ -1,3 +1,7 @@
+"""
+This module provides functions for string analysis.
+"""
+
 from collections import Counter
 from typing import Any
 

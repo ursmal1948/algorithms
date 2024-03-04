@@ -1,3 +1,7 @@
+"""
+This module provides functions for encoding and decoding text using the Morse code.
+"""
+
 from dataclasses import dataclass
 from typing import ClassVar
 
@@ -58,7 +62,8 @@ class MorseCode:
             str: The decrypted original text.
 
         Raises:
-            ValueError: If a character in the text is not present in the reversed Morse code dictionary.
+            ValueError: If a character in the text is not present
+             in the reversed Morse code dictionary.
         """
 
         encoded_chars = encrypted_text.split("|")

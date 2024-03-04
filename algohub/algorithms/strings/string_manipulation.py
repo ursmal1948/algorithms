@@ -1,3 +1,7 @@
+"""
+This module provides functions for string analysis.
+"""
+
 from collections import Counter, OrderedDict
 
 
@@ -41,7 +45,8 @@ def custom_join(words: list[str], separator: str = '') -> str:
 
     Parameters:
         words (list[str]): The list of strings to be joined.
-        separator (str): The string to be used as a separator between each element in the list. Default is ''.
+        separator (str): The string to be used as a separator
+         between each element in the list. Default is ''.
 
     Returns:
         str: A string resulting from concatenating the elements of the list with the separator.
@@ -53,11 +58,12 @@ def custom_join(words: list[str], separator: str = '') -> str:
     if not all(isinstance(word, str) for word in words):
         raise ValueError("All elements must be strings")
     result = ''
-    for i in range(len(words)):
-        if i == len(words) - 1:
-            result += words[i]
+    for index, word in enumerate(words):
+        if index == len(words) - 1:
+            result += word
         else:
-            result += (words[i] + separator)
+            result += (word + separator)
+
     return result
 
 

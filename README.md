@@ -19,6 +19,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#documentation">Documentation</a></li>
+        <li><a href="#quality">Code quality</a></li>
         <li><a href="#usage">Example usage</a></li>
         <li><a href="#algorithms">Algorithms</a></li>
         <ul>
@@ -72,8 +73,9 @@ pip install algohub
 Comprehensive documentation available at this link: <br>
 <a href="https://ursmal1948.github.io/algorithms/" target="_blank">SPHINX DOCUMENTATION</a><br>
 <br>
-    
+
 ## ‼️ 📄 Feel free to explore detailed README documentation for each package below 📃 ‼️
+
 [NUMBERS](algorithms/numbers/README.md) <br>
 [MATH](algorithms/math/README.md)<br>
 [STRINGS](algorithms/strings/README.md)<br>
@@ -82,6 +84,36 @@ Comprehensive documentation available at this link: <br>
 </font>
 </h2>
 </div>
+<div>
+<h2 id="quality">
+
+## Code Quality Checks
+
+<font size="+1">
+<h3>
+Pylint Rating <br>
+</h3>
+<h4>
+Measures quality of code and its adherence to coding standards and best practices.
+</h4>
+<br>
+
+```
+Your code has been rated at 9.81/10 (previous run: 9.81/10, +0.00)
+```
+
+<h3>
+Mypy<br>
+</h3>
+<h4>
+Analyzes code to verify that the actual usage of variables, function arguments
+and return values matches the type specified in the annotations (type hints).
+Overall the code demonstrated high compatibility with type annotations.
+</h4>
+</font>
+</h2>
+</div>
+
 <div>
 <h2 id="usage">
 

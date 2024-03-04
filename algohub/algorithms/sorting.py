@@ -1,3 +1,7 @@
+"""
+This module provides several classes for sorting.
+"""
+
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Any
@@ -9,7 +13,7 @@ class Sorting(ABC):
     """
 
     @abstractmethod
-    def sort(self, data: list[Any]):
+    def sort(self, data: list[Any]) -> list[Any]:
         """
         Sorts a list of elements.
 
@@ -21,7 +25,6 @@ class Sorting(ABC):
             list[Any]
                 The sorted list.
         """
-
         pass
 
 
@@ -30,7 +33,7 @@ class QuickSort(Sorting):
     A class implementing the QuickSort algorithm, a divide-and-conquer sorting algorithm
     """
 
-    def sort(self, data: list[Any]):
+    def sort(self, data: list[Any]) -> list[Any]:
         """
         Sorts a list using the QuickSort algorithm.
 
@@ -57,7 +60,7 @@ class BubbleSort(Sorting):
     A class implementing the BubbleSort algorithm
     """
 
-    def sort(self, data: list[Any]):
+    def sort(self, data: list[Any]) -> list[Any]:
         """
         Sorts a list using the BubbleSort algorithm.
 
@@ -113,7 +116,7 @@ class MergeSort(Sorting):
         merged.extend(right_half[j:])
         return merged
 
-    def sort(self, data: list[Any]):
+    def sort(self, data: list[Any]) -> list[Any]:
         """
         Sorts a list using the MergeSort algorithm.
 
@@ -139,7 +142,7 @@ class SelectionSort(Sorting):
     A class implementing the SelectionSort algorithm
     """
 
-    def sort(self, data: list[Any]):
+    def sort(self, data: list[Any]) -> list[Any]:
         """
         Sorts a list using the SelectionSort algorithm.
 

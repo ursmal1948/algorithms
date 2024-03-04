@@ -23,13 +23,15 @@ def rand_number_until(min_n: int | float,
                       max_n: int | float,
                       condition_fn: Callable[[int | float], bool]) -> int | float:
     """
-    Returns an int number or a float number in the range [min_n, max_n] untils it meets the condition
+    Returns an int number or a float number in the range [min_n, max_n]
+     untils it meets the condition
     Parameters:
         min_n (int|float): The left end of the range
         max_n (int|float): The right end of the range
         condition_fn (Callable[[int|float],bool]): The condition function
     Returns:
-        int: An int number or a float number in the range [min_n, max_n] that satisfies the condition
+        int: An int number or a float number in the range [min_n, max_n]
+        that satisfies the condition
     """
 
     if min_n > max_n:
@@ -94,16 +96,19 @@ def rand_n_numbers(n: int, min_n: int | float, max_n: int | float) -> list[int] 
 
 def rand_n_numbers_until(n, min_n: int | float,
                          max_n: int | float,
-                         condition_fn: Callable[[int | float], bool]) -> list[int] | list[float]:
+                         condition_fn: Callable[[int | float], bool]) \
+        -> list[int] | list[float]:
     """
-    Returns int numbers or float numbers in the range [min_n, max_n] untils it meets the condition
+    Returns int numbers or float numbers in the range [min_n, max_n] untils
+     it meets the condition
     Parameters:
         n (int): The number of items
         min_n (int|float): The left end of the range
         max_n (int|float): The right end of the range
         condition_fn (Callable[[int|float],bool]): The condition function
     Returns:
-        list[int|float]: Int numbers or float numbers in the range [min_n, max_n] that satisfies the condition
+        list[int|float]: Int numbers or float numbers in the range [min_n, max_n]
+         that satisfies the condition
     """
 
     if n <= 0:
@@ -119,7 +124,10 @@ def rand_n_numbers_until(n, min_n: int | float,
 
 
 def _rand_number_until(
-        min_n: int, max_n: int, condition_fn: Callable[[int | float], bool], data_type: type) -> int | float:
+        min_n: int, max_n: int,
+        condition_fn: Callable[[int | float], bool],
+        data_type: type) \
+        -> int | float:
     if data_type == int:
         while not condition_fn(v := random.randint(min_n, max_n)):
             pass
@@ -128,5 +136,3 @@ def _rand_number_until(
     while not condition_fn(v := random.uniform(min_n, max_n)):
         pass
     return v
-
-

@@ -1,8 +1,15 @@
+"""
+This module provides functions for various geometric algorithms.
+"""
+
 from dataclasses import dataclass
 
 
 @dataclass
 class Point:
+    """
+    Represents a point in 2D space with coordinates (x,y). Default x=0, y=0.
+    """
     x: int | float = 0
     y: int | float = 0
 

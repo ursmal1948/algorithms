@@ -1,3 +1,8 @@
+"""
+This module provides functions for working with conversion between number systems.
+"""
+
+
 def decimal_to_any(n: int, base: int = 2) -> str:
     """
     Converts a decimal number to its representation in the specified base.

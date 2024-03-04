@@ -1,3 +1,7 @@
+"""
+This module provides functions for working with divisors of integers.
+"""
+
 import math
 
 
@@ -57,7 +61,8 @@ def sum_divisors(n: int, n_included: bool = True) -> int | float:
 
     Parameters:
         n (int): Number for which the sum of divisors is determined.
-        n_included (bool): Indicates whether the number n will be taken into account when summing the divisors.
+        n_included (bool): Indicates whether the number n will be
+         taken into account when summing the divisors.
 
     Returns:
         int | float: The sum of divisors for the integer, or infinity if the integer is 0.
@@ -69,12 +74,12 @@ def sum_divisors(n: int, n_included: bool = True) -> int | float:
     divisors_sum = {1: 1, 2: 3, 3: 4}
     if nn in divisors_sum:
         return divisors_sum[nn]
-    divisors_sum = (nn if n_included else 0) + 1
+    sum_of_divisors = (nn if n_included else 0) + 1
     i = 2
     while i * i < nn:
         if nn % i == 0:
-            divisors_sum += (i + (nn // i))
+            sum_of_divisors += (i + (nn // i))
         i += 1
     if i * i == nn:
-        divisors_sum += i
-    return divisors_sum
+        sum_of_divisors += i
+    return sum_of_divisors

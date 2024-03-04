@@ -1,3 +1,8 @@
+"""
+This module provides functions for various mathematical algorithms,
+"""
+
+
 def binary_search(numbers: list[int], looked_number: int) -> int | bool:
     """
     Performs binary search to find the index of the looked number in the sorted list of numbers
@@ -39,12 +44,13 @@ def babylonian_sqrt(n: int, accuracy: float = 0.001) -> float:
     """
 
     r = n
+    #     r: float = n  # Declaring r as float
     while abs(n - r * r) > accuracy:
         r = (r + n / r) / 2
     return round(r, 3)
 
 
-def binary_exponentiation(number: int, power: int):
+def binary_exponentiation(number: int, power: int) -> int:
     """
     Computes the result of raising a given number to the power using binary exponentiation.
 
@@ -81,7 +87,7 @@ def iterative_factorial(n: int) -> int:
 
     if n < 0:
         raise ValueError('The number must be a non-negative integer')
-    if n == 0 or n == 1:
+    if n in [0, 1]:
         return 1
 
     product = 1
@@ -107,6 +113,6 @@ def recursive_factorial(n: int) -> int:
 
     if n < 0:
         raise ValueError('The number must be a non-negative integer')
-    if n == 0 or n == 1:
+    if n in [0, 1]:
         return 1
     return n * iterative_factorial(n - 1)

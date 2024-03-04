@@ -1,3 +1,8 @@
+"""
+This module provides functions for string sorting.
+"""
+
+
 from functools import cmp_to_key
 from typing import Callable
 
@@ -8,8 +13,9 @@ def sort_items(items: list[str], sorting_fn: Callable[[str, str], int]) -> list[
 
     Parameters:
         items (list[str]): A list of strings to be sorted.
-        sorting_fn (Callable[[str, str], int]): A callable function that takes two strings as arguments
-            and returns an integer. This function defines the custom sorting logic.
+        sorting_fn (Callable[[str, str], int]): A callable function that
+         takes two strings as argumentsand returns an integer. This
+         function defines the custom sorting logic.
 
     Returns:
         list[str]: A new list of strings according to the specified sorting function.

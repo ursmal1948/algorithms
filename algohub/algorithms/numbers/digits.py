@@ -1,3 +1,8 @@
+"""
+This module provides functions for working with digits.
+"""
+
+
 def get_digit(n: int, position: int) -> int:
     """
     Gets the digit at a specified position in a given integer.
@@ -76,11 +81,11 @@ def validate_luhn(number_str: str) -> bool:
 
     reversed_number_str = number_str[::-1]
     sum_ = 0
-    for i in range(len(reversed_number_str)):
-        digit = int(reversed_number_str[i])
-        if i % 2 == 1:
-            digit *= 2
-            if digit > 9:
-                digit -= 9
-        sum_ += digit
+    for index, digit in enumerate(reversed_number_str):
+        digit_int = int(digit)
+        if index % 2 == 1:
+            digit_int *= 2
+            if digit_int > 9:
+                digit_int -= 9
+        sum_ += digit_int
     return sum_ % 10 == 0
