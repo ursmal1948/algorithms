@@ -17,7 +17,7 @@
     <h2>Table of Contents</h2>
     <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#video">Project's video</a></li>
+        <li><a href="#video">Video showcase of the project</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#documentation">Documentation</a></li>
         <li><a href="#quality">Code quality</a></li>
@@ -52,11 +52,11 @@ It is wise to learn and implement them in your projects
 <div>
 <h2 id="video">
 
-## Project video
+## Video showcase of the project
 
 <font size="+1"> 
-I invite you to watch a project's video where I make an introduction to my project and show the implementation of Vigenere Cipher  <br>
-<a href="https://www.dropbox.com/scl/fi/4rkd697yidfnbz83aik28/introduction_video.mov?rlkey=6gq6im7t9i8ytadxesdz1zon9&dl=0" target="_blank">VIDEO</a><br>
+I invite you to watch videos that serve as an introduction to the project and showcase usage of various algorithms  <br>
+<a href="https://www.dropbox.com/scl/fi/4rkd697yidfnbz83aik28/introduction_video.mov?rlkey=6gq6im7t9i8ytadxesdz1zon9&dl=0" target="_blank">INTRODUCTION AND VIGENERE CIPHER</a><br>
 <br>
 
 ## ‼️ 📄 Feel free to explore detailed README documentation for each package below 📃 ‼️
