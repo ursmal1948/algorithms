@@ -33,7 +33,7 @@ Here's how you can use it:
 <br>
   
 ```
-from algohub.algorithms.ciphers import vigenere
+from algohub.algorithms.ciphers.vigenere import VigenereCipher
 ```
 
 ```
@@ -64,7 +64,7 @@ number of places down or up the alphabet.<br>
 Here's how you can use it:
 
 ```
-from algohub.algorithms.ciphers import caesar
+from algohub.algorithms.ciphers.caesar import CaesarCipher
 ```
 
 ```
@@ -93,7 +93,7 @@ as sequences of two different signal durations, called dots and dashes.<br>
 Here is how you can use it:<br>
 
 ```
-from algohub.algorithms.ciphers import morse
+from algohub.algorithms.ciphers.morse import MorseCode
 ```
 ```
 Creating an instance of Morse code
