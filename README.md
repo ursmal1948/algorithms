@@ -17,6 +17,7 @@
     <h2>Table of Contents</h2>
     <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#video">Video demonstration</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#documentation">Documentation</a></li>
         <li><a href="#quality">Code quality</a></li>
@@ -47,6 +48,28 @@ It is wise to learn and implement them in your projects
 </h2>
 </div>
 
+
+<div>
+<h2 id="video">
+
+## Demonstration video
+
+<font size="+1"> 
+I invite you to watch a deomnstration video where I make an introduction to my project and show the implementation of Vigenere Cipher  <br>
+<a href="https://www.dropbox.com/scl/fi/4rkd697yidfnbz83aik28/introduction_video.mov?rlkey=6gq6im7t9i8ytadxesdz1zon9&dl=0" target="_blank">VIDEO</a><br>
+<br>
+
+## ‼️ 📄 Feel free to explore detailed README documentation for each package below 📃 ‼️
+
+[NUMBERS](algohub/algorithms/numbers/README.md) <br>
+[MATH](algohub/algorithms/math/README.md)<br>
+[STRINGS](algohub/algorithms/strings/README.md)<br>
+[CIPHERS](algohub/algorithms/ciphers/README.md)<br>
+[SORTING](algohub/algorithms/sorting_README.md)
+</font>
+</h2>
+</div>
+
 <div>
 <h2 id="installation">
 
@@ -68,7 +91,7 @@ pip install algohub
 <div>
 <h2 id="documentation">
 
-## Documenation
+## Documentation
 
 <font size="+1"> 
 Comprehensive documentation available at this link: <br>
@@ -161,7 +184,7 @@ print(f'Text {text_2} matches regex: {result_2}')   # False
 ### Ciphers
 
 ```
-from algohub.algorithms.ciphers import vigenere
+from algohub.algorithms.ciphers.vigenere import VigenereCipher
 ```
 
 ```

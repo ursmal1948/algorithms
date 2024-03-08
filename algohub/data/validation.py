@@ -43,6 +43,43 @@ def is_number_within_range(number: int, r_min: int, r_max: int) -> bool:
     return r_min <= number <= r_max
 
 
+def does_number_match_regex(
+        n: int,
+        data_type: int | float,
+        regex: str | None = None) \
+        -> int | float:
+    """
+    Checks if a number matches a specified regular expression pattern
+     based on its data type.
+
+    Parameters:
+        n (int | float): The number to be checked.
+        data_type (int | float): The type of the number (int or float).
+        regex (str, optional): Regular expression pattern to match against.
+            If not provided, a default pattern based on the data type will be used.
+
+    Returns:
+        int | float: True if number matches the specified regular
+         expression pattern, otherwise False.
+
+    Raises:
+        TypeError: If data_type is not int or float.
+    """
+
+    if data_type not in [int, float]:
+        raise TypeError('Incorrect type')
+
+    data_type_regex = {
+        int: r'^-?\d+(\.0+)?$',
+        float: r'^-?\d+\.\d+$'
+    }
+
+    data_regex = regex if regex else data_type_regex[data_type]
+    if not re.match(data_regex, str(n)):
+        return False
+    return True
+
+
 def does_text_meet_condition(text: str, condition_fn: Callable[[str], bool]) -> bool:
     """
     Checks if text meets a specified condition.
@@ -119,43 +156,6 @@ def does_text_meet_characters_count_allow_additional(
     for char, count in expected_chars_count.items():
         if chars_count[char] < count:
             return False
-    return True
-
-
-def does_number_match_regex(
-        n: int,
-        data_type: int | float,
-        regex: str | None = None) \
-        -> int | float:
-    """
-    Checks if a number matches a specified regular expression pattern
-     based on its data type.
-
-    Parameters:
-        n (int | float): The number to be checked.
-        data_type (int | float): The type of the number (int or float).
-        regex (str, optional): Regular expression pattern to match against.
-            If not provided, a default pattern based on the data type will be used.
-
-    Returns:
-        int | float: True if number matches the specified regular
-         expression pattern, otherwise False.
-
-    Raises:
-        TypeError: If data_type is not int or float.
-    """
-
-    if data_type not in [int, float]:
-        raise TypeError('Incorrect type')
-
-    data_type_regex = {
-        int: r'^-?\d+(\.0+)?$',
-        float: r'^-?\d+\.\d+$'
-    }
-
-    data_regex = regex if regex else data_type_regex[data_type]
-    if not re.match(data_regex, str(n)):
-        return False
     return True
 
 
