@@ -58,14 +58,6 @@ It is wise to learn and implement them in your projects
 I invite you to watch videos that serve as an introduction to the project and showcase usage of various algorithms  <br>
 <a href="https://www.dropbox.com/scl/fi/4rkd697yidfnbz83aik28/introduction_video.mov?rlkey=6gq6im7t9i8ytadxesdz1zon9&dl=0" target="_blank">INTRODUCTION AND VIGENERE CIPHER</a><br>
 <br>
-
-## ‼️ 📄 Feel free to explore detailed README documentation for each package below 📃 ‼️
-
-[NUMBERS](algohub/algorithms/numbers/README.md) <br>
-[MATH](algohub/algorithms/math/README.md)<br>
-[STRINGS](algohub/algorithms/strings/README.md)<br>
-[CIPHERS](algohub/algorithms/ciphers/README.md)<br>
-[SORTING](algohub/algorithms/sorting_README.md)
 </font>
 </h2>
 </div>
