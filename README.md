@@ -17,7 +17,7 @@
     <h2>Table of Contents</h2>
     <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#video">Video demonstration</a></li>
+        <li><a href="#video">Project's video</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#documentation">Documentation</a></li>
         <li><a href="#quality">Code quality</a></li>
@@ -52,10 +52,10 @@ It is wise to learn and implement them in your projects
 <div>
 <h2 id="video">
 
-## Demonstration video
+## Project video
 
 <font size="+1"> 
-I invite you to watch a deomnstration video where I make an introduction to my project and show the implementation of Vigenere Cipher  <br>
+I invite you to watch a project's video where I make an introduction to my project and show the implementation of Vigenere Cipher  <br>
 <a href="https://www.dropbox.com/scl/fi/4rkd697yidfnbz83aik28/introduction_video.mov?rlkey=6gq6im7t9i8ytadxesdz1zon9&dl=0" target="_blank">VIDEO</a><br>
 <br>
 
