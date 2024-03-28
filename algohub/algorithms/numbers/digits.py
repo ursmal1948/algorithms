@@ -46,6 +46,29 @@ def sum_digits(n: int) -> int:
     return sum_
 
 
+def sum_range(a: int, b: int) -> int:
+    """
+    Calculates the sum of integers in a given range [a, b].
+
+    Parameters:
+        a (int): The starting value of the range (inclusive).
+        b (int): The ending value of the range (inclusive).
+
+    Returns:
+        int: The sum of integers in the range [a, b].
+
+    Raises:
+        ValueError: If 'a' is greater than 'b', indicating an invalid range.
+    """
+    if a < 0 or b < 0:
+        raise ValueError("Range must have non negative value")
+
+    if a > b:
+        raise ValueError("Range is not correct")
+
+    return (a + b) * (b - a + 1) // 2
+
+
 def move_zeroes(nums: list[int]) -> list[int]:
     """
     Moves all zeros to the end, maintaining the order of other elements.

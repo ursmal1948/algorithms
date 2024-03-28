@@ -2,6 +2,7 @@ import pytest
 from algohub.algorithms.numbers.digits import (
     get_digit,
     sum_digits,
+    sum_range,
     move_zeroes,
     validate_luhn
 )
@@ -34,6 +35,17 @@ class TestSumDigits:
     def test_sum_digits(self, number_and_expected_sum):
         number, expected_digits_sum = number_and_expected_sum[0], number_and_expected_sum[1]
         assert sum_digits(number) == expected_digits_sum
+
+
+class TestSumRange:
+
+    @pytest.mark.parametrize("a, b, expected_sum", [
+        (0, 2, 3),
+        (3, 10, 52),
+    ])
+    def test_sum_range(self, a, b, expected_sum):
+        result = sum_range(a, b)
+        assert result == expected_sum
 
 
 class TestMoveZeroes:
