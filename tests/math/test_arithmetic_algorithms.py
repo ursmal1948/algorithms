@@ -1,7 +1,7 @@
 import pytest
 from algohub.algorithms.math.arithmetic_algorithms import (
-    iterative_factorial,
-    recursive_factorial,
+    IterativeFactorial,
+    RecursiveFactorial,
     binary_search,
     binary_exponentiation,
     babylonian_sqrt
@@ -63,21 +63,21 @@ class TestBinaryExponentiation:
         assert binary_exponentiation(number, power) == expected_result
 
 
-class TestFactorials:
+class TestFactorialsClasses:
     def test_iterative_with_negative_number(self):
         with pytest.raises(ValueError) as e:
-            iterative_factorial(-10)
+            IterativeFactorial().calculate_factorial(-15)
         assert 'The number must be a non-negative integer' == str(e.value)
 
     def test_iterative_with_ge_0_number(self, ge_0_number_and_expected_factorial_result):
         number, expected_factorial_result = ge_0_number_and_expected_factorial_result
-        assert iterative_factorial(number) == expected_factorial_result
+        assert IterativeFactorial().calculate_factorial(number) == expected_factorial_result
 
     def test_recursive_with_negative_number(self):
         with pytest.raises(ValueError) as e:
-            recursive_factorial(-5)
+            RecursiveFactorial().calculate_factorial(-3)
         assert 'The number must be a non-negative integer' == str(e.value)
 
     def test_recursive_with_ge_0_number(self, ge_0_number_and_expected_factorial_result):
         number, expected_factorial_result = ge_0_number_and_expected_factorial_result
-        assert recursive_factorial(number) == expected_factorial_result
+        assert RecursiveFactorial().calculate_factorial(number) == expected_factorial_result

@@ -1,6 +1,7 @@
 """
 This module provides functions for various mathematical algorithms,
 """
+from abc import ABC, abstractmethod
 
 
 def binary_search(numbers: list[int], looked_number: int) -> int | bool:
@@ -71,48 +72,61 @@ def binary_exponentiation(number: int, power: int) -> int:
     return result
 
 
-def iterative_factorial(n: int) -> int:
-    """
-    Calculates the factorial of a non-negative integer using an iterative approach.
-
-    Parameters:
-        n (int): The non-negative integer for which to calculate the factorial.
-
-    Returns:
-        int: The factorial of the integer.
-
-    Raises:
-        ValueError: If n is a negative number.
-    """
-
-    if n < 0:
-        raise ValueError('The number must be a non-negative integer')
-    if n in [0, 1]:
-        return 1
-
-    product = 1
-    while n > 1:
-        product *= n
-        n -= 1
-    return product
+class Factorial(ABC):
+    @abstractmethod
+    def calculate_factorial(self, n: int) -> int:
+        """
+        Abstract method to calculate the factorial of a non-negative integer.
+        """
+        pass
 
 
-def recursive_factorial(n: int) -> int:
-    """
-    Calculates the factorial of a non-negative integer using a recursive approach.
+class IterativeFactorial(Factorial):
 
-    Parameters:
-        n (int): The non-negative integer for which to calculate the factorial.
+    def calculate_factorial(self, n: int) -> int:
+        """
+        Calculates the factorial of a non-negative integer using an iterative approach.
 
-    Returns:
-        int: The factorial of the integer.
+        Parameters:
+            n (int): The non-negative integer for which to calculate the factorial.
 
-    Raises:
-        ValueError: If n is a negative number.
-    """
+        Returns:
+            int: The factorial of the integer.
 
-    if n < 0:
-        raise ValueError('The number must be a non-negative integer')
-    if n in [0, 1]:
-        return 1
-    return n * iterative_factorial(n - 1)
+        Raises:
+            ValueError: If n is a negative number.
+        """
+
+        if n < 0:
+            raise ValueError('The number must be a non-negative integer')
+        if n in [0, 1]:
+            return 1
+        product = 1
+        while n > 1:
+            product *= n
+            n -= 1
+        return product
+
+
+class RecursiveFactorial(Factorial):
+
+    def calculate_factorial(self, n: int) -> int:
+
+        """
+        Calculates the factorial of a non-negative integer using a recursive approach.
+
+        Parameters:
+            n (int): The non-negative integer for which to calculate the factorial.
+
+        Returns:
+            int: The factorial of the integer.
+
+        Raises:
+            ValueError: If n is a negative number.
+        """
+
+        if n < 0:
+            raise ValueError('The number must be a non-negative integer')
+        if n in [0, 1]:
+            return 1
+        return n * self.calculate_factorial(n - 1)
