@@ -7,13 +7,13 @@ from dataclasses import dataclass
 from typing import Any
 
 
-class Sorting(ABC):
+class Sorting[T](ABC):
     """
     An abstract base class for sorting algorithms.
     """
 
     @abstractmethod
-    def sort(self, data: list[Any]) -> list[Any]:
+    def sort(self, data: list[T]) -> list[Any]:
         """
         Sorts a list of elements.
 
@@ -28,12 +28,12 @@ class Sorting(ABC):
         pass
 
 
-class QuickSort(Sorting):
+class QuickSort[T](Sorting):
     """
     A class implementing the QuickSort algorithm, a divide-and-conquer sorting algorithm
     """
 
-    def sort(self, data: list[Any]) -> list[Any]:
+    def sort(self, data: list[T]) -> list[Any]:
         """
         Sorts a list using the QuickSort algorithm.
 
@@ -55,12 +55,12 @@ class QuickSort(Sorting):
         return self.sort(less_than_pivot) + equal_to_pivot + self.sort(greater_than_pivot)
 
 
-class BubbleSort(Sorting):
+class BubbleSort[T](Sorting):
     """
     A class implementing the BubbleSort algorithm
     """
 
-    def sort(self, data: list[Any]) -> list[Any]:
+    def sort(self, data: list[T]) -> list[Any]:
         """
         Sorts a list using the BubbleSort algorithm.
 
@@ -73,7 +73,7 @@ class BubbleSort(Sorting):
                 The sorted list.
         """
 
-        sorted_data = data.copy()
+        sorted_data = [n for n in data]
         for i in range(len(sorted_data)):
             for j in range(0, len(sorted_data) - i - 1):
                 if sorted_data[j] > sorted_data[j + 1]:
@@ -81,7 +81,7 @@ class BubbleSort(Sorting):
         return sorted_data
 
 
-class MergeSort(Sorting):
+class MergeSort[T](Sorting):
     """
     A class implementing the MergeSort algorithm
     """
@@ -116,7 +116,7 @@ class MergeSort(Sorting):
         merged.extend(right_half[j:])
         return merged
 
-    def sort(self, data: list[Any]) -> list[Any]:
+    def sort(self, data: list[T]) -> list[Any]:
         """
         Sorts a list using the MergeSort algorithm.
 
@@ -137,12 +137,12 @@ class MergeSort(Sorting):
         return MergeSort.merge(left_half, right_half)
 
 
-class SelectionSort(Sorting):
+class SelectionSort[T](Sorting):
     """
     A class implementing the SelectionSort algorithm
     """
 
-    def sort(self, data: list[Any]) -> list[Any]:
+    def sort(self, data: list[T]) -> list[Any]:
         """
         Sorts a list using the SelectionSort algorithm.
 
@@ -155,7 +155,7 @@ class SelectionSort(Sorting):
                 The sorted list.
         """
 
-        sorted_data = data.copy()
+        sorted_data = [n for n in data]
         for i in range(len(sorted_data) - 1):
             min_index = i
             for j in range(i + 1, len(sorted_data)):
@@ -166,7 +166,7 @@ class SelectionSort(Sorting):
 
 
 @dataclass
-class SortingManager:
+class SortingManager[T]:
     """
     A class that manages the sorting strategy and performs sorting using the specified strategy.
     """
@@ -183,7 +183,7 @@ class SortingManager:
 
         self.sorting_strategy = sorting_strategy
 
-    def perform_sorting(self, data: list[Any]) -> list[Any]:
+    def perform_sorting(self, data: list[T]) -> list[Any]:
         """
         Performs sorting on a list using the current sorting strategy.
 
