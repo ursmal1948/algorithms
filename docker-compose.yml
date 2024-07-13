@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+
+  # ===================================================================================
+  # [ APLIKACJA WEBOWA ]
+  # ===================================================================================
+  algorithms:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # gunicorn uruchomi 4 workers, ktore beda obslugiwaly requesty przychodzace
+    # z nginx i wywolywaly create_app skonfigurowana w naszym projekcie
+
+    # Dzieki --reload gunicorn przeladowuje automatycznie wszelkie zmiany w kodzie
+    command: gunicorn --bind 0.0.0.0:8000 --workers 4 'app.create_app:main()' --reload
+    volumes:
+      - ./:/webapp
+    # Tutaj sprawdzamy, czy kontener mysql jest uruchomiony prawidlowo
+    # To powoduje, ze kontener webapp moze normalnie ruszyc, kiedy kontener
+    # mysql dziala prawidlowo
+    # Jezeli tego nie zrobimy niestety nie dziala restartowanie kontenera
+    # jezeli cos pojdzie nie tak - konfiguracja Django wymaga prawidlowej
+    # pracy kontener mysql
+    ports:
+      - "8000:8000"
+    networks:
+      # bardzo waznym jest nadanie w tym miejscu aliasu dla polaczenia ktore
+      # w ramach sieci km-flask bedzie realizowane z kontenerem flask
+      # ten alias jest pozniej wykorzystany w pliku konfiguracyjnym default.conf
+      km-flask:
+        aliases:
+          - flask-app
+
+  # ===================================================================================
+  # KONFIGURACJA NGINX
+  # ===================================================================================
+  nginx:
+    restart: always
+    image: nginx:latest
+    volumes:
+      # nginx korzysta z pliku konfiguracyjnego default.conf, ktory bedzie jednoczesnie
+      # w specjalnej lokalizacji tak jak ponizej
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      # chcesz miec dostepny nginx na porcie 80
+      - '80:80'
+    depends_on:
+      - algorithms
+    networks:
+      - km-flask
+
+networks:
+  km-flask:
+    driver: bridge
+# Po tej konfiguracji
+# [FLASK] <=== [8000] <=== [GUNCORN] <==(4 workers) <=== NGINEX [80]
