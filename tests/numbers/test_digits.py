@@ -1,5 +1,5 @@
 import pytest
-from algohub.algorithms.numbers.digits import (
+from app.algohub.algorithms.numbers.digits import (
     get_digit,
     sum_digits,
     sum_range,
@@ -57,7 +57,8 @@ class TestMoveZeroes:
 
     def test_move_zeroes(self, numbers_and_expected_result_after_moving_zeroes):
         numbers_list, expected_numbers_with_zeroes_moved_to_the_end = numbers_and_expected_result_after_moving_zeroes
-        assert move_zeroes(numbers_list) == expected_numbers_with_zeroes_moved_to_the_end
+        move_zeroes(numbers_list)
+        assert numbers_list == expected_numbers_with_zeroes_moved_to_the_end
 
 
 class TestValidateLuhn:

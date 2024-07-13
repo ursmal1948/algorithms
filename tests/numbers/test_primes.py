@@ -1,7 +1,7 @@
 import unittest
 
 import pytest
-from algohub.algorithms.numbers.primes import (
+from app.algohub.algorithms.numbers.primes import (
     ErastothenesSieve,
     is_prime_basic,
     get_prime_factors,

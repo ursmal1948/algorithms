@@ -1,5 +1,5 @@
 import unittest
-from algohub.algorithms.ciphers.vigenere import VigenereCipher
+from app.algohub.algorithms.ciphers.vigenere import VigenereCipher
 
 
 class TestVigenereWithDefaultKey2(unittest.TestCase):

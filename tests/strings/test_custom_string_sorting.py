@@ -1,5 +1,5 @@
 import pytest
-from algohub.algorithms.strings.custom_string_sorting import (
+from app.algohub.algorithms.strings.custom_string_sorting import (
     sort_items,
     compare_chars_sum,
     compare_vowels_count
