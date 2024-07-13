@@ -6,7 +6,7 @@ from collections import Counter
 from typing import Any
 
 
-def is_anagram(text1: str, text2: str) -> bool:
+def are_anagrams(text1: str, text2: str) -> bool:
     """
     Checks if two strings are anagrams of each other.
     An anagram is a word of phrase formed by rearranging the letters of a different word or phrase

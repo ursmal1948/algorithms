@@ -91,7 +91,6 @@ def move_zeroes(nums: list[int]) -> None:
         index += 1
 
 
-# digits
 def validate_luhn(number_str: str) -> bool:
     """
     Checks if a given number is valid according to the Luhn algorithm.
