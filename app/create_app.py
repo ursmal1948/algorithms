@@ -2,7 +2,9 @@ from flask import Flask, Response, jsonify
 from flask_restful import Api, Resource
 
 from app.routes.numbers.digits import digits_blueprint
+from app.routes.numbers.divisors import divisors_blueprint
 from app.routes.strings.string_manipulation import strings_manipulation_blueprint
+from app.routes.strings.string_analysis import strings_analysis_blueprint
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -23,7 +25,9 @@ def main() -> Flask:
             return {'messagsse': str(error)}, 500
 
         app.register_blueprint(digits_blueprint)
+        app.register_blueprint(divisors_blueprint)
         app.register_blueprint(strings_manipulation_blueprint)
+        app.register_blueprint(strings_analysis_blueprint)
     return app
 
 
