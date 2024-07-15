@@ -1,7 +1,7 @@
 import pytest
 import unittest
-from algohub.algorithms.strings.string_analysis import (
-    is_anagram,
+from app.algohub.algorithms.strings.string_analysis import (
+    are_anagrams,
     is_pangram,
     is_palindrome,
     is_potential_palindrome,
@@ -25,7 +25,7 @@ class TestIsAnagram(unittest.TestCase):
         for test_case in TestIsAnagram.test_cases:
             with self.subTest(test_case=test_case):
                 text1, text2, expected_result = test_case
-                self.assertEqual(is_anagram(text1, text2), expected_result)
+                self.assertEqual(are_anagrams(text1, text2), expected_result)
 
 
 class TestIsPangram:

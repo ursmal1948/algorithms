@@ -35,8 +35,8 @@ def compress(text: str) -> str:
     """
 
     chars_counter = Counter(text)
-    ordered_chars_counter = OrderedDict.fromkeys(text)
-    return ''.join([c + str(chars_counter[c]) for c in ordered_chars_counter])
+    ordered_chars = OrderedDict.fromkeys(text)
+    return ''.join([c + str(chars_counter[c]) for c in ordered_chars])
 
 
 def custom_join(words: list[str], separator: str = '') -> str:

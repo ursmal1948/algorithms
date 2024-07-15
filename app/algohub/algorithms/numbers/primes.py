@@ -2,7 +2,7 @@
 This module provides functions for working primes.
 """
 
-from algohub.algorithms.numbers.divisors import sum_divisors
+from app.algohub.algorithms.numbers.divisors import sum_divisors
 
 
 class ErastothenesSieve:

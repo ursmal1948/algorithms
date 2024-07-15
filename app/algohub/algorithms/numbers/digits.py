@@ -58,18 +58,19 @@ def sum_range(a: int, b: int) -> int:
         int: The sum of integers in the range [a, b].
 
     Raises:
+        ValueError: If 'a' and/or 'b' have negative values.
         ValueError: If 'a' is greater than 'b', indicating an invalid range.
     """
     if a < 0 or b < 0:
-        raise ValueError("Range must have non negative value")
+        raise ValueError("Range values must have non negative value")
 
     if a > b:
-        raise ValueError("Range is not correct")
+        raise ValueError("Starting value of range can not be greater than ending value")
 
     return (a + b) * (b - a + 1) // 2
 
 
-def move_zeroes(nums: list[int]) -> list[int]:
+def move_zeroes(nums: list[int]) -> None:
     """
     Moves all zeros to the end, maintaining the order of other elements.
 
@@ -88,7 +89,6 @@ def move_zeroes(nums: list[int]) -> list[int]:
     while index < len(nums):
         nums[index] = 0
         index += 1
-    return nums
 
 
 def validate_luhn(number_str: str) -> bool:

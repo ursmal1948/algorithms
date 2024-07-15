@@ -1,6 +1,6 @@
 import pytest
 
-from algohub.algorithms.math.geometric_algorithms import (
+from app.algohub.algorithms.math.geometric_algorithms import (
     Point,
     distance_between_points,
     are_points_collinear,

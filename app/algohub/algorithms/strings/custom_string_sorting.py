@@ -2,7 +2,6 @@
 This module provides functions for string sorting.
 """
 
-
 from functools import cmp_to_key
 from typing import Callable
 
