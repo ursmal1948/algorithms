@@ -7,7 +7,7 @@ from app.routes.strings.string_manipulation import strings_manipulation_blueprin
 from app.routes.strings.string_analysis import strings_analysis_blueprint
 import logging
 from app.algohub.algorithms.ciphers.caesar import CaesarCipher
-from app.routes.ciphers import configure_caesar_cipher
+from app.routes.ciphers import configure_ciphers
 
 logging.basicConfig(level=logging.INFO)
 
@@ -17,7 +17,7 @@ def main() -> Flask:
     with app.app_context():
         #
         #
-        configure_caesar_cipher(app)
+        configure_ciphers(app)
 
         @app.errorhandler(Exception)
         def handle_error(error: Exception):

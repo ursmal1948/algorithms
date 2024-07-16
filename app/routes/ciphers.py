@@ -12,11 +12,12 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 
-def configure_caesar_cipher(app: Flask) -> None:
+def configure_ciphers(app: Flask) -> None:
     caesar_cipher = CaesarCipher()
+    vigenere_cipher = VigenereCipher()
 
     @app.route('/ciphers/caesar-ecnryption', methods=['POST'])
-    def encrypt_text():
+    def encrypt_caesar():
         text = request.args.get('text', type=str)
         if not text:
             return jsonify({'message': 'No text provided'}), 400
@@ -28,7 +29,7 @@ def configure_caesar_cipher(app: Flask) -> None:
         return jsonify({'Encrypted_text': f'{encrypted_text}'}), 200
 
     @app.route('/ciphers/caesar-decryption', methods=['POST'])
-    def decrypt_text():
+    def decrypt_caesar():
         text = request.args.get('text', type=str)
         if not text:
             return jsonify({'message': 'No text provided'}), 400
@@ -39,3 +40,27 @@ def configure_caesar_cipher(app: Flask) -> None:
 
         encrypted_text = caesar_cipher.decrypt(text)
         return jsonify({'Encrypted_text': f'{encrypted_text}'}), 200
+
+    @app.route('/ciphers/vigenere-encryption', methods=['POST'])
+    def encrypt_vigenere():
+        text = request.args.get('text', type=str)
+        if not text:
+            return jsonify({'message': 'No text provided'}), 400
+        key = request.args.get('key', type=str, default=None)
+        if key:
+            vigenere_cipher.key = key
+        encrypted_text = vigenere_cipher.encrypt(text)
+        return jsonify({'Encrypted_text': f'{encrypted_text}'}), 200
+
+    @app.route('/ciphers/vigenere-decryption', methods=['POST'])
+    def decrypt_vigenere():
+        text = request.args.get('text', type=str)
+        if not text:
+            return jsonify({'message': 'No text provided'}), 400
+        key = request.args.get('key', type=str, default=None)
+        if key:
+            vigenere_cipher.key = key
+        decrypted_text = vigenere_cipher.decrypt(text)
+        return jsonify({'Decrypted_text': f'{decrypted_text}'}), 200
+
+
