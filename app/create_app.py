@@ -8,6 +8,7 @@ from app.routes.strings.string_analysis import strings_analysis_blueprint
 import logging
 from app.algohub.algorithms.ciphers.caesar import CaesarCipher
 from app.routes.ciphers import configure_ciphers
+from app.routes.math.arithmetic_algorithms import configure_arithmetic_algorithms
 
 logging.basicConfig(level=logging.INFO)
 
@@ -18,6 +19,7 @@ def main() -> Flask:
         #
         #
         configure_ciphers(app)
+        configure_arithmetic_algorithms(app)
 
         @app.errorhandler(Exception)
         def handle_error(error: Exception):
