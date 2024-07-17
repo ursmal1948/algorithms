@@ -87,17 +87,14 @@ pip install algohub
 ## Documentation
 
 <font size="+1"> 
-Comprehensive documentation available at this link: <br>
-<a href="https://ursmal1948.github.io/algorithms_hub/" target="_blank">SPHINX DOCUMENTATION</a><br>
-<br>
 
 ## ‼️ 📄 Feel free to explore detailed README documentation for each package below 📃 ‼️
 
-[NUMBERS](algohub/algorithms/numbers/README.md) <br>
-[MATH](algohub/algorithms/math/README.md)<br>
-[STRINGS](algohub/algorithms/strings/README.md)<br>
-[CIPHERS](algohub/algorithms/ciphers/README.md)<br>
-[SORTING](algohub/algorithms/sorting_README.md)
+[NUMBERS](app/algohub/algorithms/numbers/README.md) <br>
+[MATH](app/algohub/algorithms/math/README.md)<br>
+[STRINGS](app/algohub/algorithms/strings/README.md)<br>
+[CIPHERS](app/algohub/algorithms/ciphers/README.md)<br>
+[SORTING](app/algohub/algorithms/sorting_README.md)
 </font>
 </h2>
 </div>
