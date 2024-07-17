@@ -20,6 +20,7 @@
         <li><a href="#video">Video showcase of the project</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#documentation">Documentation</a></li>
+        <li><a href="#postman-documentation">API</a></li>
         <li><a href="#quality">Code quality</a></li>
         <li><a href="#data">Data</a></li>
         <li><a href="#usage">Example usage</a></li>
@@ -102,6 +103,12 @@ Comprehensive documentation available at this link: <br>
 </div>
 <div>
 <h2 id="quality">
+
+## API 
+
+<div align="center">
+    <img src="ALGORITHMS.postman_collection.json" alt="postman">
+</div>
 
 ## Code Quality Checks
 
