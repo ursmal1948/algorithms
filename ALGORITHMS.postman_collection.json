@@ -1,0 +1,555 @@
+{
+	"info": {
+		"_postman_id": "2a620e1e-6c4c-4ba1-962e-18908aaf1248",
+		"name": "ALGORITHMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36229565"
+	},
+	"item": [
+		{
+			"name": "NUMBERS",
+			"item": [
+				{
+					"name": "DIGITS",
+					"item": [
+						{
+							"name": "GET DIGIT",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/digits/get_digit/123?position=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"digits",
+										"get_digit",
+										"123"
+									],
+									"query": [
+										{
+											"key": "position",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SUM DIGITS",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/digits/sum_digits/1234",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"digits",
+										"sum_digits",
+										"1234"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SUM RANGE",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"r_start\": 6,\n    \"r_end\": 8\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/digits/sum_range",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"digits",
+										"sum_range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "MOVE ZEROES",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"numbers\": [1, 9, 3, 4, 0]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/digits/move_zeroes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"digits",
+										"move_zeroes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LUHN",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/digits/luhn?card_number=79927398713",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"digits",
+										"luhn"
+									],
+									"query": [
+										{
+											"key": "card_number",
+											"value": "79927398713"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DIVISORS",
+					"item": [
+						{
+							"name": "SUM AND COUNT",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/divisors/3?action=sum",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"divisors",
+										"3"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "sum"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "COMMON DIVISORS",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/divisors/count-common-divisors?a=3&b=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"divisors",
+										"count-common-divisors"
+									],
+									"query": [
+										{
+											"key": "a",
+											"value": "3"
+										},
+										{
+											"key": "b",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "STRINGS",
+			"item": [
+				{
+					"name": "STRING MANIPULATION",
+					"item": [
+						{
+							"name": "REVERSE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/strings_manipulation/reverse?text=mama",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"strings_manipulation",
+										"reverse"
+									],
+									"query": [
+										{
+											"key": "text",
+											"value": "mama"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "COMPRESS",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/strings_manipulation/compress?text=mama",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"strings_manipulation",
+										"compress"
+									],
+									"query": [
+										{
+											"key": "text",
+											"value": "mama"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "JOIN",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/strings_manipulation/join",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"strings_manipulation",
+										"join"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LOWER & UPPER",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/strings_manipulation/abAcd?case=lower",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"strings_manipulation",
+										"abAcd"
+									],
+									"query": [
+										{
+											"key": "case",
+											"value": "lower"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "STRING ANALYSIS",
+					"item": [
+						{
+							"name": "PALINDROME",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/string-analysis/valid-palindrome?text=223",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"string-analysis",
+										"valid-palindrome"
+									],
+									"query": [
+										{
+											"key": "text",
+											"value": "223"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PANGRAM",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/string-analysis/valid-pangram?text=ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"string-analysis",
+										"valid-pangram"
+									],
+									"query": [
+										{
+											"key": "text",
+											"value": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ANAGRAMS",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/string-analysis/valid-anagrams?",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"string-analysis",
+										"valid-anagrams"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CIPHERS",
+			"item": [
+				{
+					"name": "CAESAR ENCRYPTION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ciphers/caesar-encryption?text=ABCD",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ciphers",
+								"caesar-encryption"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "ABCD"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CAESAR DECRYPTION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ciphers/caesar-decryption?text=ABCD&shift=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ciphers",
+								"caesar-decryption"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "ABCD"
+								},
+								{
+									"key": "shift",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VIGENERE ENCRYPTION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ciphers/vigenere-encryption?text=KAYAK",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ciphers",
+								"vigenere-encryption"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "KAYAK"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VIGENERE DECRYPTION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ciphers/vigenere-decryption?text=UEWKO",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ciphers",
+								"vigenere-decryption"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "UEWKO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MORSE ENCRYPTION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ciphers/morse-encryption?text=ABC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ciphers",
+								"morse-encryption"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "ABC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MORSE DECRYPTION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ciphers/morse-decryption?text=.--.|-.--|-|....|---|-.",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ciphers",
+								"morse-decryption"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": ".--.|-.--|-|....|---|-."
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
