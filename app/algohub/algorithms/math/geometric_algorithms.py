@@ -3,6 +3,7 @@ This module provides functions for various geometric algorithms.
 """
 
 from dataclasses import dataclass
+from typing import Self
 
 
 @dataclass
@@ -12,6 +13,14 @@ class Point:
     """
     x: int | float = 0
     y: int | float = 0
+
+    @classmethod
+    def from_list(cls, coordinates: list[int | float]) -> Self:
+        if len(coordinates) != 2:
+            raise ValueError("2 coordinates must be provided for point")
+
+        coordinate_x, coordinate_y = coordinates
+        return cls(coordinate_x, coordinate_y)
 
 
 def distance_between_points(p1: Point, p2: Point) -> float:

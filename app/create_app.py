@@ -9,6 +9,7 @@ import logging
 from app.algohub.algorithms.ciphers.caesar import CaesarCipher
 from app.routes.ciphers import configure_ciphers
 from app.routes.math.arithmetic_algorithms import configure_arithmetic_algorithms
+from app.routes.math.geometric_algorithms import configure_geometric_algorithms
 
 logging.basicConfig(level=logging.INFO)
 
@@ -20,6 +21,7 @@ def main() -> Flask:
         #
         configure_ciphers(app)
         configure_arithmetic_algorithms(app)
+        configure_geometric_algorithms(app)
 
         @app.errorhandler(Exception)
         def handle_error(error: Exception):

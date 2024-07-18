@@ -16,13 +16,13 @@ logging.basicConfig(level=logging.INFO)
 def configure_arithmetic_algorithms(app: Flask) -> None:
     @app.route('/factorial/<int:number>', methods=['GET'])
     def handle_factorial(number: int):
-        method = request.args.get("method",default='iter')
+        method = request.args.get("method", default='iter')
         if method == 'iter':
             return jsonify({'Iterative factorial': IterativeFactorial().calculate_factorial(number)}), 200
         if method == 'recursive':
             return jsonify({'Recursive factorial': RecursiveFactorial().calculate_factorial(number)}), 200
         else:
-            return jsonify({'message': 'Wrong argument type'}), 400
+            return jsonify({'message': 'Wrong factorial method'}), 400
 
     @app.route('/binary-search', methods=['GET'])
     def handle_binary_search():
