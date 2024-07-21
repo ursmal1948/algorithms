@@ -6,67 +6,68 @@ from app.algohub.algorithms.strings.string_manipulation import (
     upper
 )
 
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, Response, Flask
+from flask_json_schema import JsonSchema
+from app.routes.schemas import (
+    text_schema,
+    text_and_separator_schema,
+    text_and_case_schema)
 import logging
 
 logging.basicConfig(level=logging.INFO)
 
-strings_manipulation_blueprint = Blueprint('strings_manipulation', __name__, url_prefix='/strings_manipulation')
+string_manipulation_blueprint = Blueprint('string_manipulation',
+                                          __name__,
+                                          url_prefix='/api/algorithms/strings/string-manipulation')
+schema = JsonSchema()
 
 
-# todo wszystko zrobione ze string manipulation
-
-@strings_manipulation_blueprint.route('/reverse', methods=['POST'])
-def reverse_():
-    text = request.args.get('text', type=str)
-
-    if not text:
-        return jsonify({'message': 'No text provided'}), 400
+@string_manipulation_blueprint.route('/reverse', methods=['POST'])
+@schema.validate(text_schema)
+def handle_reverse() -> Response:
+    json_body = request.json
+    text = json_body['text']
+    if not text.strip():
+        return jsonify({'message': 'empty string'}), 400
     reversed_text = reverse(text)
-    return jsonify({'Text reversed successfuly': reversed_text}), 201
+    return jsonify({'reversed': reversed_text}), 200
 
 
-# jak nie podam queyr params w ogole to ABACDA,a jak podam pusty to wejdzie w warunek
-
-
-@strings_manipulation_blueprint.route('/compress', methods=['POST'])
-def compress_():
-    # http://localhost/strings_manipulation/compress? to bedzie ABACDA
-    # text = request.args.get('text', type=str, default='ABACDA').strip()
-    # http://localhost/strings_manipulation/compress?text a jak cos takiego to bedzie empty string.
-    text = request.args.get('text', type=str)
-    if not text:
-        return jsonify({'message': 'No text provided'}), 400
+@string_manipulation_blueprint.route('/compress', methods=['POST'])
+@schema.validate(text_schema)
+def handle_compress() -> Response:
+    json_body = request.json
+    text = json_body['text']
+    if not text.strip():
+        return jsonify({'message': 'empty string'}), 400
     compressed_text = compress(text)
-    return jsonify({'Text compressed successfuly': compressed_text}), 201
+    return jsonify({'compressed': compressed_text}), 200
 
 
-@strings_manipulation_blueprint.route('/join', methods=['POST'])
-def custom_join_():
-    text = request.args.get('text', type=str)
-    if not text:
-        return jsonify({'message': 'No text provided'}), 400
+@string_manipulation_blueprint.route('/join', methods=['POST'])
+@schema.validate(text_and_separator_schema)
+def handle_custom_join() -> Response:
+    json_body = request.json
+    text = json_body['text']
+    if not text.strip():
+        return jsonify({'message': 'empty string'}), 400
+    separator = json_body.get('separator', '-')
+    items = list(text)
+    joined_text = custom_join(items, separator)
+    return jsonify({'joined': joined_text}), 200
 
-    sep = request.args.get('sep', type=str)
-    if not sep:
-        return jsonify({'message': 'No seperator provided'}), 400
-    text_items = list(text)
-    new_text = custom_join(text_items, sep)
-    return jsonify({'Text joined successfuly': new_text}), 201
 
-
-# moge zrobic ze cos tam= lower albo cos tam = upper jako query params
-# case
-@strings_manipulation_blueprint.route('/<string:text>', methods=['POST'])
-def transform(text: str):
-    if not text:
-        return jsonify({'message': 'No text provided'}), 400
-    case = request.args.get('case', type=str)
-
+@string_manipulation_blueprint.route('/transform', methods=['POST'])
+@schema.validate(text_and_case_schema)
+def handle_lower_upper_case() -> Response:
+    json_body = request.json
+    text = json_body['text']
+    if not text.strip():
+        return jsonify({'message': 'empty string'}), 400
+    case = json_body.get('case', 'lower')
     if case not in ['lower', 'upper']:
-        return jsonify({'message': 'Case is invalid'}), 400
-
+        return jsonify({'message': 'invalid case'}), 400
     if case == 'lower':
-        return jsonify({'Text lowercased successfuly': lower(text)}), 201
+        return jsonify({'lowered': lower(text)}), 200
     if case == 'upper':
-        return jsonify({'Text uppercased successfuly': upper(text)}), 201
+        return jsonify({'uppered': upper(text)}), 200
