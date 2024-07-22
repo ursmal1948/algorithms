@@ -1,4 +1,3 @@
-
 from app.algohub.algorithms.numbers.digits import (
     get_digit,
     sum_digits,
@@ -6,60 +5,59 @@ from app.algohub.algorithms.numbers.digits import (
     validate_luhn,
     move_zeroes
 )
-from flask import  request, jsonify,Blueprint
+from flask import request, jsonify, Blueprint, Response
 from flask_restful import reqparse
 
+from flask_json_schema import JsonSchema
+from app.routes.schemas import range_schema, numbers_list_schema, text_schema
 import logging
 
 logging.basicConfig(level=logging.INFO)
 
-digits_blueprint = Blueprint('digits', __name__, url_prefix='/digits')
+digits_blueprint = Blueprint('digits', __name__, url_prefix='/api/algorithms/numbers/digits')
+schema = JsonSchema()
 
 
-
-# blad prechwyci route z maina, a blad bedzie rzucony w funkjci get_digit
-@digits_blueprint.route('/get_digit/<int:number>', methods=['GET'])
-def get_digit_(number: int):
-    position = request.args.get('position', default=0, type=int)
+@digits_blueprint.route('/get_digit/number/<int:number>/position/<int:position>', methods=['GET'])
+def handle_get_digit(number: int, position: int) -> Response:
     digit = get_digit(number, position)
-    return jsonify({'digit': digit}), 201
+    return jsonify({'digit': digit}), 200
 
 
-@digits_blueprint.route('/sum_digits/<int:number>', methods=['GET'])
-def sum_digits_(number: int):
+@digits_blueprint.route('/digits-sum/<int:number>', methods=['GET'])
+def handle_sum_digits(number: int) -> Response:
     digits_sum = sum_digits(number)
-    return jsonify({'digits_sum': digits_sum}), 201
+    return jsonify({'sum': digits_sum}), 201
 
 
-@digits_blueprint.route('/sum_range', methods=['GET'])
-def sum_range_():
-    parser = reqparse.RequestParser()
-    parser.add_argument('r_start', type=int)
-    parser.add_argument('r_end', type=int)
-    json_body = parser.parse_args()
+@digits_blueprint.route('/range-sum', methods=['POST'])
+@schema.validate(range_schema)
+def handle_sum_range() -> Response:
+    json_body = request.get_json()
     a, b = json_body['r_start'], json_body['r_end']
-    return jsonify({'Sum between the range (inclusive)': sum_range(a, b)}), 201
+    return jsonify({'Sum': sum_range(a, b)}), 200
 
 
-@digits_blueprint.route('/move_zeroes', methods=['GET'])
-def move_zeroes_():
-    parser = reqparse.RequestParser()
-    parser.add_argument('numbers', type=list, location='json', help='List of numbers')
-    request_data = parser.parse_args()
-    numbers = request_data['numbers']
+#
+@digits_blueprint.route('/move-zeroes', methods=['POST'])
+@schema.validate(numbers_list_schema)
+def handle_move_zeroes():
+    json_body = request.get_json()
+    numbers = json_body['numbers']
     if 0 not in numbers or numbers[len(numbers) - 1] == 0:
-        return jsonify({'No zeroes to move': numbers}), 200
+        return jsonify({'message': 'No zeroes to move', 'numbers': numbers}), 200
 
     move_zeroes(numbers)
-    return jsonify({'Zeroes moved successfully to the end': numbers}), 201
+    return jsonify({'message': 'Zeroes moved to the end', 'numbers': numbers}), 200
 
 
 @digits_blueprint.route('/luhn', methods=['GET'])
-def validate_luhn_():
+def handle_validate_luhn() -> Response:
     card_number = request.args.get('card_number').strip()
-    logging.info(type(card_number))
     if not card_number:
         return jsonify({'message': 'Empty string provided'}), 400
 
     result = validate_luhn(card_number)
-    return jsonify({'message': f'Card number{' not' if not result else ""} validated successfully'}), 201
+    if result:
+        return jsonify({'message': 'card number is valid', 'card_number': card_number}), 200
+    return jsonify({'message': 'card number is invalid', 'card_number': card_number}), 200

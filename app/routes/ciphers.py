@@ -2,80 +2,98 @@ from app.algohub.algorithms.ciphers.caesar import CaesarCipher
 from app.algohub.algorithms.ciphers.morse import MorseCode
 from app.algohub.algorithms.ciphers.vigenere import VigenereCipher
 from app.algohub.algorithms.ciphers.caesar import CaesarCipher
-from flask import request, jsonify, Blueprint, Flask
-import re
+from flask import request, jsonify, Blueprint, Flask, Response
+from flask_json_schema import JsonSchema
+from app.routes.schemas import caesar_schema, vigenere_schema, text_schema, morse_decryption_schema
 
 import logging
 
 logging.basicConfig(level=logging.INFO)
 
+ciphers_blueprint = Blueprint('ciphers', __name__, url_prefix='/api/algorithms/ciphers')
+schema = JsonSchema()
+
 
 def configure_ciphers(app: Flask) -> None:
-    caesar_cipher = CaesarCipher()
-    vigenere_cipher = VigenereCipher()
-    morse_cipher = MorseCode()
+    schema.init_app(app)
+    app.register_blueprint(ciphers_blueprint)
 
-    @app.route('/ciphers/caesar-ecnryption', methods=['POST'])
-    def encrypt_caesar():
-        text = request.args.get('text', type=str)
-        if not text:
-            return jsonify({'message': 'No text provided'}), 400
-        shift = request.args.get('shift', type=int)
-        if shift:
-            caesar_cipher.shift = shift
 
-        encrypted_text = caesar_cipher.encrypt(text)
-        return jsonify({'Encrypted_text': f'{encrypted_text}'}), 200
+@ciphers_blueprint.route('/caesar-encryption', methods=['POST'])
+@schema.validate(caesar_schema)
+def handle_caesar_encryption() -> Response:
+    json_body = request.json
+    text = json_body['text']
+    shift = json_body.get('shift', 3)
+    if not text.strip():
+        return jsonify({'message': 'empty string'}), 400
+    cs = CaesarCipher(shift=shift)
+    encrypted_text = cs.encrypt(text)
+    return jsonify({'encrypted': encrypted_text}), 200
 
-    @app.route('/ciphers/caesar-decryption', methods=['POST'])
-    def decrypt_caesar():
-        text = request.args.get('text', type=str)
-        if not text:
-            return jsonify({'message': 'No text provided'}), 400
 
-        shift = request.args.get('shift', type=int)
-        if shift:
-            caesar_cipher.shift = shift
+@ciphers_blueprint.route('/caesar-decryption', methods=['POST'])
+@schema.validate(caesar_schema)
+def handle_caesar_decryption() -> Response:
+    json_body = request.json
+    text = json_body['text']
+    shift = json_body.get('shift', 3)
+    if not text.strip():
+        return jsonify({'message': 'empty string'}), 400
+    cs = CaesarCipher(shift=shift)
+    decrypted_text = cs.decrypt(text)
+    return jsonify({'decrypted': decrypted_text}), 200
 
-        encrypted_text = caesar_cipher.decrypt(text)
-        return jsonify({'Encrypted_text': f'{encrypted_text}'}), 200
 
-    @app.route('/ciphers/vigenere-encryption', methods=['POST'])
-    def encrypt_vigenere():
-        text = request.args.get('text', type=str)
-        if not text:
-            return jsonify({'message': 'No text provided'}), 400
-        key = request.args.get('key', type=str, default=None)
-        if key:
-            vigenere_cipher.key = key
-        encrypted_text = vigenere_cipher.encrypt(text)
-        return jsonify({'Encrypted_text': f'{encrypted_text}'}), 200
+@ciphers_blueprint.route('/vigenere-encryption', methods=['POST'])
+@schema.validate(vigenere_schema)
+def handle_vigenere_encryption() -> Response:
+    json_body = request.json
+    text = json_body['text']
+    key = json_body.get('key', None)
+    if not text.strip():
+        return jsonify({'message': 'empty string'}), 400
+    # domyslna wartosc, w roucie, czy  wklasie,
+    vs = VigenereCipher() if key is None else VigenereCipher(key)
+    encrypted_text = vs.encrypt(text)
+    return jsonify({'encrypted': encrypted_text}), 200
 
-    @app.route('/ciphers/vigenere-decryption', methods=['POST'])
-    def decrypt_vigenere():
-        text = request.args.get('text', type=str)
-        if not text:
-            return jsonify({'message': 'No text provided'}), 400
-        key = request.args.get('key', type=str, default=None)
-        if key:
-            vigenere_cipher.key = key
-        decrypted_text = vigenere_cipher.decrypt(text)
-        return jsonify({'Decrypted_text': f'{decrypted_text}'}), 200
 
-    @app.route('/ciphers/morse-encryption', methods=['POST'])
-    def encrypt_morse():
-        text = request.args.get('text', type=str)
-        if not text:
-            return jsonify({'message': 'No text provided'}), 400
+@ciphers_blueprint.route('/vigenere-decryption', methods=['POST'])
+@schema.validate(vigenere_schema)
+def handle_vigenere_decryption() -> Response:
+    json_body = request.json
+    text = json_body['text']
+    key = json_body.get('key', None)
+    if not text.strip():
+        return jsonify({'message': 'empty string'}), 400
+    # default value for key
+    vs = VigenereCipher() if key is None else VigenereCipher(key)
+    decrypted_text = vs.decrypt(text)
+    return jsonify({'decrypted': decrypted_text}), 200
 
-        decrypted_text = morse_cipher.encrypt(text)
-        return jsonify({'Encrypted_text': f'{decrypted_text}'}), 200
 
-    @app.route('/ciphers/morse-decryption', methods=['POST'])
-    def decrypt_morse():
-        text = request.args.get('text', type=str)
+@ciphers_blueprint.route('/morse-encryption', methods=['POST'])
+@schema.validate(text_schema)
+def handle_morse_encryption() -> Response:
+    json_body = request.json
+    text = json_body['text']
+    if not text.strip():
+        return jsonify({'message': 'empty string'}), 400
 
-        if not re.match(r'^[\\|.-]+$', text):
-            return jsonify({'message': 'Text must consist of dots and dashes and vertical bars '}), 400
-        decrypted_text = morse_cipher.decrypt(text)
-        return jsonify({'Decrypted_text': f'{decrypted_text}'}), 200
+    morse_code = MorseCode()
+    encrypted_text = morse_code.encrypt(text)
+    return jsonify({'encrypted': encrypted_text}), 200
+
+
+@ciphers_blueprint.route('/morse-decryption', methods=['POST'])
+@schema.validate(morse_decryption_schema)
+def handle_morse_decryption() -> Response:
+    json_body = request.json
+    text = json_body['text']
+    if not text.strip():
+        return jsonify({'message': 'empty string'}), 400
+
+    morse_code = MorseCode()
+    encrypted_text = morse_code.decrypt(text)
+    return jsonify({'decrypted': encrypted_text}), 200
