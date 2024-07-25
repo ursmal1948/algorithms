@@ -17,10 +17,10 @@
     <h2>Table of Contents</h2>
     <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#postman-documentation">API</a></li>
         <li><a href="#video">Video showcase of the project</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#documentation">Documentation</a></li>
-        <li><a href="#postman-documentation">API</a></li>
         <li><a href="#quality">Code quality</a></li>
         <li><a href="#data">Data</a></li>
         <li><a href="#usage">Example usage</a></li>
@@ -45,6 +45,18 @@ This repository contains a collection of algorithms written in Python. You can f
 including ciphers, strings and for sorting data. 
 It is wise to learn and implement them in your projects 
 💯<br>
+</font>
+</h2>
+</div>
+
+<div>
+<h2 id="postman-documentation">
+
+## API DOCUMENTATION
+
+<font size="+1">
+<a href="https://documenter.getpostman.com/view/36229565/2sA3kSoPGQ" target="_blank">POSTMAN DOCUMENTATION</a><br>
+
 </font>
 </h2>
 </div>
