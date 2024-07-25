@@ -1,7 +1,10 @@
 text_schema = {
     "type": "object",
     "properties": {
-        "text": {"type": "string"}
+        "text": {
+            "type": "string",
+            "minLength": 1
+        }
     },
     "required": ["text"]
 }
@@ -9,15 +12,15 @@ text_schema = {
 anagrams_schema = {
     "type": "object",
     "properties": {
-        "text1": {"type": "string"},
-        "text2": {"type": "string"},
+        "text1": {"type": "string", "minLength": 1},
+        "text2": {"type": "string", "minLength": 1},
     },
     "required": ["text1", "text2"]
 }
 text_and_separator_schema = {
     "type": "object",
     "properties": {
-        "text": {"type": "string"},
+        "text": {"type": "string", "minLength": 1},
         "separator": {"type": "string"}
     },
     "required": ["text"]
@@ -26,7 +29,7 @@ text_and_separator_schema = {
 text_and_case_schema = {
     "type": "object",
     "properties": {
-        "text": {"type": "string"},
+        "text": {"type": "string", "minLength": 1},
         "case": {"type": "string"}
     },
     "required": ["text"]
@@ -51,7 +54,7 @@ numbers_list_schema = {
 caesar_schema = {
     "type": "object",
     "properties": {
-        "text": {"type": "string"},
+        "text": {"type": "string", "minLength": 1},
         "shift": {"type": "integer"}
     },
     "required": ["text"]
@@ -60,8 +63,8 @@ caesar_schema = {
 vigenere_schema = {
     "type": "object",
     "properties": {
-        "text": {"type": "string"},
-        "key": {"type": "string"}
+        "text": {"type": "string", "minLength": 1},
+        "key": {"type": "string", "minLength": 1}
     },
     "required": ["text"]
 }
@@ -99,4 +102,40 @@ triangle_side_schema = {
         "side3": {"type": "number", "minimum": 0},
     },
     "required": ["side1", "side2", "side3"]
+}
+
+binary_search_schema = {
+    "type": "object",
+    "properties": {
+        "numbers": {"type": "array", "items": {"type": "integer"}},
+        "target": {"type": "integer"}
+    },
+    "required": ["numbers", "target"]
+}
+
+quadratic_equation_coefficiets_schema = {
+    "type": "object",
+    "properties": {
+        "a": {"type": "number"},
+        "b": {"type": "number"},
+        "c": {"type": "number"},
+
+    },
+    "required": ["a"]
+}
+horner_schema = {
+    "type": "object",
+    "properties": {
+        "coefficients": {"type": "array", "items": {"type": "number"}},
+        "value": {"type": "number"}
+    },
+    "required": ["coefficients", "value"]
+}
+eratosthenes_schema = {
+    "type": "object",
+    "properties": {
+        "sieve_upper_limit": {"type": "integer"},
+        "looked_number": {"type": "integer"},
+    },
+    "required": ["sieve_upper_limit", "looked_number"]
 }
