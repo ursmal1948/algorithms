@@ -39,7 +39,7 @@ def compress(text: str) -> str:
     return ''.join([c + str(chars_counter[c]) for c in ordered_chars])
 
 
-def custom_join(words: list[str], separator: str = '') -> str:
+def custom_join(words: list[str], separator: str) -> str:
     """
     Concatenates a list of strings using the specified separator.
 
