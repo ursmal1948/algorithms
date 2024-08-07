@@ -1,24 +1,52 @@
-from flask import Blueprint, jsonify, request
-from typing import Callable
+from flask import Blueprint, jsonify, request, Response
 import jsonschema
 from app.algohub.algorithms.numeric import (
     bisection_root,
-    rectangular_integration,
-    trapezoidal_integration
+    RectangularIntegration,
+    TrapezoidalIntegration
 )
 
 from app.algohub.utility_functions import (
     execute_function_from_string,
     create_polynomial_function
 )
-from app.routes.schemas import bisection_root_schema
-import logging
+from app.routes.schemas import (
+    bisection_root_schema,
+    trapezoidal_integration_schema,
+    rectangular_integration_schema
+)
 
 numeric_algorithms_blueprint = Blueprint(
     'numeric_algorithms',
     __name__,
     url_prefix='/api/algorithms/computation/numeric'
 )
+
+
+@numeric_algorithms_blueprint.route('/trapezoidal-integration', methods=['POST'])
+def handle_trapezoidal_integration() -> Response:
+    json_body = request.json
+    jsonschema.validate(instance=json_body, schema=trapezoidal_integration_schema)
+    function_body = json_body['function_body']
+    a, b = json_body['a'], json_body['b']
+    n = json_body['n']
+    result = TrapezoidalIntegration().calculate(lambda x: execute_function_from_string(function_body, x),
+                                                a, b, n
+                                                )
+    return jsonify({'integration result': result}), 200
+
+
+@numeric_algorithms_blueprint.route('/rectangular-integration', methods=['POST'])
+def handle_rectangular_integration() -> Response:
+    json_body = request.json
+    jsonschema.validate(instance=json_body, schema=rectangular_integration_schema)
+    coefficients = json_body['coefficients']
+    a, b = json_body['a'], json_body['b']
+    n = json_body['n']
+    function_from_coeff = create_polynomial_function(coefficients)
+    result = RectangularIntegration().calculate(lambda x: function_from_coeff(x), a, b, n)
+
+    return jsonify({'integration result': result}), 200
 
 
 @numeric_algorithms_blueprint.route('/bisection-root', methods=['POST'])

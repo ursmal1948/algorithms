@@ -150,3 +150,24 @@ bisection_root_schema = {
     },
     "required": ["a", "b", "function_body"]
 }
+rectangular_integration_schema = {
+    "type": "object",
+    "properties": {
+        "coefficients": {"type": "array", "items": {"type": "number"}},
+        "a": {"type": "number"},
+        "b": {"type": "number"},
+        "n": {"type": "number"},
+    },
+    "required": ["coefficients", "a", "b", "n"]
+}
+
+trapezoidal_integration_schema = {
+    "type": "object",
+    "properties": {
+        "function_body": {"type": "string"},
+        "a": {"type": "number"},
+        "b": {"type": "number"},
+        "n": {"type": "number"},
+    },
+    "required": ["function_body", "a", "b", "n"]
+}
