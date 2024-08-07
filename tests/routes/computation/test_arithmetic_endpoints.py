@@ -11,7 +11,7 @@ def factorial_fixture(request):
 class TestArithmeticAlgorithmsEndpoints:
     @staticmethod
     def _factorial_path(method: str, number: int) -> str:
-        return f'/api/algorithms/math/arithmetic-algorithms/factorial/{method}/{number}'
+        return f'/api/algorithms/computation/arithmetic/factorial/{method}/{number}'
 
     def test_factorial_routes(self, client, factorial_fixture):
         number, result = factorial_fixture
