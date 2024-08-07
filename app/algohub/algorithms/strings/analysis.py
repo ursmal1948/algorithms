@@ -53,6 +53,8 @@ def is_palindrome(text: str) -> bool:
     """
 
     cleaned_text = ''.join(c.lower() for c in text if c.isalnum())
+    if not cleaned_text:
+        return False
     start_index = 0
     end_index = len(cleaned_text) - 1
     while start_index < end_index:
@@ -75,6 +77,8 @@ def is_potential_palindrome(text: str) -> bool:
     """
 
     cleaned_text = ''.join(c.lower() for c in text if c.isalnum())
+    if not cleaned_text:
+        return False
     chars_counter = Counter(cleaned_text)
     odd_count = sum(count % 2 for count in chars_counter.values())
     return odd_count <= 1

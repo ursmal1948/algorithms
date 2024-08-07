@@ -77,8 +77,6 @@ def binary_search(numbers: list[int], looked_number: int) -> int | bool:
         otherwise False.
     """
 
-    if not numbers:
-        return False
     first_index = 0
     end_index = len(numbers) - 1
     while first_index <= end_index:
