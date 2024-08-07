@@ -12,6 +12,8 @@ divisors_blueprint = Blueprint('divisors', __name__, url_prefix='/api/algorithms
 @divisors_blueprint.route('/<int:number>', methods=['GET'])
 def handle_divisors(number):
     action = request.args.get('action')
+    if not action:
+        return jsonify({'message': 'Missing parameter'}), 400
     if action == 'count':
         result = count_divisors(number)
     elif action == 'sum':
@@ -22,8 +24,11 @@ def handle_divisors(number):
 
 
 @divisors_blueprint.route('/count-common-divisors', methods=['GET'])
-def common_divisors():
-    a = int(request.args.get('a'))
-    b = int(request.args.get('b'))
-    count_of_common_divisors = count_common_divisors(a, b)
+def handle_count_common_divisors():
+    a = request.args.get('a')
+    b = request.args.get('b')
+    if not a or not b:
+        return jsonify({'message': 'Missing parameters'}), 400
+
+    count_of_common_divisors = count_common_divisors(int(a), int(b))
     return jsonify({'count': count_of_common_divisors}), 200
