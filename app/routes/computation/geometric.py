@@ -1,4 +1,4 @@
-from app.algohub.algorithms.geometric import (
+from app.algohub.algorithms.computation.geometric import (
     Point,
     distance_between_points,
     are_points_collinear,

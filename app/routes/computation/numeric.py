@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request, Response
 import jsonschema
-from app.algohub.algorithms.numeric import (
+from app.algohub.algorithms.computation.numeric import (
     bisection_root,
     RectangularIntegration,
     TrapezoidalIntegration

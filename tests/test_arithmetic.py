@@ -1,5 +1,5 @@
 import pytest
-from app.algohub.algorithms.arithmetic import (
+from app.algohub.algorithms.computation.arithmetic import (
     binary_search,
     binary_exponentiation,
     babylonian_sqrt,

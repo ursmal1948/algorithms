@@ -1,4 +1,4 @@
-from app.algohub.algorithms.function import (
+from app.algohub.algorithms.computation.function import (
     quadratic_roots,
     horner_evaluation
 )

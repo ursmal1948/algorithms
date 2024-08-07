@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request, Response
 
-from app.algohub.algorithms.arithmetic import (
+from app.algohub.algorithms.computation.arithmetic import (
     IterativeFactorial,
     RecursiveFactorial,
     binary_search

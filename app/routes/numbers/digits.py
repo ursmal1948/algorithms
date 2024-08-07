@@ -1,3 +1,7 @@
+from flask import request, jsonify, Blueprint, Response
+from flask_json_schema import JsonSchema
+import logging
+
 from app.algohub.algorithms.numbers.digits import (
     get_digit,
     sum_digits,
@@ -5,12 +9,8 @@ from app.algohub.algorithms.numbers.digits import (
     validate_luhn,
     move_zeroes
 )
-from flask import request, jsonify, Blueprint, Response
-from flask_restful import reqparse
 
-from flask_json_schema import JsonSchema
-from app.routes.schemas import range_schema, numbers_list_schema, text_schema
-import logging
+from app.routes.schemas import range_schema, numbers_list_schema
 
 logging.basicConfig(level=logging.INFO)
 

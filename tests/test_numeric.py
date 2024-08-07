@@ -1,6 +1,6 @@
 import unittest
 
-from app.algohub.algorithms.numeric import (
+from app.algohub.algorithms.computation.numeric import (
     bisection_root,
     TrapezoidalIntegration,
     RectangularIntegration
