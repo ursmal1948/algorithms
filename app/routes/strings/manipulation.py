@@ -1,4 +1,4 @@
-from app.algohub.algorithms.strings.string_manipulation import (
+from app.algohub.algorithms.strings.manipulation import (
     reverse,
     compress,
     custom_join,
@@ -18,17 +18,16 @@ logging.basicConfig(level=logging.INFO)
 
 string_manipulation_blueprint = Blueprint('string_manipulation',
                                           __name__,
-                                          url_prefix='/api/algorithms/strings/string-manipulation')
+                                          url_prefix='/api/algorithms/strings/manipulation')
 schema = JsonSchema()
 
 
+# pattern zeby sie zabezpieczyc przed pustym znakiem.
 @string_manipulation_blueprint.route('/reverse', methods=['POST'])
 @schema.validate(text_schema)
 def handle_reverse() -> Response:
     json_body = request.json
     text = json_body['text']
-    if not text.strip():
-        return jsonify({'message': 'empty string'}), 400
     reversed_text = reverse(text)
     return jsonify({'reversed': reversed_text}), 200
 
@@ -38,8 +37,9 @@ def handle_reverse() -> Response:
 def handle_compress() -> Response:
     json_body = request.json
     text = json_body['text']
-    if not text.strip():
-        return jsonify({'message': 'empty string'}), 400
+    # if not text.strip():
+    #     return jsonify({'message': 'empty string'}), 400
+
     compressed_text = compress(text)
     return jsonify({'compressed': compressed_text}), 200
 
@@ -49,8 +49,8 @@ def handle_compress() -> Response:
 def handle_custom_join() -> Response:
     json_body = request.json
     text = json_body['text']
-    if not text.strip():
-        return jsonify({'message': 'empty string'}), 400
+    # if not text.strip():
+    #     return jsonify({'message': 'empty string'}), 400
     separator = json_body.get('separator', '-')
     items = list(text)
     joined_text = custom_join(items, separator)
@@ -62,12 +62,12 @@ def handle_custom_join() -> Response:
 def handle_lower_upper_case() -> Response:
     json_body = request.json
     text = json_body['text']
-    if not text.strip():
-        return jsonify({'message': 'empty string'}), 400
+    # if not text.strip():
+    #     return jsonify({'message': 'empty string'}), 400
     case = json_body.get('case', 'lower')
     if case not in ['lower', 'upper']:
         return jsonify({'message': 'invalid case'}), 400
     if case == 'lower':
-        return jsonify({'lowered': lower(text)}), 200
+        return jsonify({'transformed': lower(text)}), 200
     if case == 'upper':
-        return jsonify({'uppered': upper(text)}), 200
+        return jsonify({'transformed': upper(text)}), 200

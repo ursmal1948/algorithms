@@ -1,7 +1,7 @@
 import unittest
 
 import pytest
-from app.algohub.algorithms.strings.string_manipulation import (
+from app.algohub.algorithms.strings.manipulation import (
     reverse,
     compress,
     custom_join,

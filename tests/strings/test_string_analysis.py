@@ -1,6 +1,6 @@
 import pytest
 import unittest
-from app.algohub.algorithms.strings.string_analysis import (
+from app.algohub.algorithms.strings.analysis import (
     are_anagrams,
     is_pangram,
     is_palindrome,
