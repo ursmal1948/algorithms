@@ -1,7 +1,16 @@
 import pytest
+from app.create_app import main
 
 
-@pytest.fixture(params=[['', True], ['a', True], ['Euston saw I was not Sue!', True], ['aabbccde', False]])
+@pytest.fixture
+def client():
+    app = main()
+    app.config['TESTING'] = True
+    with app.test_client() as client:
+        yield client
+
+
+@pytest.fixture(params=[['', False], ['a', True], ['Euston saw I was not Sue!', True], ['aabbccde', False]])
 def palindrome_and_potential_palindrome(request):
     return request.param
 
