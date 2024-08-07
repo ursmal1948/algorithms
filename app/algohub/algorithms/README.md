@@ -1,10 +1,9 @@
-# 🔢 NUMERIC FUNCTION, GEOMTRIC AND SORTING 🔢
+# 🔢 NUMERIC, FUNCTION, GEOMTRIC AND ARITHMETIC ALGORITHMS 🔢
 
 ## Overview
 
 <font size="+1">
-Welcome to the "math" package of the "algorithms" library. This package
-provides functionalities for dealing with many mathematical issues, like 
+Modules function, numeric geometric and arithmetic provide functionalities for dealing with many mathematical issues, like 
 calculating factorial, finding root of the function, checking triangle properties and many more.  
 </font>
 
