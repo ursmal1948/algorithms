@@ -92,10 +92,11 @@ Comprehensive documentation available at this link: <br>
 
 ## ‼️ 📄 Feel free to explore detailed README documentation for each package below 📃 ‼️
 
-[NUMBERS](algohub/algorithms/numbers/README.md) <br>
-[MATH](algohub/algorithms/math/README.md)<br>
 [STRINGS](algohub/algorithms/strings/README.md)<br>
 [CIPHERS](algohub/algorithms/ciphers/README.md)<br>
+[NUMBERS](algohub/algorithms/numbers/README.md) <br>
+[MATH](algohub/algorithms/README.md)<br>
+
 [SORTING](algohub/algorithms/sorting_README.md)
 </font>
 </h2>
