@@ -24,10 +24,13 @@ def configure_ciphers(app: Flask) -> None:
 def handle_caesar_encryption() -> Response:
     json_body = request.json
     text = json_body['text']
-    shift = json_body.get('shift', 3)
+
+    shift = json_body.get('shift', None)  # wtedy w CaesarCipher default shift jest ustawione na 3
+
     if not text.strip():
         return jsonify({'message': 'empty string'}), 400
-    cs = CaesarCipher(shift=shift)
+
+    cs = CaesarCipher(shift) if shift else CaesarCipher()  # wtedy w CaesarCipher default shift jest ustawione na 3
     encrypted_text = cs.encrypt(text)
     return jsonify({'encrypted': encrypted_text}), 200
 
@@ -38,8 +41,10 @@ def handle_caesar_decryption() -> Response:
     json_body = request.json
     text = json_body['text']
     shift = json_body.get('shift', 3)
+
     if not text.strip():
         return jsonify({'message': 'empty string'}), 400
+
     cs = CaesarCipher(shift=shift)
     decrypted_text = cs.decrypt(text)
     return jsonify({'decrypted': decrypted_text}), 200
@@ -51,9 +56,10 @@ def handle_vigenere_encryption() -> Response:
     json_body = request.json
     text = json_body['text']
     key = json_body.get('key', None)
+
     if not text.strip():
         return jsonify({'message': 'empty string'}), 400
-    # domyslna wartosc, w roucie, czy  wklasie,
+
     vs = VigenereCipher() if key is None else VigenereCipher(key)
     encrypted_text = vs.encrypt(text)
     return jsonify({'encrypted': encrypted_text}), 200
@@ -65,9 +71,10 @@ def handle_vigenere_decryption() -> Response:
     json_body = request.json
     text = json_body['text']
     key = json_body.get('key', None)
+
     if not text.strip():
         return jsonify({'message': 'empty string'}), 400
-    # default value for key
+
     vs = VigenereCipher() if key is None else VigenereCipher(key)
     decrypted_text = vs.decrypt(text)
     return jsonify({'decrypted': decrypted_text}), 200

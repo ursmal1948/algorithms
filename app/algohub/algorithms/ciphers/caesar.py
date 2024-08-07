@@ -36,7 +36,7 @@ class CaesarCipher:
             str: The encrypted character.
         """
 
-        if char.isalpha() and char.isupper():
+        if char.isalpha() and char in self.sequence:
             return self.sequence[(self.sequence.index(char) + self.shift) % 26]
         return char
 
@@ -51,7 +51,7 @@ class CaesarCipher:
             str: The decrypted character.
         """
 
-        if char.isalpha() and char.isupper():
+        if char.isalpha() and char in self.sequence:
             return self.sequence[(self.sequence.index(char) - self.shift) % 26]
         return char
 
