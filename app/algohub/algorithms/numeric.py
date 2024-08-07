@@ -1,4 +1,5 @@
 from typing import Callable
+from abc import ABC, abstractmethod
 
 
 def bisection_root(func: Callable[[int | float], int | float],
@@ -43,17 +44,13 @@ def bisection_root(func: Callable[[int | float], int | float],
     return round((a + b) / 2, 3)
 
 
-def trapezoidal_integration(
-        func: Callable[[int | float], int | float],
-        a: int | float, b: int | float,
-        n: int
-) -> int | float:
-    """
-    Approximates the definite integral of a function using the trapezoidal
-    rule. Evaluates area under the curve by dividing the total area into
-    smaller trapzoids.
-
-    Parameters:
+class Integration(ABC):
+    @abstractmethod
+    def calculate(self, func: Callable[[int | float], int | float],
+                  a: int | float, b: int | float,
+                  n: int):
+        """
+        Parameters:
         func (Callable[[int | float], int | float]): Function to be integrated.
         a (int | float): The lower limit of integration.
         b (int | float): The upper limit of integration.
@@ -62,42 +59,47 @@ def trapezoidal_integration(
 
     Returns:
         float: The estimated value of the definite integral.
-    """
-
-    h = (b - a) / n
-    integral_approximation = 0.5 * (func(a) + func(b))
-
-    for i in range(1, n):
-        x = a + i * h
-        integral_approximation += func(x)
-    return integral_approximation * h
+        """
+        pass
 
 
-def rectangular_integration(
-        func: Callable[[int | float], int | float],
-        a: int | float, b: int | float,
-        n: int
-) -> int | float:
-    """
-    Approximates the definite integral of a function using the rectangle rule.
-    In other words - evaluates area under the curve by dividing the total area
-    into smaller rectangles
+class TrapezoidalIntegration(Integration):
 
-    Parameters:
-        func (Callable[[int | float], int | float]): Function to be integrate.
-        a (int | float): The lower limit of integration.
-        b (int | float): The upper limit of integration.
-        n (int): The number of rectangles used to divide the area under the curve.
+    def calculate(self,
+                  func: Callable[[int | float], int | float],
+                  a: int | float, b: int | float,
+                  n: int):
+        """
+        Approximates the definite integral of a function using the trapezoidal
+        rule. Evaluates area under the curve by dividing the total area into
+        smaller trapzoids.
+        """
+        h = (b - a) / n
+        integral_approximation = 0.5 * (func(a) + func(b))
 
-    Returns:
-        float: The estimated value of the definite integral.
-    """
+        for i in range(1, n):
+            x = a + i * h
+            integral_approximation += func(x)
+        return integral_approximation * h
 
-    h = (b - a) / n
-    integral_approximation = 0
 
-    for i in range(n):
-        x = a + (i + 0.5) * h
-        rectangle_area = func(x) * h
-        integral_approximation += rectangle_area
-    return integral_approximation
+class RectangularIntegration(Integration):
+
+    def calculate(self,
+                  func: Callable[[int | float], int | float],
+                  a: int | float, b: int | float,
+                  n: int):
+        """
+        Approximates the definite integral of a function using the rectangle rule.
+        In other words - evaluates area under the curve by dividing the total area
+        into smaller rectangles.
+        """
+
+        h = (b - a) / n
+        integral_approximation = 0
+
+        for i in range(n):
+            x = a + (i + 0.5) * h
+            rectangle_area = func(x) * h
+            integral_approximation += rectangle_area
+        return integral_approximation

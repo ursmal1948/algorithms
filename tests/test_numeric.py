@@ -2,8 +2,8 @@ import unittest
 
 from app.algohub.algorithms.numeric import (
     bisection_root,
-    trapezoidal_integration,
-    rectangular_integration
+    TrapezoidalIntegration,
+    RectangularIntegration
 )
 
 
@@ -73,12 +73,12 @@ class TestIntegration(unittest.TestCase):
             with self.subTest(test_case=test_case):
                 params, expected_result = test_case
                 fn, a, b, n = params
-                integration_result = trapezoidal_integration(fn, a, b, n)
+                integration_result = TrapezoidalIntegration().calculate(fn, a, b, n)
                 self.assertAlmostEqual(integration_result, expected_result, places=1)
 
     def test_rectangular_integration(self):
         for test_case in TestIntegration.test_cases_rectangular_integration:
             params, expected_result = test_case
             fn, a, b, n = params
-            integration_result = rectangular_integration(fn, a, b, n)
+            integration_result = RectangularIntegration().calculate(fn, a, b, n)
             self.assertAlmostEqual(integration_result, expected_result, places=1)
