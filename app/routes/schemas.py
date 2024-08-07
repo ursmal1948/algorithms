@@ -139,3 +139,14 @@ eratosthenes_schema = {
     },
     "required": ["sieve_upper_limit", "looked_number"]
 }
+
+bisection_root_schema = {
+    "type": "object",
+    "properties": {
+        "coefficients": {"type": "array", "items": {"type": "number"}},
+        "a": {"type": "number"},
+        "b": {"type": "number"},
+        "function_body": {"type": "string"}
+    },
+    "required": ["a", "b", "function_body"]
+}
