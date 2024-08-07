@@ -18,7 +18,7 @@ digits_blueprint = Blueprint('digits', __name__, url_prefix='/api/algorithms/num
 schema = JsonSchema()
 
 
-@digits_blueprint.route('/get_digit/number/<int:number>/position/<int:position>', methods=['GET'])
+@digits_blueprint.route('/get-digit/number/<int:number>/position/<int:position>', methods=['GET'])
 def handle_get_digit(number: int, position: int) -> Response:
     digit = get_digit(number, position)
     return jsonify({'digit': digit}), 200
@@ -35,7 +35,7 @@ def handle_sum_digits(number: int) -> Response:
 def handle_sum_range() -> Response:
     json_body = request.get_json()
     a, b = json_body['r_start'], json_body['r_end']
-    return jsonify({'Sum': sum_range(a, b)}), 200
+    return jsonify({'sum': sum_range(a, b)}), 200
 
 
 #
