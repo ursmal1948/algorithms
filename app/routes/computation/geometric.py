@@ -1,12 +1,11 @@
-from app.algohub.algorithms.math.geometric_algorithms import (
+from app.algohub.algorithms.geometric import (
     Point,
     distance_between_points,
     are_points_collinear,
     is_triangle_valid,
     is_triangle_rectangular
 )
-from flask import Flask, jsonify, request, Blueprint, Response
-from flask_restful import reqparse
+from flask import jsonify, request, Blueprint, Response
 from flask_json_schema import JsonSchema
 from app.routes.schemas import (
     two_coordinates_list_schema,
@@ -18,9 +17,9 @@ logging.basicConfig(level=logging.INFO)
 
 schema = JsonSchema()
 geometric_algorithms_blueprint = Blueprint(
-    'geometric-algorithms',
+    'geometric_algorithms',
     __name__,
-    url_prefix='/api/algorithms/math/geometric-algorithms'
+    url_prefix='/api/algorithms/computation/geometric'
 )
 
 
@@ -66,16 +65,3 @@ def handle_is_triangle_rect() -> Response:
     s1, s2, s3 = json_body['side1'], json_body['side2'], json_body['side3']
     rectangularity = is_triangle_rectangular(s1, s2, s3)
     return jsonify({'rectangularity': rectangularity}), 200
-
-
-# todo stare podejscie. taki blad dostawalam. w ramach konwersji wyskakiwal blad.
-
-#     @app.route('/valid-triangle', methods=['GET'])
-#     def handle_is_triangle_valid():
-#         s1, s2, s3 = int(request.args.get('a')), int(request.args.get('b')), int(request.args.get('c'))
-# jak nie podalam
-# {
-#     "message": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
-# }
-#         validity = is_triangle_valid(s1, s2, s3)
-#         return jsonify({f'Valid triangle with sides: {s1} {s2} {s3} ': validity})
