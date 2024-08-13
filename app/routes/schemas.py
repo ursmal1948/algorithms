@@ -9,6 +9,21 @@ text_schema = {
     "required": ["text"]
 }
 
+text_and_subsequence = {
+    "type": "object",
+    "properties": {
+        "text": {
+            "type": "string",
+            "minLength": 1
+        },
+        "sub_text": {
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "required": ["text", "sub_text"]
+}
+
 anagrams_schema = {
     "type": "object",
     "properties": {
@@ -170,4 +185,12 @@ trapezoidal_integration_schema = {
         "n": {"type": "number"},
     },
     "required": ["function_body", "a", "b", "n"]
+}
+
+strings_list_schema = {
+    "type": "object",
+    "properties": {
+        "items": {"type": "array", "items": {"type": ["string", "number"]}}
+    },
+    "required": ["items"]
 }
