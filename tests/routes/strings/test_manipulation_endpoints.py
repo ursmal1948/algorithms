@@ -2,18 +2,14 @@ import pytest
 
 
 class TestStringManipulationEndpoints:
-    # join_path = 'api/algorithms/strings/string-manipulation/join'
-    # transformation_path = 'api/algorithms/strings/string-manipulation/transform'
-    # compress_path = 'api/algorithms/strings/string-manipulation/compress'
-    # reverse_path = 'api/algorithms/strings/string-manipulation/reverse'
 
-    def test_custom_join_with_default_separator_route(self, client, custom_join_path):
+    def test_custom_join_route_with_default_separator(self, client, custom_join_path):
         json_payload = {'text': 'ABC'}
         response = client.post(custom_join_path, json=json_payload)
         assert response.status_code == 200
         assert response.json['joined'] == 'A-B-C'
 
-    def test_custom_join_with_custom_separator_route(self, client, custom_join_path):
+    def test_custom_join_route_with_custom_separator(self, client, custom_join_path):
         json_payload = {'text': 'ABC', 'separator': '*'}
         response = client.post(custom_join_path, json=json_payload)
         assert response.status_code == 200

@@ -11,9 +11,9 @@ def create_polynomial_function(coefficients: list[int]) -> Callable[[int | float
     return polynomial_function
 
 
-def execute_function_from_string(expression: str, x_value: int) -> int | float:
+def execute_function_from_string(expression: str, x_value: int | float) -> int | float:
     try:
         x = x_value
         return eval(expression)
     except Exception as e:
-        raise ValueError(f"Error evaluating expression: {e}")
+        raise ValueError(f'Error evaluating expression: {e}')

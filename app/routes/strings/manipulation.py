@@ -6,7 +6,7 @@ from app.algohub.algorithms.strings.manipulation import (
     upper
 )
 
-from flask import Blueprint, request, jsonify, Response, Flask
+from flask import Blueprint, request, jsonify, Response
 from flask_json_schema import JsonSchema
 from app.routes.schemas import (
     text_schema,
@@ -37,9 +37,6 @@ def handle_reverse() -> Response:
 def handle_compress() -> Response:
     json_body = request.json
     text = json_body['text']
-    # if not text.strip():
-    #     return jsonify({'message': 'empty string'}), 400
-
     compressed_text = compress(text)
     return jsonify({'compressed': compressed_text}), 200
 
@@ -62,8 +59,7 @@ def handle_custom_join() -> Response:
 def handle_lower_upper_case() -> Response:
     json_body = request.json
     text = json_body['text']
-    # if not text.strip():
-    #     return jsonify({'message': 'empty string'}), 400
+
     case = json_body.get('case', 'lower')
     if case not in ['lower', 'upper']:
         return jsonify({'message': 'invalid case'}), 400

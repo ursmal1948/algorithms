@@ -1,7 +1,5 @@
 import pytest
 
-import logging
-
 
 @pytest.fixture(params=[[3, 6], [0, 1], [4, 24]])
 def factorial_fixture(request):

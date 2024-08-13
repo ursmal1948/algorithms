@@ -9,9 +9,6 @@ logging.basicConfig(level=logging.INFO)
 
 
 class TestStringAnalysisEndpoints:
-    # palindrome_path = '/api/algorithms/strings/string-analysis/palindrome'
-    # anagram_path = '/api/algorithms/strings/string-analysis/anagrams'
-    # pangram_path = '/api/algorithms/strings/string-analysis/pangram'
 
     @pytest.mark.parametrize('payload_arg, expected_result', [
         ('abcd', False),
