@@ -14,7 +14,7 @@ class TestQuadraticRootsFinder:
     @pytest.mark.parametrize('coefficients, expected_roots', [
         [(2, 10, 12), (-3, -2)],
         [(1, 4, 4), (-2, -2)],
-        [(0.5, 3, 5), ((1.0, -1.0))]
+        [(0.5, 3, 5), (1.0, -1.0)]
     ])
     def test_correct_roots_calculation(self, coefficients, expected_roots):
         a, b, c = coefficients
@@ -33,3 +33,8 @@ class TestHornerEvaluation:
     def test_various_cases(self, coefficients, value, expected_result):
         result = horner_evaluation(coefficients, value)
         assert result == expected_result
+
+    def test_when_no_coefficients(self):
+        with pytest.raises(ValueError) as e:
+            horner_evaluation([], 0)
+        assert str(e.value) == 'Coefficients list cannot be empty'
