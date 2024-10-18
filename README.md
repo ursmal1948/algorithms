@@ -113,11 +113,6 @@ pip install algohub
 <div>
 <h2 id="quality">
 
-## API 
-
-<div align="center">
-    <img src="ALGORITHMS.postman_collection.json" alt="postman">
-</div>
 
 ## Code Quality Checks
 
